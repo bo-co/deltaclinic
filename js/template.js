@@ -33,8 +33,10 @@ function map() {
             title: "Маршруты",
             routePanelTypes: {
             	pedestrian: true,
-            	masstransit: false,
-            	auto: false
+            	masstransit: true,
+            	bicycle: true,
+            	auto: true,
+            	taxi: true
             	},
             maxWidth: "260px",
             visible: false,
@@ -68,6 +70,7 @@ function map() {
   			})
     	});
 	myMap.controls.add(routePanelControl);
+	routePanelControl.routePanel.geolocate("from");
 	}
 	
 $(document).ready(function() {
