@@ -32,11 +32,11 @@ function map() {
             showHeader: true,
             title: "Маршруты",
             routePanelTypes: {
-            	pedestrian: true,
-            	masstransit: true,
-            	bicycle: true,
-            	auto: true,
-            	taxi: true
+            	pedestrian: false,
+            	masstransit: false,
+            	bicycle: false,
+            	auto: false,
+            	taxi: false
             	},
             maxWidth: "260px",
             visible: false,
