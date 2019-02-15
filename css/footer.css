@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+div.container > footer {
+	position : relative;
+	display : table-row !important;
+	width : 100%;
+  	height : 1px;
+	}
+	
+div.container > footer > div.contacts {
+	display : flex;
+	flex-wrap : wrap;
+	background-color : rgba(239, 241, 245, 1);
+	}
+	
+div.container > footer > div.contacts > div:first-child {
+	position : relative;
+	overflow : hidden;
+	}
+	
+div.container > footer > div.contacts > div > div.map {
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 10;
+	width : 100%;
+	height : calc(100% + 40px);
+	}
+	
+div.container > footer > div.contacts > div > span {
+	color : rgba(1, 31, 88, 1);
+	}
+	
+div.container > footer > div.contacts > div > ul {
+	padding : 0;
+	margin : 0;
+	list-style : none;
+	}
+	
+div.container > footer > div.contacts > div > ul > li > span {	
+	display : inline-block;
+	margin : 0 10px 0 0;
+	}
+	
+div.container > footer > div.contacts > div > ul > li > a.phone {
+	margin : 0 10px 0 0;
+	color : rgba(68, 68, 68, 1) !important;
+	font : 400 24px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+	
+div.container > footer > div.contacts > div > ul > li > a.phone::before {
+	display : none !important;
+	}
+	
+@media (min-width : 1401px) {
+	div.container > footer > div.contacts > div {
+		width : 50%;
+		}
+		
+	div.container > footer > div.contacts > div:last-child {
+		padding : 30px 60px 30px 30px;
+		}
+		
+	div.container > footer > div.contacts > div > span {
+		font : 700 36px/36px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > footer > div.contacts > div > ul {
+		padding : 10px 0 0 0;
+		}
+		
+	div.container > footer > div.contacts > div > ul > li {
+		margin : 15px 0;
+		}
+	}
+	
+@media (min-width : 1041px) and (max-width : 1400px) {
+
+	}
+	
+@media (min-width : 721px) and (max-width : 1040px) {
+
+	}
+	
+@media (min-width : 481px) and (max-width : 720px) {
+
+	}
+	
+@media (max-width : 480px) {
+
+	}

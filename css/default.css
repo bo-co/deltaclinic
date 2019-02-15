@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+* {
+	box-sizing : border-box;
+	}
+
+body {
+	-webkit-text-size-adjust : 100%;
+	-webkit-font-smoothing : antialiased;
+  	-moz-osx-font-smoothing : grayscale;
+	}
+
+html, body,
+main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section,
+dl, dt, dd,
+h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, blockquote, th, td,
+img, a img,
+div {
+	margin : 0;
+	padding : 0;
+	}
+
+html, body,
+main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section,
+img, a img,
+div {
+	font : inherit;
+	vertical-align : baseline;
+	}
+
+address, caption, cite, code, dfn, th, var {
+	font-style : normal;
+	font-weight : normal;
+	}
+
+html, body {
+	width : 100%;
+	height : 100%;
+	}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus,
+div:focus,
+a:focus {
+	outline : none;
+	}
+
+input,
+textarea {
+	-webkit-appearance : none;
+	-moz-appearance : none;
+    }
+
+caption, th {
+	text-align : left;
+	}
+
+fieldset,
+abbr, acronym,
+img, img a {
+	border : 0;
+	}
+
+blockquote, q {
+	quotes : none;
+	}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+	content : "";
+	content : none;
+	}
+
+main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, img {
+	display : block;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size : 100%;
+	font-weight : normal;
+	}
+
+table {
+	border-collapse : collapse;
+	border-spacing : 0;
+	}
