@@ -49,7 +49,7 @@ function map() {
     	});    	
     routePanelControl.routePanel.state.set({
     	type: "auto",
-        to: [55.75164123543684, 37.662869272700114],
+        to: "Наставнический перeулок, 6",
         toEnabled: false
     	});
 	routePanelControl.routePanel.options.set({
@@ -85,6 +85,10 @@ $(document).ready(function() {
 			title: $(this).data("title"),
 			visible: true
 			});
+		setTimeout(function() {
+			$(".ymaps-2-1-72-route-panel-input__icon_first .ymaps-2-1-72-route-panel-input__circle").css("fill", "rgb(1, 31, 88)");	
+			$(".ymaps-2-1-72-route-panel-input__icon_last .ymaps-2-1-72-route-panel-input__circle").css("fill", "rgb(244, 86, 65)");
+			}, 50);
 		e.preventDefault();
 		});
 	return false;

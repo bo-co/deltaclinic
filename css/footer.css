@@ -57,12 +57,10 @@ div.container > footer > div.contacts > div > ul > li > a.phone::before {
 
 /* цвет точек на Яндекс Карте (маршруты) - начало */
 .ymaps-2-1-72-route-panel-input__icon_first .ymaps-2-1-72-route-panel-input__circle {
-    fill : rgba(1, 31, 88, 1) !important;
     color : rgba(1, 31, 88, 1) !important;
 	}
 	
 .ymaps-2-1-72-route-panel-input__icon_last .ymaps-2-1-72-route-panel-input__circle {
-    fill: rgba(244, 86, 65, 1) !important;
     color: rgba(244, 86, 65, 1) !important;
 	}
 /* цвет точек на Яндекс Карте (маршруты) - конец */
