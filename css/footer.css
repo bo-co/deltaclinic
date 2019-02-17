@@ -38,7 +38,41 @@ div.container > footer > div.contacts > div > ul {
 	}
 	
 div.container > footer > div.contacts > div > ul > li {
+	position : relative;
+	padding : 0 0 0 30px;
 	margin : 15px 0;
+	}
+	
+div.container > footer > div.contacts > div > ul > li::before {
+	position : absolute;
+	left : 0;
+	z-index : 10;
+	color : rgb(186, 195, 210);
+	}
+	
+div.container > footer > div.contacts > div > ul > li.location::before {
+	top : 0;
+	content: "\e905";
+	}
+	
+div.container > footer > div.contacts > div > ul > li.phone::before {
+	top : 0;
+	content: "\e907";
+	}
+	
+div.container > footer > div.contacts > div > ul > li.time::before {
+	top : 0;
+	content: "\e908";
+	}
+	
+div.container > footer > div.contacts > div > ul > li.email::before {
+	top : 0;
+	content: "\e902";
+	}
+	
+div.container > footer > div.contacts > div > ul > li.payment::before {
+	top : 10px;
+	content: "\e900";
 	}
 	
 div.container > footer > div.contacts > div > ul > li > span {	
@@ -53,6 +87,52 @@ div.container > footer > div.contacts > div > ul > li > a.phone {
 	
 div.container > footer > div.contacts > div > ul > li > a.phone::before {
 	display : none !important;
+	}
+	
+div.container > footer > div.contacts > div > ul > li.payment > ul {
+	display : flex;
+	padding : 0;
+	margin : 0;
+	list-style : none;
+	}
+	
+div.container > footer > div.contacts > div > ul > li.payment > ul > li {
+	position : relative;
+	width : 55px;
+	height : 55px;
+	}
+	
+div.container > footer > div.contacts > div > ul > li.payment > ul > li:not(:last-child) {
+	margin : 0 10px 0 0;
+	}
+	
+div.container > footer > div.contacts > div > ul > li.payment > ul > li::before {
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 10;
+	width : 100%;
+	height : 100%;
+	content : "";
+	background-position : 50% 50%;
+	background-repeat : no-repeat;
+	background-size : contain;
+	}
+	
+div.container > footer > div.contacts > div > ul > li.payment > ul > li.mir::before {
+	background-image : url("../img/mir.svg?170220191124");
+	}
+	
+div.container > footer > div.contacts > div > ul > li.payment > ul > li.visa::before {
+	background-image : url("../img/visa.svg?170220191124");
+	}
+	
+div.container > footer > div.contacts > div > ul > li.payment > ul > li.master::before {
+	background-image : url("../img/master.svg?170220191124");
+	}
+	
+div.container > footer > div.contacts > div > ul > li.payment > ul > li.maestro::before {
+	background-image : url("../img/maestro.svg?170220191124");
 	}
 
 /* цвет точек на Яндекс Карте (маршруты) - начало */
@@ -71,7 +151,7 @@ div.container > footer > div.contacts > div > ul > li > a.phone::before {
 		}
 		
 	div.container > footer > div.contacts > div:last-child {
-		padding : 30px 60px;
+		padding : 30px 60px 0 60px;
 		}
 		
 	div.container > footer > div.contacts > div > span {
@@ -80,6 +160,10 @@ div.container > footer > div.contacts > div > ul > li > a.phone::before {
 		
 	div.container > footer > div.contacts > div > ul > li > a.phone {
 		font : 400 24px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > footer > div.contacts > div > ul > li::before {
+		font : normal 16px/24px "icomoon";
 		}
 	}
 	
@@ -89,7 +173,7 @@ div.container > footer > div.contacts > div > ul > li > a.phone::before {
 		}
 		
 	div.container > footer > div.contacts > div:last-child {
-		padding : 25px 50px;
+		padding : 25px 50px 0 50px;
 		}
 		
 	div.container > footer > div.contacts > div > span {
@@ -99,6 +183,10 @@ div.container > footer > div.contacts > div > ul > li > a.phone::before {
 	div.container > footer > div.contacts > div > ul > li > a.phone {
 		font : 400 24px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
+		
+	div.container > footer > div.contacts > div > ul > li::before {
+		font : normal 16px/24px "icomoon";
+		}
 	}
 	
 @media (min-width : 721px) and (max-width : 1040px) {
@@ -107,7 +195,7 @@ div.container > footer > div.contacts > div > ul > li > a.phone::before {
 		}
 
 	div.container > footer > div.contacts > div:last-child {
-		padding : 20px 40px;
+		padding : 20px 40px 0 40px;
 		}
 		
 	div.container > footer > div.contacts > div > span {
@@ -116,6 +204,10 @@ div.container > footer > div.contacts > div > ul > li > a.phone::before {
 
 	div.container > footer > div.contacts > div > ul > li > a.phone {
 		font : 400 20px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+
+	div.container > footer > div.contacts > div > ul > li::before {
+		font : normal 16px/20px "icomoon";
 		}
 	}
 	
@@ -129,7 +221,7 @@ div.container > footer > div.contacts > div > ul > li > a.phone::before {
 		}
 		
 	div.container > footer > div.contacts > div:last-child {
-		padding : 30px;
+		padding : 30px 30px 0 30px;
 		}
 		
 	div.container > footer > div.contacts > div > span {
@@ -138,6 +230,10 @@ div.container > footer > div.contacts > div > ul > li > a.phone::before {
 		
 	div.container > footer > div.contacts > div > ul > li > a.phone {
 		font : 400 20px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > footer > div.contacts > div > ul > li::before {
+		font : normal 16px/20px "icomoon";
 		}
 	}
 	
@@ -151,7 +247,7 @@ div.container > footer > div.contacts > div > ul > li > a.phone::before {
 		}
 		
 	div.container > footer > div.contacts > div:last-child {
-		padding : 20px;
+		padding : 20px 20px 0 20px;
 		}
 		
 	div.container > footer > div.contacts > div > span {
@@ -160,5 +256,9 @@ div.container > footer > div.contacts > div > ul > li > a.phone::before {
 		
 	div.container > footer > div.contacts > div > ul > li > a.phone {
 		font : 400 20px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > footer > div.contacts > div > ul > li::before {
+		font : normal 16px/20px "icomoon";
 		}
 	}

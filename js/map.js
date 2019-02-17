@@ -88,8 +88,19 @@ $(document).ready(function() {
 		setTimeout(function() {
 			$(".ymaps-2-1-72-route-panel-input__icon_first .ymaps-2-1-72-route-panel-input__circle").css("fill", "rgb(1, 31, 88)");	
 			$(".ymaps-2-1-72-route-panel-input__icon_last .ymaps-2-1-72-route-panel-input__circle").css("fill", "rgb(244, 86, 65)");
-			}, 50);
+			$(".ymaps-2-1-72-popup").css("display", "block");
+			}, 100);
 		e.preventDefault();
 		});
 	return false;
+	});
+	
+$(document).mouseup(function(e) {
+	if(!$(".ymaps-2-1-72-popup").is(e.target) && $(".ymaps-2-1-72-popup").has(e.target).length === 0 && $(".ymaps-2-1-72-popup").is(":visible")) {
+		if(routePanelControl) {
+			$(".ymaps-2-1-72-popup").css("display", "none");
+			}
+		}
+    e.preventDefault();
+    return false;
 	});
