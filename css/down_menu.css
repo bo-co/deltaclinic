@@ -80,9 +80,9 @@ div.down_menu > span {
 
 @media (min-width: 1041px) {
 	div.down_menu {
-		width: 1000px;
+		width: 940px;
 		padding-top: 35px;
-		margin: 0 auto 150px;
+		margin: 0 auto 40px;
 	}
 
 	li.menu_head {
@@ -91,7 +91,7 @@ div.down_menu > span {
 
 	div.down_menu > span {
 		position: absolute;
-		bottom: 0;
+		bottom: 10px;
 		right: 0;
 		font: 400 13px/18px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	}
