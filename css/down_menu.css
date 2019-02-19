@@ -123,22 +123,14 @@ footer > ul > li:last-child > span {
 		padding-bottom: 10px !important;
 	}
 
-	footer > ul > li {
-		width: 100%;
-	}
-
 	footer > ul > li.social {
 		display: flex;
-		justify-content: center;
 		align-items: center;
-	}
-
-	footer > ul > li.social > ul {
-		margin-left: 40px !important;
 	}
 
 	footer > ul > li:not([class]) {
 		text-align: center;
+		width: 100%;
 	}
 
 	footer > ul > li.social {
@@ -186,6 +178,12 @@ footer > ul > li:last-child > span {
 		padding-left: 40px;
 		padding-right: 40px;
 	}
+
+	footer > ul > li.social {
+		justify-content: space-around;
+		margin-left: 40px;
+		margin-right: 40px;
+	}
 }
 
 @media (min-width : 481px) and (max-width : 720px) {
@@ -193,11 +191,23 @@ footer > ul > li:last-child > span {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
+
+	footer > ul > li.social {
+		justify-content: space-around;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
 }
 
 @media (max-width : 480px) {
 	footer > ul > li:last-child {
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+
+	footer > ul > li.social {
+		justify-content: space-between;
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 }
