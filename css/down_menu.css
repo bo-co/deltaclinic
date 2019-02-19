@@ -3,17 +3,17 @@
 footer > ul {
 	display: flex;
 	list-style: none;
-	padding: 0 !important;
-	margin: 0 !important;
+	padding: 0;
+	margin: 0;
 }
 
 footer > ul > li > ul {
 	list-style: none;
-	padding: 0 !important;
-	margin: 0 !important;
+	padding: 0;
+	margin: 0;
 }
 
-footer > ul > li > span:not(:last-child) {
+footer > ul > li > span {
 	font-weight: 700;
 }
 
@@ -41,13 +41,13 @@ footer > ul > li > ul > li {
 
 footer > ul > li > ul.social_list {
 	display: flex;
-	width: 150px;
+	width: 170px;
 	justify-content: space-between;
 }
 
 footer > ul > li > ul.social_list > li {
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
 }
 
 footer > ul > li > ul.social_list > li > a {
@@ -64,7 +64,11 @@ footer > ul > li > ul.social_list > li > a::after {
 	height: 100%;
 	top: 0;
 	left: 0;
-	font : normal 30px/30px "icomoon";
+	font : normal 35px/35px "icomoon";
+}
+
+footer > ul > li > ul.social_list > li:hover > a::after {
+	transform: scale(1.1);
 }
 
 footer > ul > li > ul.social_list > li > a.u-tube::after {
@@ -87,7 +91,7 @@ footer > ul > li > ul.social_list > li > a.vk::after {
 	color: rgba(77, 117, 164, 1);
 }
 
-footer > ul > li:last-child > span {
+footer > span {
 	color: rgba(60, 60, 60, 1);
 }
 
@@ -100,18 +104,18 @@ footer > ul > li:last-child > span {
 		margin: 0 auto 20px !important;
 	}
 
-	footer > ul > li:not(:last-child) > span {
+	footer > ul > li > span {
 		margin-bottom: 24px;
 	}
 
-	footer > ul > li:last-child {
+	footer > span {
 		position: absolute;
-		bottom: 10px;
-		right: 0;
+		bottom: 30px;
+		left: 52%;
 		font: 400 13px/18px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	}
 
-	footer > ul > li:last-child > span > br {
+	footer > span > br {
 		display: none;
 	}
 }
@@ -123,9 +127,12 @@ footer > ul > li:last-child > span {
 		padding-bottom: 10px !important;
 	}
 
-	footer > ul > li.social {
-		display: flex;
-		align-items: center;
+	footer > ul > li.social > span {
+		display: none;
+	}
+
+	footer > ul > li.social > ul {
+		margin: 0 auto;
 	}
 
 	footer > ul > li:not([class]) {
@@ -135,11 +142,10 @@ footer > ul > li:last-child > span {
 
 	footer > ul > li.social {
 		padding-top: 20px;
+		padding-bottom: 60px;
 	}
 
-	footer > ul > li:first-child > span,
-	footer > ul > li:nth-child(2) > span,
-	footer > ul > li:nth-child(3) > span {
+	footer > ul > li:not(:last-child) > span {
 		display: block;
 		width: 100%;
 		background-color: rgba(245, 104, 86, 1);
@@ -150,64 +156,23 @@ footer > ul > li:last-child > span {
 		cursor: pointer;
 	}
 
-	footer > ul > li:first-child > ul,
-	footer > ul > li:nth-child(2) > ul,
-	footer > ul > li:nth-child(3) > ul {
-		display: none;
+	footer > ul > li:not(:last-child) > ul {
+		overflow: hidden;
+		height: 0;
 		transition : all 0.25s ease;
 	}
 
-	footer > ul > li:first-child > ul.opened,
-	footer > ul > li:nth-child(2) > ul.opened,
-	footer > ul > li:nth-child(3) > ul.opened  {
-		display: block;
+	footer > ul > li:not(:last-child) > ul.opened{
+		height: 100%;
 	}
 
-	footer > ul > li:last-child {
+	footer > span {
+		position: absolute;
 		text-align: center;
-		padding-top: 20px;
+	    bottom: 10px;
+	    left: 50%;
 		white-space: nowrap;
-		padding-bottom: 20px;
+	    transform: translate(-50%, 0);
 		font: 400 12px/16px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
-	}
-
-}
-
-@media (min-width: 721px) and (max-width : 1040px) {
-	footer > ul > li:last-child {
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-
-	footer > ul > li.social {
-		justify-content: space-around;
-		margin-left: 40px;
-		margin-right: 40px;
-	}
-}
-
-@media (min-width : 481px) and (max-width : 720px) {
-	footer > ul > li:last-child {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-
-	footer > ul > li.social {
-		justify-content: space-around;
-		margin-left: 30px;
-		margin-right: 30px;
-	}
-}
-
-@media (max-width : 480px) {
-	footer > ul > li:last-child {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-
-	footer > ul > li.social {
-		justify-content: space-between;
-		margin-left: 20px;
-		margin-right: 20px;
 	}
 }
