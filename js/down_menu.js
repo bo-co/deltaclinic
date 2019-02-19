@@ -1,20 +1,14 @@
-function resize() {
-	if ($("ul.drop_down > li").hasClass("opened")) {
-		$("ul.drop_down > li").removeClass("opened");
-	}
-}
-
 $(document).ready(function() {
-		$("li.clinic").click(function() {
-			$("li.clinic ~ li").toggleClass("opened");
+		$("footer > ul > li:first-child > span").click(function() {
+			$("footer > ul > li:first-child > ul").toggleClass("opened");
 		});
 
-		$("li.patient").click(function() {
-			$("li.patient ~ li").toggleClass("opened");
+		$("footer > ul > li:nth-child(2) > span").click(function() {
+			$("footer > ul > li:nth-child(2) > ul").toggleClass("opened");
 		});
 
-		$("li.depart").click(function() {
-			$("li.depart ~ li").toggleClass("opened");
+		$("footer > ul > li:nth-child(3) > span").click(function() {
+			$("footer > ul > li:nth-child(3) > ul").toggleClass("opened");
 		});
 	return false;
 	});
