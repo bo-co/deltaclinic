@@ -17,6 +17,10 @@ footer > ul > li > span:not(:last-child) {
 	font-weight: 700;
 }
 
+footer > ul > li > ul > li {
+	font: 400 15px/18px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+}
+
 footer > ul > li > ul > li > a {
 	color: rgba(1, 31, 88, 1);
 	transition : all 0.25s ease;
@@ -65,18 +69,22 @@ footer > ul > li > ul.social_list > li > a::after {
 
 footer > ul > li > ul.social_list > li > a.u-tube::after {
 	content: "\e90a";
+	color: rgba(237, 31, 36, 1);
 }
 
 footer > ul > li > ul.social_list > li > a.fb::after {
 	content: "\e90b";
+	color: rgba(59, 89, 152, 1);
 }
 
 footer > ul > li > ul.social_list > li > a.insta::after {
 	content: "\e90c";
+	color: rgba(105, 137, 179, 1);
 }
 
 footer > ul > li > ul.social_list > li > a.vk::after {
 	content: "\e90d";
+	color: rgba(77, 117, 164, 1);
 }
 
 footer > ul > li:last-child > span {
