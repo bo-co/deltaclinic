@@ -35,19 +35,19 @@ footer > ul > li > ul > li > a::before {
 }
 
 footer > ul > li > ul > li {
-	margin-top: 10px;
+	margin-top: 5px;
 	margin-bottom: 10px;
 }
 
 footer > ul > li > ul.social_list {
 	display: flex;
-	width: 170px;
+	width: 190px;
 	justify-content: space-between;
 }
 
 footer > ul > li > ul.social_list > li {
-	width: 35px;
-	height: 35px;
+	width: 40px;
+	height: 40px;
 }
 
 footer > ul > li > ul.social_list > li > a {
@@ -64,7 +64,7 @@ footer > ul > li > ul.social_list > li > a::after {
 	height: 100%;
 	top: 0;
 	left: 0;
-	font : normal 35px/35px "icomoon";
+	font : normal 40px/40px "icomoon";
 }
 
 footer > ul > li > ul.social_list > li:hover > a::after {
@@ -126,10 +126,6 @@ footer > span {
 		width: 100%;
 		flex-direction: column;
 		padding-bottom: 10px !important;
-	}
-
-	footer > ul > li.social > span {
-		display: none;
 	}
 
 	footer > ul > li.social > ul {

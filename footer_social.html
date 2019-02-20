@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0" />
+    	<link rel="stylesheet" href="fonts/opensans/opensans.css?170220191337" />
+    	<link rel="stylesheet" href="fonts/icomoon/icomoon.css?170220191337" />
+    	<link rel="stylesheet" href="css/default.css?170220191337" />
+    	<link rel="stylesheet" href="css/style.css?170220191337" />
+    	<link rel="stylesheet" href="css/footer.css?170220191337" />
+		<link rel="stylesheet" href="css/down_menu2.css?180220191337" />
+		<script defer src="js/jquery.js?170220191337"></script>
+		<script defer src="https://api-maps.yandex.ru/2.1.72/?lang=ru_RU"></script>
+		<script defer src="js/map.js?170220191337"></script>
+		<script defer src="js/down_menu.js?180220191337"></script>
+		<title>«Дельтаклиник» — многопрофильный медицинский центр</title>
+	</head>
+	<body onload="resize();" onresize="resize();">
+		<div class="container">
+			<header></header>
+			<footer>
+				<div class="contacts">
+					<div>
+						<div class="map" id="map"></div>
+					</div>
+					<div>
+						<span>Контакты</span>
+						<ul>
+							<li class="location">
+								<span>Москва, Наставнический перeулок, 6</span>
+								<a class="route" href="#" title="Как пройти" data-title="Как пройти" data-type="pedestrian">Как пройти</a><br />
+								<span>(м. Курская, м. Чкаловская)</span>
+								<a class="route" href="#" title="Как проехать" data-title="Как проехать" data-type="auto">Как проехать</a>
+							</li>
+							<li class="phone">
+								<a class="phone" href="tel:+74959179292" title="+7 (495) 917-92-92">+7 (495) 917-92-92</a>
+								<a href="#" title="Обратный звонок">Обратный звонок</a>
+							</li>
+							<li class="time">
+								<span>с 8:00 до 21:00, ежедневно</span>
+							</li>
+							<li class="email">
+								<span>Справочно-информационная служба:</span><br />
+								<a href="mailto:consult@deltaclinic.ru" title="Справочно-информационная служба">consult@deltaclinic.ru</a>
+								<br /><br />
+								<span>Служба контроля качества:</span><br />
+								<a href="mailto:control@deltaclinic.ru" title="Служба контроля качества">control@deltaclinic.ru</a>
+								<br /><br />
+								<span>Отдел маркетинга и рекламы:</span><br />
+								<a href="mailto:marketing@deltaclinic.ru" title="Отдел маркетинга и рекламы">marketing@deltaclinic.ru</a>
+							</li>
+							<li class="payment">
+								<ul>
+									<li class="visa"></li>
+									<li class="master"></li>
+									<li class="maestro"></li>
+									<li class="mir"></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<ul>
+					<li>
+						<span>Дельта Клиник</span>
+						<ul>
+							<li>
+								<a href="/about/" title="О клинике">О клинике</a>
+							</li>
+							<li>
+								<a href="/spetsialisty/" title="Врачи">Врачи</a>
+							</li>
+							<li>
+								<a href="/info/" title="Статьи">Статьи</a>
+							</li>
+							<li>
+								<a href="/news/" title="Новости">Новости</a>
+							</li>
+							<li>
+								<a href="/films/" title="Фильмы о клинике">Фильмы о клинике</a>
+							</li>
+							<li>
+								<a href="/vacancies/" title="Вакансии">Вакансии</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>Пациентам</span>
+						<ul>
+							<li>
+								<a href="/actions/" title="Акции">Акции</a>
+							</li>
+							<li>
+								<a href="/program/" title="Программа">Программа</a>
+							</li>
+							<li>
+								<a href="/services/" title="Услуги и цены">Услуги и цены</a>
+							</li>
+							<li>
+								<a href="/zapis/" title="Запись на прием">Запись на прием</a>
+							</li>
+							<li>
+								<a href="/about/otzyvyo_deltaclinic/" title="Отзывы">Отзывы</a>
+							</li>
+							<li>
+								<a href="/helpful/" title="Полезная информация">Полезная информация</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>Наши отделения</span>
+						<ul>
+							<li>
+								<a href="https://xn----7sbbmeuafalcjhvfrb7a.xn--80adxhks/" target="_blank" title="Клиника Андрологии">Клиника Андрологии</a>
+							</li>
+							<li>
+								<a href="http://deltabeauty.ru/" target="_blank" title="Центр косметологии">Центр косметологии</a>
+							</li>
+						</ul>
+					</li>
+					<li class="social">
+						<ul class="social_list">
+							<li>
+								<a class="u-tube" href="https://www.youtube.com/user/Deltaclinic" title="Youtube-канал" target="_blank"></a>
+							</li>
+							<li>
+								<a class="fb" href="#" title="Facebook"></a>
+							</li>
+							<li>
+								<a class="insta" href="#" title="Instagram"></a>
+							</li>
+							<li>
+								<a class="vk" href="#" title="ВКонтакте"></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<span>&copy; Дельта Клиник 1999 – 2019.<br /> Лицензия ЛО-77-01-010877 от 04.09.2015</span>
+			</footer>
+		</div>
+	</body>
+</html>
