@@ -43,6 +43,7 @@ footer > ul > li > ul.social_list {
 	display: flex;
 	width: 190px;
 	justify-content: space-between;
+	margin-left: auto;
 }
 
 footer > ul > li > ul.social_list > li {
@@ -114,7 +115,8 @@ footer > span {
 		position: relative;
 		bottom: 45px;
 		margin: 0 auto;
-		width: 940px;
+		padding: 0 50px;
+		max-width: 1140px;
 		font: 400 12px/16px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		text-align: right;
 
