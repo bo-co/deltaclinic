@@ -9,7 +9,6 @@ footer > ul {
 
 footer > ul > li > ul {
 	list-style: none;
-	padding: 0;
 	margin: 0;
 }
 
@@ -107,6 +106,14 @@ footer > span {
 		width: 25%;
 	}
 
+	footer > ul > li > ul {
+		padding: 10px 0;
+	}
+
+	footer > ul > li > ul.social_list {
+		padding-top: 30px !important;
+	}
+
 	footer > ul > li > span {
 		margin-bottom: 24px;
 	}
@@ -137,6 +144,10 @@ footer > span {
 
 	footer > ul > li.social > ul {
 		margin: 0 auto;
+	}
+
+	footer > ul > li > ul {
+		padding: 0;
 	}
 
 	footer > ul > li:not([class]) {

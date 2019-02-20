@@ -9,7 +9,6 @@ footer > ul {
 
 footer > ul > li > ul {
 	list-style: none;
-	padding: 0;
 	margin: 0;
 }
 
@@ -43,11 +42,12 @@ footer > ul > li > ul.social_list {
 	display: flex;
 	width: 170px;
 	justify-content: space-between;
+	margin-left: auto;
 }
 
 footer > ul > li > ul.social_list > li {
-	width: 35px;
-	height: 35px;
+	width: 30px;
+	height: 30px;
 }
 
 footer > ul > li > ul.social_list > li > a {
@@ -64,7 +64,7 @@ footer > ul > li > ul.social_list > li > a::after {
 	height: 100%;
 	top: 0;
 	left: 0;
-	font : normal 40px/40px "icomoon";
+	font : normal 30px/30px "icomoon";
 }
 
 footer > ul > li > ul.social_list > li:hover > a::after {
@@ -106,18 +106,27 @@ footer > span {
 		width: 25%;
 	}
 
-	footer > ul > li > span {
-		margin-bottom: 24px;
+	footer > ul > li > ul {
+		padding: 10px 0;
 	}
+
+	footer > ul > li.social  {
+		display: flex;
+		flex-direction: column;
+	}
+
+	footer > ul > li.social > span {
+		align-self: flex-end;
+}
 
 	footer > span {
 		position: relative;
 		bottom: 45px;
 		margin: 0 auto;
-		width: 940px;
+		padding: 0 50px;
+		max-width: 1140px;
 		font: 400 12px/16px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		text-align: right;
-
 	}
 
 	footer > span > br {
@@ -135,6 +144,10 @@ footer > span {
 
 	footer > ul > li.social > span {
 		display: none;
+	}
+
+	footer > ul > li > ul {
+		padding: 0;
 	}
 
 	footer > ul > li.social > ul {
