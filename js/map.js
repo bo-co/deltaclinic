@@ -74,7 +74,7 @@ function map() {
 	}
 	
 $(document).ready(function() {
-	$("div.container > footer > div.contacts > div > ul > li > a.route").on("click", function(e) {
+	$("div.container > footer > div.contacts > div > ul > li > a.route").on("tap", function(e) {
 		if(!routePanelControl) {
 			map();
 			}

@@ -39,31 +39,31 @@ a:hover::before {
 	}
 	
 @media (min-width : 1401px) {
-	div.container {
+	body {
 		font : 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
 @media (min-width : 1041px) and (max-width : 1400px) {
-	div.container {
+	body {
 		font : 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
 @media (min-width : 721px) and (max-width : 1040px) {
-	div.container {
+	body {
 		font : 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
 @media (min-width : 481px) and (max-width : 720px) {
-	div.container {
+	body {
 		font : 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
 @media (max-width : 480px) {
-	div.container {
+	body {
 		font : 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
