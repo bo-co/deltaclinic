@@ -2,9 +2,9 @@
 
 footer > ul {
 	display: flex;
+	max-width: 1140px;
 	list-style: none;
-	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 }
 
 footer > ul > li > ul {
@@ -35,19 +35,19 @@ footer > ul > li > ul > li > a::before {
 }
 
 footer > ul > li > ul > li {
-	margin-top: 10px;
+	margin-top: 5px;
 	margin-bottom: 10px;
 }
 
 footer > ul > li > ul.social_list {
 	display: flex;
-	width: 170px;
+	width: 190px;
 	justify-content: space-between;
 }
 
 footer > ul > li > ul.social_list > li {
-	width: 35px;
-	height: 35px;
+	width: 40px;
+	height: 40px;
 }
 
 footer > ul > li > ul.social_list > li > a {
@@ -64,7 +64,7 @@ footer > ul > li > ul.social_list > li > a::after {
 	height: 100%;
 	top: 0;
 	left: 0;
-	font : normal 35px/35px "icomoon";
+	font : normal 40px/40px "icomoon";
 }
 
 footer > ul > li > ul.social_list > li:hover > a::after {
@@ -92,18 +92,19 @@ footer > ul > li > ul.social_list > li > a.vk::after {
 }
 
 footer > span {
-	position: absolute;
+	display: block;
 	color: rgba(60, 60, 60, 1);
-	font: 400 12px/16px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 }
 
 @media (min-width: 1041px) {
 	footer > ul {
 		position: relative;
-		width: 940px;
-		justify-content: space-between;
-		padding-top: 35px !important;
-		margin: 0 auto 20px !important;
+		padding: 35px 50px 0 50px;
+		margin-bottom: 20px !important;
+	}
+
+	footer > ul > li {
+		width: 25%;
 	}
 
 	footer > ul > li > span {
@@ -111,8 +112,12 @@ footer > span {
 	}
 
 	footer > span {
-		bottom: 30px;
-		left: 54%;
+		position: relative;
+		bottom: 45px;
+		margin: 0 auto;
+		width: 940px;
+		font: 400 12px/16px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		text-align: right;
 
 	}
 
@@ -126,10 +131,6 @@ footer > span {
 		width: 100%;
 		flex-direction: column;
 		padding-bottom: 10px !important;
-	}
-
-	footer > ul > li.social > span {
-		display: none;
 	}
 
 	footer > ul > li.social > ul {
@@ -168,6 +169,7 @@ footer > span {
 	}
 
 	footer > span {
+		position: absolute;
 		text-align: center;
 	    bottom: 10px;
 	    left: 50%;
