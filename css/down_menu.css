@@ -40,7 +40,7 @@ footer > ul > li > ul > li {
 
 footer > ul > li > ul.social_list {
 	display: flex;
-	width: 170px;
+	width: 150px;
 	justify-content: space-between;
 	margin-left: auto;
 }
