@@ -160,6 +160,7 @@ function init() {
 		if(!$("div#map").is(e.target) && $("div#map").has(e.target).length === 0 && $("div#map").is(":visible")) {
 			if(routePanelControl) {
 				myMap.controls.remove(routePanelControl);
+				myMap.geoObjects.add(myPlacemark);
 				}
 			}
     	e.preventDefault();
