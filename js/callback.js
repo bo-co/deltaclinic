@@ -50,7 +50,7 @@ $(document).ready(function() {
 		$("div.callback").css("top", parseInt($(window).scrollTop()+20) + "px").toggleClass("opened");
 		 e.preventDefault();
 		});
-	$("div.callback > button").on("tap", function() {
+	$("div.callback > button").on("click", function() {
 		$("div.callback").removeClass("opened");
 		});
 	$(".field").on("propertychange change tap keyup input paste", function() {
@@ -106,7 +106,7 @@ $(document).ready(function() {
 				}
 			}, 100);
 		});
-	$("div.form > form > button").on("tap", function() {
+	$("div.form > form > button").on("click", function() {
 		if ($(this).hasClass("active")) {
 			/* $(this).parents("form").submit(); */
 			$("div.form."+ $(this).data("form")).html("<span>Спасибо!</span><p>В ближайшее время с Вами свяжется наш специалист и ответит на все, интересующие Вас, вопросы.</p>");
@@ -115,10 +115,4 @@ $(document).ready(function() {
 	clear($(".field"));
 	$("input[type=tel]").inputmask("+7 (999) 999-99-99");
 	return false;
-	});
-	
-$(document).mouseup(function(e) {
-    if (!$("div.form.cb").is(e.target) && $("div.form.cb").has(e.target).length === 0) {
-      	$("div.callback").removeClass("opened");
-    	} 
 	});

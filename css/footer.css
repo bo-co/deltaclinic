@@ -135,7 +135,53 @@ div.container > footer > div.contacts > div > ul > li.payment > ul > li.maestro:
 	background-image : url("../img/maestro.svg?170220191124");
 	}
 
-/* цвет точек на Яндекс Карте (маршруты) - начало */
+/* Яндекс Карта - начало */
+div.zoom {
+	position : absolute;
+    left : 20px;
+	}
+
+div.zoom > div {
+    position : relative;
+    margin-bottom : 10px;
+    width : 40px;
+    height : 40px;
+	background-color : rgba(255 , 255 , 255, 1);
+    cursor : pointer;
+    box-shadow : 0 2px 5px rgba(0, 0, 0, 0.25);
+    transition : all 0.25s ease;
+	}
+	
+div.zoom > div::before, 
+div.zoom > div::after {
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    margin : -1px 0 0 -8px;
+    width : 16px;
+    height : 2px;
+    background-color : rgba(244, 86, 65, 1);
+    content : '.';
+    text-indent : -999em;
+    overflow : hidden;
+    transition : all 0.25s ease;
+	}
+	
+div.zoom > div.in::before {
+    margin : -8px 0 0 -1px;
+    width : 2px;
+    height : 16px;
+	}
+	
+div.zoom > div:hover {
+	background-color : rgba(244, 86, 65, 1);
+	}
+	
+div.zoom > div:hover::before, 
+div.zoom > div:hover::after {
+	background-color : rgba(255 , 255 , 255, 1);
+	}
+
 .ymaps-2-1-72-route-panel-input__icon_first .ymaps-2-1-72-route-panel-input__circle {
     color : rgba(1, 31, 88, 1) !important;
 	}
@@ -143,7 +189,7 @@ div.container > footer > div.contacts > div > ul > li.payment > ul > li.maestro:
 .ymaps-2-1-72-route-panel-input__icon_last .ymaps-2-1-72-route-panel-input__circle {
     color: rgba(244, 86, 65, 1) !important;
 	}
-/* цвет точек на Яндекс Карте (маршруты) - конец */
+/* Яндекс Карта - конец */
 	
 @media (min-width : 1401px) {
 	div.container > footer > div.contacts > div {

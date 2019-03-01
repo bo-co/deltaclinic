@@ -47,10 +47,6 @@ div.form > form > ul > li > input[type=tel] {
 div.form > form > ul > li > input.error {
 	border : 1px solid rgba(244, 86, 65, 1) !important;
 	}
-
-div.form > form > ul > li > input.success {
-	border : 1px solid rgba(1, 31, 88, 1) !important;
-	}
 	
 div.form > form > ul > li > input[type=text] + span,
 div.form > form > ul > li > input[type=email] + span,

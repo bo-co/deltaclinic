@@ -9,7 +9,11 @@ div.callback {
 	}
 	
 div.callback.opened {
-	display : block;
+	display : flex;
+  	justify-content : center;
+  	align-content : space-between;
+  	align-items : center;
+  	flex-direction : column;
 	}
 	
 div.callback.opened + div.container::before {
@@ -35,34 +39,46 @@ div.callback > button {
 	top : 0;
 	right : 0;
 	z-index : 10;
-	width : 40px;
-	height : 40px;
-	background-color : rgba(0, 0, 0, 0);
+    width : 40px;
+    height : 40px;
+    margin-bottom : 10px;
+	background-color : rgba(0 , 0 , 0, 0);
 	border : solid 2px rgba(255, 255, 255, 1);
 	border-radius : 50%;
 	transition : all 0.25s ease;
 	}
 	
 div.callback > button:hover {
-	cursor : pointer;
 	transform : scale(1.1);
+	cursor : pointer;
+	}
+	
+div.callback > button::before, 
+div.callback > button::after {
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    background-color : rgba(255, 255, 255, 1);
+    content : '.';
+    text-indent : -999em;
+    transform : rotate(45deg);
+    overflow : hidden;
 	}
 	
 div.callback > button::before {
-	position : absolute;
-	top : 16px;
-	left : 9px;
-	z-index : 10;
-	font-size : 36px;
-	line-height : 0;
-	color : rgba(255, 255, 255, 1);
-	transform : rotate(45deg);
-	content : "+";
+    margin : -9px 0 0 -1px;
+    width : 2px;
+    height : 18px;
+	}
+	
+div.callback > button::after {
+    margin : -1px 0 0 -9px;
+    width : 18px;
+    height : 2px;
 	}
 	
 div.callback > div.form {
 	max-width : 340px;
-	margin : 0 auto;
 	}
 	
 div.callback > div.form > span {
@@ -85,7 +101,7 @@ div.callback > div.form a::before {
 		width : calc(100% - 120px);
 		min-height : calc(100% - 120px);
 		}
-		
+
 	div.callback > div.form > span {
 		font : 700 36px/36px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
