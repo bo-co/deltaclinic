@@ -9,12 +9,12 @@ div.container > footer {
 	
 div.container > footer > div.contacts {
 	display : flex;
-	flex-wrap : wrap;
 	background-color : rgba(239, 241, 245, 1);
 	}
 	
 div.container > footer > div.contacts > div:first-child {
 	position : relative;
+	min-height : 320px;
 	overflow : hidden;
 	}
 	
@@ -135,7 +135,6 @@ div.container > footer > div.contacts > div > ul > li.payment > ul > li.maestro:
 	background-image : url("../img/maestro.svg?170220191124");
 	}
 
-/* Яндекс Карта - начало */
 div.zoom {
 	position : absolute;
     left : 20px;
@@ -189,7 +188,6 @@ div.zoom > div:hover::after {
 .ymaps-2-1-72-route-panel-input__icon_last .ymaps-2-1-72-route-panel-input__circle {
     color: rgba(244, 86, 65, 1) !important;
 	}
-/* Яндекс Карта - конец */
 	
 @media (min-width : 1401px) {
 	div.container > footer > div.contacts > div {
@@ -258,14 +256,10 @@ div.zoom > div:hover::after {
 	}
 	
 @media (min-width : 481px) and (max-width : 720px) {
-	div.container > footer > div.contacts > div {
-		width : 100%;
+	div.container > footer > div.contacts {
+		flex-direction : column;
 		}
-		
-	div.container > footer > div.contacts > div:first-child {
-		height : 320px;
-		}
-		
+	
 	div.container > footer > div.contacts > div:last-child {
 		padding : 30px 30px 0 30px;
 		}
@@ -284,14 +278,10 @@ div.zoom > div:hover::after {
 	}
 	
 @media (max-width : 480px) {
-	div.container > footer > div.contacts > div {
-		width : 100%;
+	div.container > footer > div.contacts {
+		flex-direction : column;
 		}
-		
-	div.container > footer > div.contacts > div:first-child {
-		height : 320px;
-		}
-		
+
 	div.container > footer > div.contacts > div:last-child {
 		padding : 20px 20px 0 20px;
 		}
