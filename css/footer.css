@@ -18,15 +18,6 @@ div.container > footer > div.contacts > div:first-child {
 	overflow : hidden;
 	}
 	
-div.container > footer > div.contacts > div > div.map {
-	position : absolute;
-	top : 0;
-	left : 0;
-	z-index : 10;
-	width : 100%;
-	height : calc(100% + 40px);
-	}
-	
 div.container > footer > div.contacts > div > span {
 	color : rgba(1, 31, 88, 1);
 	}
@@ -135,9 +126,93 @@ div.container > footer > div.contacts > div > ul > li.payment > ul > li.maestro:
 	background-image : url("../img/maestro.svg?170220191124");
 	}
 
+div.container > footer > div.contacts > div > div.route {
+	display : none;
+	position : absolute;
+	top : 20px;
+	left : 20px;
+	z-index : 20;
+	width : 280px;
+	height : 40px;
+	padding-right : 40px;
+	background-color : rgba(255, 255, 255, 1);
+	box-shadow : 0 2px 5px rgba(0, 0, 0, 0.25);
+	}
+	
+div.container > footer > div.contacts > div > div.route > button {
+	position : absolute;
+	top : 0;
+	right : 0;
+	z-index : 10;
+	width : 40px;
+	height : 40px;
+	padding : 0;
+	margin : 0;
+	border : 0;
+	background-color : rgba(244, 86, 65, 1);
+	cursor : pointer;
+	}
+	
+div.container > footer > div.contacts > div > div.route > button::before {
+	position : absolute;
+	left : 0;
+	top : 0;
+	z-index : 10;
+	width : 100%;
+	height : 100%;
+	color : rgba(255, 255, 255, 1);
+	font : normal 24px/40px "icomoon";
+	text-align : center;
+	content : "\e90e";
+	}
+	
+div.container > footer > div.contacts > div > div.route > input {
+	position : relative;
+	z-index : 2;
+	display : block;
+	width : 100%;
+	height : 100%;
+	padding : 0 20px;
+	border : 1px solid rgba(203, 207, 213, 0);
+	border-radius : 0;
+	font : 400 16px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	background-color : rgba(250, 250, 250, 0);
+	color : rgba(68, 68, 68, 1);
+	}
+	
+div.container > footer > div.contacts > div > div.route > input + span {
+	position : absolute;
+	display : inline-block;
+	top : 10px;
+	left : 20px;
+	z-index : 1;
+	max-width : 200px;
+	color : rgba(104, 104, 104, 1);
+	transform : scale(1,1);
+	font: 400 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	white-space : nowrap;
+	transition : all 0.25s ease;
+	overflow : hidden;
+	}
+	
+div.container > footer > div.contacts > div > div.route > input:focus + span,
+div.container > footer > div.contacts > div > div.route > input + span.selected { 
+	transform : scale(0,0); 
+	}
+
+div.container > footer > div.contacts > div > div.map {
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 10;
+	width : 100%;
+	height : calc(100% + 40px);
+	}
+
 div.zoom {
 	position : absolute;
-    left : 20px;
+    left : 10px;
+    top : 105px;
 	}
 
 div.zoom > div {
@@ -179,14 +254,6 @@ div.zoom > div:hover {
 div.zoom > div:hover::before, 
 div.zoom > div:hover::after {
 	background-color : rgba(255 , 255 , 255, 1);
-	}
-
-.ymaps-2-1-72-route-panel-input__icon_first .ymaps-2-1-72-route-panel-input__circle {
-    color : rgba(1, 31, 88, 1) !important;
-	}
-	
-.ymaps-2-1-72-route-panel-input__icon_last .ymaps-2-1-72-route-panel-input__circle {
-    color: rgba(244, 86, 65, 1) !important;
 	}
 	
 @media (min-width : 1401px) {

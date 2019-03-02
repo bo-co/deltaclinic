@@ -1,8 +1,6 @@
 function init() {
 
-	var routePanelControl,
-		multiRoutePromise,
-		myPlacemark = new ymaps.Placemark([55.75164123543684, 37.662869272700114], {
+	var myPlacemark = new ymaps.Placemark([55.75164123543684, 37.662869272700114], {
 			balloonContent: null,
 			hintContent: null
 			}, {
@@ -109,10 +107,14 @@ function init() {
     	if (myPlacemark) {
     		myMap.geoObjects.remove(myPlacemark);
     		}
-        multiRouteModel.setParams({ routingMode: routingMode }, true);
-        autoRouteItem.deselect();
-        pedestrianRouteItem.deselect();
-        targetItem.select();
+    	if (routingMode) {
+        	multiRouteModel.setParams({ routingMode: routingMode }, true);
+        	}
+        if (targetItem) {
+        	autoRouteItem.deselect();
+        	pedestrianRouteItem.deselect();
+        	targetItem.select();
+        	}
         routeTypeSelector.collapse();
         myMap.geoObjects.add(multiRoute);
         myMap.setBounds(multiRoute.getBounds());
@@ -125,8 +127,28 @@ function init() {
 		else {
 			changeRoutingMode($(this).data('type'), autoRouteItem);
 			}
+		$('div.container > footer > div.contacts > div > div.route > button').removeClass();
+		$('div.container > footer > div.contacts > div > div.route > button').addClass($(this).data('type'));
+		$('div.container > footer > div.contacts > div > div.route').css('display', 'block');
+		$('html, body').stop().animate({
+			scrollTop: $('a#contacts').offset().top
+			}, 1000);
 		e.preventDefault();
 		});
+		
+	$('div.container > footer > div.contacts > div > div.route > button').on('click', function() {
+		multiRouteModel.setReferencePoints([$('div.container > footer > div.contacts > div > div.route > input').val(), 'Москва, Наставнический перeулок, 6']);
+		setTimeout(function () {
+			if ($(this).hasClass('pedestrian')) {
+				changeRoutingMode('pedestrian', pedestrianRouteItem);
+				}
+			else {
+				changeRoutingMode('auto', autoRouteItem);
+				}
+			}, 600);
+		
+		});
+	
     }
     
 ymaps.ready(init);
