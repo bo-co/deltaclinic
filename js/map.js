@@ -131,7 +131,7 @@ function init() {
 		$('div.container > footer > div.contacts > div > div.route > button').addClass($(this).data('type'));
 		$('div.container > footer > div.contacts > div > div.route').css('display', 'block');
 		$('html, body').stop().animate({
-			scrollTop: $('a#contacts').offset().top
+			scrollTop: $('footer > div.contacts').offset().top
 			}, 1000);
 		e.preventDefault();
 		});

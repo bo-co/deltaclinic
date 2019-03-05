@@ -1,18 +1,33 @@
 @charset "UTF-8";
 
+div.form div.choose > ul,
 div.form > form > ul {
 	display : block;
 	margin : 0;
-	padding : 0 0 15px 0;
 	list-style : none;
 	}
 	
-div.form > form > ul > li {
+div.form div.choose.service > ul,
+div.form div.choose.type > ul,
+div.form > form > ul {
+	padding : 0 0 15px 0;
+	}
+	
+div.form div.choose.date > ul,
+div.form div.choose.time > ul {
+	padding : 0;
+	}
+
+div.form div.choose > ul > li,
+div.form > form > ul > li:not(.datetime) {
 	display : block;
 	position : relative;
 	min-height : 40px;
-	margin : 0 0 15px 0;
 	background-color : rgba(250, 250, 250, 1);
+	}
+
+div.form > form > ul > li {
+	margin : 0 0 15px 0;
 	}
 	
 div.form > form > ul > li.required::after {
@@ -27,7 +42,20 @@ div.form > form > ul > li.required::after {
 	font : 700 18px/42px Arial, Tahoma, Verdana, sans-serif;
 	content : "\273b";
 	}
+	
+div.form > form > ul > li.datetime {
+	display : flex;
+	justify-content : space-between;
+	position : relative;
+	min-height : 40px;
+	}
+	
+div.form > form > ul > li.datetime > div {
+	width : calc(50% - 7px);
+	background-color : rgba(250, 250, 250, 1);
+	}
 
+div.form div.choose > ul > li > input[type=text],
 div.form > form > ul > li > input[type=text],
 div.form > form > ul > li > input[type=email],
 div.form > form > ul > li > input[type=tel] {
@@ -47,7 +75,8 @@ div.form > form > ul > li > input[type=tel] {
 div.form > form > ul > li > input.error {
 	border : 1px solid rgba(244, 86, 65, 1) !important;
 	}
-	
+
+div.form div.choose > ul > li > input[type=text] + span,	
 div.form > form > ul > li > input[type=text] + span,
 div.form > form > ul > li > input[type=email] + span,
 div.form > form > ul > li > input[type=tel] + span {
@@ -56,13 +85,14 @@ div.form > form > ul > li > input[type=tel] + span {
 	top : 10px;
 	left : 20px;
 	z-index : 1;
-	color : rgba(104, 104, 104, 1);
+	color : rgba(140, 140, 140, 1);
 	transform : scale(1,1);
 	font: 400 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	white-space : nowrap;
 	transition : all 0.25s ease;
 	}
-	
+
+div.form div.choose > ul > li > input[type=text] + span.selected,	
 div.form > form > ul > li > input[type=text]:focus + span,
 div.form > form > ul > li > input[type=email]:focus + span,
 div.form > form > ul > li > input[type=tel]:focus + span,
@@ -93,4 +123,241 @@ div.form > form > button {
 div.form > form > button.active {
 	background-color : rgba(244, 86, 65, 1);
 	cursor : pointer;
+	}
+	
+/* список выбора */
+div.form div.choose > ul > li::after {
+	display : block;
+	position : absolute;
+	top : 11px;
+	right : 20px;
+	z-index : 3;
+	width : 5px;
+	height : 20px;
+	color : rgba(0, 28, 87, 0.25);
+	font : normal 16px/20px "icomoon" !important;
+	}
+	
+div.form div.choose.service > ul > li::after,
+div.form div.choose.type > ul > li::after {
+	content : "\e90e";
+	}
+	
+div.form div.choose.time > ul > li::after {
+	content : "\e908";
+	}
+	
+div.form div.choose.date > ul > li::after {
+	content : "\e910";
+	}
+
+div.form div.choose > ul > li > input[type=text] {
+	cursor : pointer;
+	}
+	
+div.form div.choose > ul > li > div {
+	display : none;
+	position : absolute;
+	left : 0;
+	top : calc(100% + 5px);
+	z-index : 20;
+	width : 100%;
+	height : 100%;
+	min-height : 80px;
+	background-color : rgba(255, 255, 255, 1);
+	overflow : hidden;	
+	box-shadow : 5px 5px 10px rgba(0, 0, 0, 0.05);
+	}
+	
+div.form div.choose > ul > li > div.swiper-container {
+	min-height : 120px;
+	}
+
+div.form div.choose > ul > li > div.selected {
+	display : block;
+	}
+	
+div.form div.choose > ul > li > div > ul {
+	display : block;
+	width : 100%;
+	height : 100%;
+    padding : 0;
+    margin : 0;
+    list-style : none;
+    }
+    
+div.form div.choose > ul > li > div > ul > li {
+	position : relative;
+	display : block;
+	min-height : 40px;
+	padding-top : 10px;
+	padding-left : 20px;
+	padding-right : 40px;
+	padding-bottom : 10px;
+	font : normal 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	cursor : pointer;
+	transition : all 0.25s ease;
+	}
+	
+div.form div.choose > ul > li > div > ul > li:hover {
+	background-color : rgba(1, 31, 88, 1);
+	color : rgba(255, 255, 255, 1);
+	}
+	
+div.form div.choose > ul > li > div.swiper-container > div.swiper-scrollbar,
+div.form div.choose > ul > li > div.swiper-container > div.swiper-scrollbar > div.swiper-scrollbar-drag {
+	border-radius : 5px;
+	}
+
+div.form div.choose > ul > li > div.swiper-container > div.swiper-scrollbar {
+    position : absolute;
+    right : 15px;
+    top : 10px;
+    z-index : 40;
+    width : 5px;
+    height : 100px;
+    background-color : rgba(0, 0, 0, 0.1);
+    opacity : 0;
+    transition : all 0.25s ease;
+	}
+	
+div.form div.choose > ul > li > div.swiper-container:hover > div.swiper-scrollbar {
+	opacity : 1;
+	}
+
+div.form div.choose > ul > li > div.swiper-container > div.swiper-scrollbar > div.swiper-scrollbar-drag {
+    background-color : rgba(0, 0, 0, 0.25);
+	}
+	
+/* календарь */
+div.form div.choose > ul > li > div.calendar {
+	width : 255px !important;
+	height : 255px !important;
+	}
+	
+div.form div.choose > ul > li > div.calendar > table {
+	width : 100%;
+	}
+
+div.form div.choose > ul > li > div.calendar > table > caption {
+	position : relative;
+	height : 40px;
+	background-color : rgba(0, 28, 87, 0.25);
+	color : rgba(255, 255, 255, 1);
+	font : 700 16px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	text-align : center;
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > caption > div {
+	position : absolute;
+	top : 0;
+	z-index : 10;
+	width : 40px;
+	height : 40px;
+	cursor : pointer;
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > caption > div.larr {
+	left : 0;
+	transform : rotate(-90deg);
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > caption > div.rarr {
+	right : 0;
+	transform : rotate(90deg);
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > caption > div::before,
+div.form div.choose > ul > li > div.calendar > table > caption > div::after {
+	position : absolute;
+	display : block;
+	top : calc(50% - 1px);
+	z-index : 10;
+	width : 8px;
+	height : 2px;
+	content : "";
+	background-color : rgba(0, 28, 87, 0.5);
+	transition : all 0.25s ease;
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > caption > div:hover::before,
+div.form div.choose > ul > li > div.calendar > table > caption > div:hover::after {
+	background-color : rgba(0, 28, 87, 1);
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > caption > div::before {
+	right : calc(50% - 1px);
+	transform : rotate(35deg);
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > caption > div::after {
+	left : calc(50% - 1px);
+	transform : rotate(-35deg);
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > caption > div::before {
+	transform : rotate(-35deg);
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > caption > div::after {
+	transform : rotate(35deg);
+	}
+
+div.form div.choose > ul > li > div.calendar > table > thead,
+div.form div.choose > ul > li > div.calendar > table > tbody {	
+	border-left : solid 5px rgba(255, 255, 255, 1);
+	border-right : solid 5px rgba(255, 255, 255, 1);
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > tbody {
+	border-bottom : solid 5px rgba(255, 255, 255, 1);
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > thead > tr,
+div.form div.choose > ul > li > div.calendar > table > tbody > tr {
+	display : flex;
+	height : 35px;
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > tbody > tr:nth-child(odd) {
+	background-color : rgba(0, 28, 87, 0.05);
+	}
+
+div.form div.choose > ul > li > div.calendar > table > thead > tr > th,
+div.form div.choose > ul > li > div.calendar > table > tbody > tr > td {
+	width : calc(100%/7);
+	text-align : center;
+	}
+
+div.form div.choose > ul > li > div.calendar > table > thead > tr > th {	
+	color : rgba(0, 28, 87, 0.75);
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > thead > tr > th,
+div.form div.choose > ul > li > div.calendar > table > tbody > tr > td.calSelected {
+	font : 700 14px/35px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > tbody > tr > td {
+	font : 400 14px/35px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > tbody > tr > td.calSelectable {
+	color : rgba(0, 28, 87, 1);
+	cursor : pointer;
+	transition : all 0.25s ease;
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > tbody > tr > td.calSelectable:hover {
+	background-color : rgba(0, 28, 87, 0.25);
+	color : rgba(255, 255, 255, 1);
+	}
+
+div.form div.choose > ul > li > div.calendar > table > tbody > tr > td.calDisable {
+	color : rgba(0, 28, 87, 0.5);
+	}
+	
+div.form div.choose > ul > li > div.calendar > table > tbody > tr > td.calSelected {
+	background-color : rgba(0, 28, 87, 1);
+	color : rgba(255, 255, 255, 1);
 	}

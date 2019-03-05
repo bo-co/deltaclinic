@@ -4,21 +4,23 @@
     	<meta charset="UTF-8" />
     	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
     	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0" />
-    	<link rel="stylesheet" href="fonts/opensans/opensans.css?030320190104" />
-    	<link rel="stylesheet" href="fonts/icomoon/icomoon.css?030320190104" />
-    	<link rel="stylesheet" href="css/default.css?030320190104" />
-    	<link rel="stylesheet" href="css/style.css?030320190104" />
-    	<link rel="stylesheet" href="css/footer.css?030320190104" />
-    	<link rel="stylesheet" href="css/callback.css?030320190104" />
-    	<link rel="stylesheet" href="css/form.css?030320190104" />
+    	<link rel="stylesheet" href="fonts/opensans/opensans.css?050320192349" />
+    	<link rel="stylesheet" href="fonts/icomoon/icomoon.css?050320192349" />
+    	<link rel="stylesheet" href="css/default.css?050320192349" />
+    	<link rel="stylesheet" href="css/style.css?050320192349" />
+    	<link rel="stylesheet" href="css/footer.css?050320192349" />
+    	<link rel="stylesheet" href="css/callback.css?050320192349" />
+    	<link rel="stylesheet" href="css/form.css?050320192349" />
     	<script defer src="https://api-maps.yandex.ru/2.1.72/?lang=ru_RU"></script>
-		<script defer src="js/jquery.js?030320190104"></script>
-		<script defer src="js/inputmask.js?030320190104"></script>
-		<script defer src="js/callback.js?030320190104"></script>
-		<script defer src="js/map.js?030320190104"></script>
+		<script defer src="js/jquery.js?050320192349"></script>
+		<script defer src="js/swiper.js?050320192349"></script>
+		<script defer src="js/calendar.js?050320192349"></script>
+		<script defer src="js/inputmask.js?050320192349"></script>
+		<script defer src="js/callback.js?050320192349"></script>
+		<script defer src="js/map.js?050320192349"></script>
 		<title>«Дельтаклиник» — многопрофильный медицинский центр</title>
 	</head>
-	<body>
+	<body onload="resize();" onresize="resize();">
 		<div class="callback">
 			<button type="button"></button>
 			<div class="form cb">
@@ -43,7 +45,108 @@
 		<div class="container">
 			<header></header>
 			<footer>
-				<a id="contacts"></a>
+				<div class="order">
+					<span>Запишитесь к врачу</span>
+					<div>
+						<div class="form order">
+							<form name="application" method="post" action="#" target="actions">
+								<div class="choose type">
+									<ul>
+										<li>
+											<input class="field" type="text" name="type" value="" readonly="readonly" data-choose="type"  data-form="order" />
+											<span>Прием или консультация?</span>
+											<div>
+												<ul>
+													<li data-choose="type">Запись на прием</li>
+													<li data-choose="type">Запись на консультацию</li>
+												</ul>
+											</div>
+										</li>
+									</ul>								
+								</div>
+								<div class="choose service">
+									<ul>
+										<li>
+											<input class="field" type="text" name="service" value="" readonly="readonly" data-choose="service"  data-form="order" />
+											<span>Выберите направление</span>
+											<div class="swiper-container">
+												<ul class="swiper-wrapper">
+													<li class="swiper-slide" data-choose="service">Андрология и урология</li>
+													<li class="swiper-slide" data-choose="service">Аллергия</li>
+													<li class="swiper-slide" data-choose="service">Ведение беременности</li>
+													<li class="swiper-slide" data-choose="service">Венерология</li>
+													<li class="swiper-slide" data-choose="service">Гинекология</li>
+													<li class="swiper-slide" data-choose="service">Дерматология</li>
+													<li class="swiper-slide" data-choose="service">Коррекция фигуры с LPG. Аппаратный массаж</li>
+													<li class="swiper-slide" data-choose="service">Косметология</li>
+													<li class="swiper-slide" data-choose="service">ЛОР</li>
+													<li class="swiper-slide" data-choose="service">Мануальная терапия</li>
+													<li class="swiper-slide" data-choose="service">Массаж</li>
+													<li class="swiper-slide" data-choose="service">Офтальмология</li>
+													<li class="swiper-slide" data-choose="service">Проктология</li>
+													<li class="swiper-slide" data-choose="service">Терапия</li>
+													<li class="swiper-slide" data-choose="service">Трихология</li>
+													<li class="swiper-slide" data-choose="service">Физиотерапия</li>
+													<li class="swiper-slide" data-choose="service">Эндокринология</li>
+												</ul>
+												<div class="swiper-scrollbar"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<ul>
+									<li>
+										<input class="field" type="text" name="uname" value="" data-form="order" />
+										<span>Ваше имя</span>
+									</li>
+									<li class="required">
+										<input class="field" type="tel" name="uphone" value="" data-form="order" />
+										<span>Ваш телефон</span>
+									</li>
+									<li class="datetime">
+										<div class="choose date">
+											<ul>
+												<li>
+													<input class="field" type="text" name="date" value="" readonly="readonly" data-choose="date"  data-form="order" />
+													<span>Дата</span>
+													<div class="calendar"></div>
+												</li>
+											</ul>
+										</div>
+										<div class="choose time">
+											<ul>
+												<li>
+													<input class="field" type="text" name="time" value="" readonly="readonly" data-choose="time"  data-form="order" />
+													<span>Время</span>
+													<div class="swiper-container">
+														<ul class="swiper-wrapper">
+															<li class="swiper-slide" data-choose="time">08:00</li>
+															<li class="swiper-slide" data-choose="time">09:00</li>
+															<li class="swiper-slide" data-choose="time">10:00</li>
+															<li class="swiper-slide" data-choose="time">11:00</li>
+															<li class="swiper-slide" data-choose="time">12:00</li>
+															<li class="swiper-slide" data-choose="time">13:00</li>
+															<li class="swiper-slide" data-choose="time">14:00</li>
+															<li class="swiper-slide" data-choose="time">15:00</li>
+															<li class="swiper-slide" data-choose="time">16:00</li>
+															<li class="swiper-slide" data-choose="time">17:00</li>
+															<li class="swiper-slide" data-choose="time">18:00</li>
+															<li class="swiper-slide" data-choose="time">19:00</li>
+															<li class="swiper-slide" data-choose="time">20:00</li>
+														</ul>
+														<div class="swiper-scrollbar"></div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+								<button type="button" data-form="order">Записаться</button>
+							</form>		
+							<p>Нажимая на кнопку «Записаться», Вы соглашаетесь с <a class="callback" href="/privacy/" title="политика конфиденциальности">политикой конфиденциальности</a></p>
+						</div>
+					</div>
+				</div>
 				<div class="contacts">
 					<div>
 						<div class="route">

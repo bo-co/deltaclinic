@@ -7,6 +7,29 @@ div.container > footer {
   	height : 1px;
 	}
 	
+div.container > footer > div.order {
+	flex-wrap : wrap;
+	}
+	
+div.container > footer > div.order > div {
+	width : 100%;
+	background-image : url("../img/xgirl.jpg?05032019");
+	background-position : 15% 100%;
+	background-repeat : no-repeat;
+	background-size : contain;
+	}
+	
+div.container > footer > div.order> span {
+	display : block;
+	width : 100%;
+	text-align : center;
+	}
+	
+div.container > footer > div.order > div > div.form {
+	max-width : 340px;
+	}
+
+div.container > footer > div.order,
 div.container > footer > div.contacts {
 	display : flex;
 	background-color : rgba(239, 241, 245, 1);
@@ -17,7 +40,8 @@ div.container > footer > div.contacts > div:first-child {
 	min-height : 320px;
 	overflow : hidden;
 	}
-	
+
+div.container > footer > div.order > span,
 div.container > footer > div.contacts > div > span {
 	color : rgba(1, 31, 88, 1);
 	}
@@ -161,9 +185,9 @@ div.container > footer > div.contacts > div > div.route > button::before {
 	width : 100%;
 	height : 100%;
 	color : rgba(255, 255, 255, 1);
-	font : normal 24px/40px "icomoon";
+	font : normal 24px/40px "icomoon" !important;
 	text-align : center;
-	content : "\e90e";
+	content : "\e90f";
 	}
 	
 div.container > footer > div.contacts > div > div.route > input {
@@ -257,14 +281,29 @@ div.zoom > div:hover::after {
 	}
 	
 @media (min-width : 1401px) {
+	div.container > footer > div.order {
+		padding : 0 60px;
+		}
+		
+	div.container > footer > div.order> span {
+		padding : 60px 0;
+		}
+		
+	div.container > footer > div.order > div {
+		min-height : 520px;
+		padding-left : calc(50% + 60px);
+		}
+		
+
 	div.container > footer > div.contacts > div {
 		width : 50%;
 		}
 		
 	div.container > footer > div.contacts > div:last-child {
-		padding : 30px 60px 0 60px;
+		padding : 30px 60px;
 		}
-		
+	
+	div.container > footer > div.order > span,
 	div.container > footer > div.contacts > div > span {
 		font : 700 36px/36px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
@@ -274,7 +313,7 @@ div.zoom > div:hover::after {
 		}
 		
 	div.container > footer > div.contacts > div > ul > li::before {
-		font : normal 16px/24px "icomoon";
+		font : normal 16px/24px "icomoon" !important;
 		}
 	}
 	
@@ -284,7 +323,7 @@ div.zoom > div:hover::after {
 		}
 		
 	div.container > footer > div.contacts > div:last-child {
-		padding : 25px 50px 0 50px;
+		padding : 25px 50px;
 		}
 		
 	div.container > footer > div.contacts > div > span {
@@ -296,7 +335,7 @@ div.zoom > div:hover::after {
 		}
 		
 	div.container > footer > div.contacts > div > ul > li::before {
-		font : normal 16px/24px "icomoon";
+		font : normal 16px/24px "icomoon" !important;
 		}
 	}
 	
@@ -306,7 +345,7 @@ div.zoom > div:hover::after {
 		}
 
 	div.container > footer > div.contacts > div:last-child {
-		padding : 20px 40px 0 40px;
+		padding : 20px 40px;
 		}
 		
 	div.container > footer > div.contacts > div > span {
@@ -318,7 +357,7 @@ div.zoom > div:hover::after {
 		}
 
 	div.container > footer > div.contacts > div > ul > li::before {
-		font : normal 16px/20px "icomoon";
+		font : normal 16px/20px "icomoon" !important;
 		}
 	}
 	
@@ -328,7 +367,7 @@ div.zoom > div:hover::after {
 		}
 	
 	div.container > footer > div.contacts > div:last-child {
-		padding : 30px 30px 0 30px;
+		padding : 30px;
 		}
 		
 	div.container > footer > div.contacts > div > span {
@@ -340,7 +379,7 @@ div.zoom > div:hover::after {
 		}
 		
 	div.container > footer > div.contacts > div > ul > li::before {
-		font : normal 16px/20px "icomoon";
+		font : normal 16px/20px "icomoon" !important;
 		}
 	}
 	
@@ -350,7 +389,7 @@ div.zoom > div:hover::after {
 		}
 
 	div.container > footer > div.contacts > div:last-child {
-		padding : 20px 20px 0 20px;
+		padding : 20px;
 		}
 		
 	div.container > footer > div.contacts > div > span {
@@ -362,6 +401,6 @@ div.zoom > div:hover::after {
 		}
 		
 	div.container > footer > div.contacts > div > ul > li::before {
-		font : normal 16px/20px "icomoon";
+		font : normal 16px/20px "icomoon" !important;
 		}
 	}
