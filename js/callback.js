@@ -80,7 +80,7 @@ $(document).ready(function() {
 				}
 			if ($(this).data("choose") == "date") {	
 				$("div.form div.choose > ul > li > div.calendar").jsRapCalendar({
-  					week: 5,
+  					week: 6,
 					onClick: function(y,m,d) {
 						/* alert(y + '-' + m + '-' + d); */
 						if (!$("div.form div.choose.date > ul > li > span").hasClass("selected")) {
