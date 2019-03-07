@@ -67,7 +67,7 @@ $(document).ready(function() {
 	$("div.form div.choose > ul > li > input[readonly]").on("click", function() {
 		if (!$("div.form div.choose." + $(this).data("choose") + " > ul > li > div").hasClass("selected")) {
 			$("div.form div.choose." + $(this).data("choose") + " > ul > li > div").addClass("selected");
-			if ($("div.form div.choose." + $(this).data("choose") + " > ul > li > div.swiper-container").length!==0) {
+			if ($("div.form div.choose." + $(this).data("choose") + " > ul > li > div.swiper-container").length !== 0) {
   				new Swiper("div.form div.choose." + $(this).data("choose") + " > ul > li > div.swiper-container", {
       				direction: "vertical",
       				slidesPerView: "auto",
@@ -78,11 +78,10 @@ $(document).ready(function() {
      				mousewheel: true
     				});		
 				}
-			if ($(this).data("choose") == "date") {	
+			if ($(this).data("choose") == "date" && $("div.form div.choose > ul > li > div.calendar > table").length == 0) {	
 				$("div.form div.choose > ul > li > div.calendar").jsRapCalendar({
   					week: 6,
 					onClick: function(y,m,d) {
-						/* alert(y + '-' + m + '-' + d); */
 						if (!$("div.form div.choose.date > ul > li > span").hasClass("selected")) {
 							$("div.form div.choose.date > ul > li > span").addClass("selected");
 							}
@@ -174,7 +173,7 @@ $(document).ready(function() {
 	});
 	
 $(document).mouseup(function(e) {
-	if (!$("div.form div.choose > ul > li > div").is(e.target) && $("div.form div.choose > ul > li > div").has(e.target).length === 0 && $("div.form div.choose > ul > li > div:visible").length!==0) {
+	if (!$("div.form div.choose > ul > li > div").is(e.target) && $("div.form div.choose > ul > li > div").has(e.target).length === 0 && $("div.form div.choose > ul > li > div:visible").length !== 0) {
 		if ($("div.form div.choose > ul > li > div").hasClass("selected")) {
 			$("div.form div.choose > ul > li > div").removeClass("selected");
 			}
