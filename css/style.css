@@ -45,6 +45,7 @@ a.fix {
 	border : solid 2px rgba(244, 86, 65, 0.25);
 	border-radius : 50%;
 	text-indent : -999px;
+	text-decoration : none;
 	overflow : hidden;
 	}
 	
