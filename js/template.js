@@ -262,5 +262,10 @@ $(document).mouseup(function(e) {
 			$("div.form div.choose > ul > li > div").removeClass("selected");
 			}
     	}
+	if (!$("div.form.cb").is(e.target) && $("div.form.cb").has(e.target).length === 0 && $("div.form.cb:visible").length !== 0) {
+		if ($("div.callback").hasClass("opened")) {
+			$("div.callback").removeClass("opened");
+			}
+    	}
     return false;
 	});
