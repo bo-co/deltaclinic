@@ -38,10 +38,10 @@ a:not(.fix):hover::before {
 	width : 0;
 	}
 	
-a.fix {
+div.container > a.fix {
 	display : none;
 	position : fixed;
-	z-index : 10;
+	z-index : 80;
 	border : solid 2px rgba(244, 86, 65, 0.25);
 	border-radius : 50%;
 	text-indent : -999px;
@@ -49,7 +49,7 @@ a.fix {
 	overflow : hidden;
 	}
 	
-a.fix::after {
+div.container > a.fix::after {
 	display : block;
 	position : absolute;
 	z-index : 20;
@@ -64,7 +64,7 @@ a.fix::after {
 	transition : all 0.25s ease;
 	}
 	
-a.fix::before {
+div.container > a.fix::before {
 	display : block;
 	position : absolute;
 	z-index : 10;
@@ -78,19 +78,19 @@ a.fix::before {
 		font : 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	a.fix {
+	div.container > a.fix {
 		width : 120px;
 		height : 120px;
 		}
 		
-	a.fix::before {
+	div.container > a.fix::before {
 		top : calc(50% - 40px);
 		left : calc(50% - 40px);
 		width : 80px;
 		height : 80px;		
 		}
 		
-	a.fix::after {
+	div.container > a.fix::after {
 		top : calc(50% - 28px);
 		left : calc(50% - 28px);
 		width : 56px;
@@ -98,8 +98,8 @@ a.fix::before {
 		font : normal 24px/56px "icomoon" !important;	
 		}
 		
-	a.fix.callback {
-		display : block !important;
+	div.container > a.fix.callback {
+		display : block;
 		right : 40px;
 		bottom : 40px;
 		}
@@ -110,19 +110,19 @@ a.fix::before {
 		font : 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	a.fix {
+	div.container > a.fix {
 		width : 120px;
 		height : 120px;
 		}
 		
-	a.fix::before {
+	div.container > a.fix::before {
 		top : calc(50% - 40px);
 		left : calc(50% - 40px);
 		width : 80px;
 		height : 80px;		
 		}
 		
-	a.fix::after {
+	div.container > a.fix::after {
 		top : calc(50% - 28px);
 		left : calc(50% - 28px);
 		width : 56px;
@@ -130,8 +130,8 @@ a.fix::before {
 		font : normal 24px/56px "icomoon" !important;	
 		}
 		
-	a.fix.callback {
-		display : block !important;
+	div.container > a.fix.callback {
+		display : block;
 		right : 35px;
 		bottom : 35px;
 		}
@@ -142,19 +142,19 @@ a.fix::before {
 		font : 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	a.fix {
+	div.container > a.fix {
 		width : 100px;
 		height : 100px;
 		}
 		
-	a.fix::before {
+	div.container > a.fix::before {
 		top : calc(50% - 35px);
 		left : calc(50% - 35px);
 		width : 70px;
 		height : 70px;		
 		}
 		
-	a.fix::after {
+	div.container > a.fix::after {
 		top : calc(50% - 23px);
 		left : calc(50% - 23px);
 		width : 46px;
@@ -162,8 +162,8 @@ a.fix::before {
 		font : normal 20px/46px "icomoon" !important;	
 		}
 		
-	a.fix.callback {
-		display : block !important;
+	div.container > a.fix.callback {
+		display : block;
 		right : 30px;
 		bottom : 30px;
 		}
@@ -174,19 +174,19 @@ a.fix::before {
 		font : 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	a.fix {
+	div.container > a.fix {
 		width : 80px;
 		height : 80px;
 		}
 		
-	a.fix::before {
+	div.container > a.fix::before {
 		top : calc(50% - 27px);
 		left : calc(50% - 27px);
 		width : 54px;
 		height : 54px;		
 		}
 		
-	a.fix::after {
+	div.container > a.fix::after {
 		top : calc(50% - 18px);
 		left : calc(50% - 18px);
 		width : 36px;
@@ -194,8 +194,8 @@ a.fix::before {
 		font : normal 16px/36px "icomoon" !important;	
 		}
 		
-	a.fix.call {
-		display : block !important;
+	div.container > a.fix.call {
+		display : block;
 		right : 25px;
 		bottom : 25px;
 		}
@@ -206,19 +206,19 @@ a.fix::before {
 		font : 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	a.fix {
+	div.container > a.fix {
 		width : 80px;
 		height : 80px;
 		}
 		
-	a.fix::before {
+	div.container > a.fix::before {
 		top : calc(50% - 27px);
 		left : calc(50% - 27px);
 		width : 54px;
 		height : 54px;		
 		}
 		
-	a.fix::after {
+	div.container > a.fix::after {
 		top : calc(50% - 18px);
 		left : calc(50% - 18px);
 		width : 36px;
@@ -226,8 +226,8 @@ a.fix::before {
 		font : normal 16px/36px "icomoon" !important;	
 		}
 		
-	a.fix.call {
-		display : block !important;
+	div.container > a.fix.call {
+		display : block;
 		right : 20px;
 		bottom : 20px;
 		}
