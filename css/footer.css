@@ -68,7 +68,14 @@ div.container > footer > div.contacts > div > ul {
 div.container > footer > div.contacts > div > ul > li {
 	position : relative;
 	padding : 0 0 0 30px;
+	}
+	
+div.container > footer > div.contacts > div > ul > li:not(:last-child) {
 	margin : 15px 0;
+	}
+	
+div.container > footer > div.contacts > div > ul > li:last-child {
+	margin : 15px 0 0 0;
 	}
 	
 div.container > footer > div.contacts > div > ul > li::before {
