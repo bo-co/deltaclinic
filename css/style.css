@@ -38,6 +38,59 @@ a:not(.fix):hover::before {
 	width : 0;
 	}
 	
+@keyframes ring {
+	from {
+    	transform : rotate(0deg);
+    	-webkit-transform : rotate(0deg);
+    	-ms-transform : rotate(0deg);
+		}
+	1% {
+    	transform : rotate(20deg);
+    	-webkit-transform : rotate(20deg);
+    	-ms-transform : rotate(20deg);
+		}
+	2% {
+    	transform : rotate(-16deg);
+    	-webkit-transform : rotate(-16deg);
+    	-ms-transform : rotate(-16deg);
+		}
+	3% {
+  		transform : rotate(12deg);
+  		-webkit-transform : rotate(12deg);
+  		-ms-transform : rotate(12deg);
+		}
+	4% {
+    	transform : rotate(-1deg);
+    	-webkit-transform : rotate(-1deg);
+    	-ms-transform : rotate(-1deg);
+  		}
+	5% {
+    	transform : rotate(20deg);
+    	-webkit-transform : rotate(20deg);
+    	-ms-transform : rotate(20deg);
+  		}
+	6% {
+    	transform : rotate(-16deg);
+    	-webkit-transform : rotate(-16deg);
+    	-ms-transform : rotate(-16deg);
+		}
+	7% {
+  		transform : rotate(12deg);
+  		-webkit-transform : rotate(12deg);
+  		-ms-transform : rotate(12deg);
+		}
+	8% {
+  		transform : rotate(0deg);
+  		-webkit-transform : rotate(0deg);
+  		-ms-transform : rotate(0deg);
+		}
+	to {
+    	transform : rotate(0deg);
+    	-webkit-transform : rotate(0deg);
+    	-ms-transform : rotate(0deg);
+  		}
+	}
+	
 div.container > a.fix {
 	display : none;
 	position : fixed;
@@ -47,6 +100,27 @@ div.container > a.fix {
 	text-indent : -999px;
 	text-decoration : none;
 	overflow : hidden;
+	animation-delay: 5s;
+	-webkit-animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	animation-duration : 5s;
+	-webkit-animation-duration : 5s;
+	-ms-animation-duration : 5s; 
+    animation-iteration-count : infinite;
+    -webkit-animation-iteration-count : infinite;
+    -ms-animation-iteration-count : infinite; 
+	animation-fill-mode : both;
+	-webkit-animation-fill-mode : both;
+	-ms-animation-fill-mode : both;
+	animation-name : ring;
+	-webkit-animation-name : ring;
+	-ms-animation-name : ring;
+	animation-direction : normal;
+	-webkit-animation-direction : normal;
+	-ms-animation-direction : normal;
+	animation-timing-function : ease;
+	-webkit-animation-timing-function : ease;
+	-ms-animation-timing-function : ease;
 	}
 	
 div.container > a.fix::after {
@@ -76,6 +150,10 @@ div.container > a.fix::before {
 @media (min-width : 1401px) {
 	body {
 		font : 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container {
+		padding-left : 240px;
 		}
 		
 	div.container > a.fix {
@@ -108,6 +186,10 @@ div.container > a.fix::before {
 @media (min-width : 1041px) and (max-width : 1400px) {
 	body {
 		font : 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container {
+		padding-left : 240px;
 		}
 		
 	div.container > a.fix {
