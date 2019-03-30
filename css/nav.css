@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+div.container > nav {
+	position : fixed;
+	top : 0;
+	left : 0;
+	z-index : 100;
+	width : 240px;
+	height : calc(100% - 100px);
+	min-height : 100vh;
+	background-color : rgba(247, 248, 250, 1);
+	box-shadow : 0 0 10px 5px rgba(52, 86, 129, 0.1);
+	}
+	
+div.container.nav > span {
+	display : block;
+	position : absolute;
+	top : 0;
+	left : 240px;
+	z-index : 90;
+	width : calc(100% - 240px);
+	height : 100%;
+	background-color : rgba(52, 86, 129, 0.85);
+	content : "";	
+	}
+
+	
+@media (min-width : 1401px) {
+
+	}
+	
+@media (min-width : 1041px) and (max-width : 1400px) {
+
+	}
+	
+@media (min-width : 721px) and (max-width : 1040px) {
+
+	}
+	
+@media (min-width : 481px) and (max-width : 720px) {
+
+	}
+	
+@media (max-width : 480px) {
+
+	}

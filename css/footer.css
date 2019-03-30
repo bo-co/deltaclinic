@@ -35,6 +35,7 @@ div.container > footer > div.order > span {
 	}
 	
 div.container > footer > div.order > div > div.form {
+	min-width : 280px;
 	max-width : 340px;
 	}
 
@@ -346,18 +347,20 @@ div.zoom > div:hover::after {
 		padding : 0 50px;
 		}
 		
+		
 	div.container > footer > div.order > span {
 		padding : 50px 0;
 		}
 		
 	div.container > footer > div.order > div {
 		min-height : 480px;
-		padding-left : calc(50% + 50px);
+		width : calc(50% - 50px);
+		left : calc(50% + 50px);
 		}
 		
 	div.container > footer > div.order > div::before {
-		left : -50px;
-		width : calc(50% + 50px);
+		right : calc(100% + 100px);
+		width : calc(100% + 50px);
 		}
 
 	div.container > footer > div.contacts > div {
