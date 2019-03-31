@@ -122,14 +122,18 @@ div.container > a.fix {
 	-webkit-animation-timing-function : ease;
 	-ms-animation-timing-function : ease;
 	}
-	
+
+div.container > a.fix::before,
 div.container > a.fix::after {
 	display : block;
 	position : absolute;
+	border-radius : 50%;
+	}
+	
+div.container > a.fix::after {
 	z-index : 20;
 	width : 40px;
 	height : 40px;
-	border-radius : 50%;
 	text-indent : 0;
 	text-align : center;
 	content : "\e907";
@@ -139,10 +143,7 @@ div.container > a.fix::after {
 	}
 	
 div.container > a.fix::before {
-	display : block;
-	position : absolute;
 	z-index : 10;
-	border-radius : 50%;
 	content : "";
 	background-color : rgba(244, 86, 65, 0.5);	
 	}
