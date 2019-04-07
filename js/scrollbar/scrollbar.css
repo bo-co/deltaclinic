@@ -8,7 +8,7 @@
     }
     
 .scroll-wrapper {
-	position : relative;
+	position : relative !important;
 	overflow : hidden !important;
     }
 
