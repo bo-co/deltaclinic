@@ -396,12 +396,13 @@ div.zoom > div:hover::after {
 		
 	div.container > footer > div.order > div {
 		min-height : 460px;
-		padding-left : calc(50% + 40px);
+		width : calc(50% - 40px);
+		left : calc(50% + 40px);
 		}
 		
 	div.container > footer > div.order > div::before {
-		left : -40px;
-		width : calc(50% + 40px);
+		right : calc(100% + 80px);
+		width : calc(100% + 40px);
 		}
 		
 	div.container > footer > div.contacts > div {

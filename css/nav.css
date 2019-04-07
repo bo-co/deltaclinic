@@ -1,46 +1,388 @@
 @charset "UTF-8";
 
+div.menu {
+	display : none;
+	position : fixed;
+	min-width : 320px;
+	max-width : 840px;
+	height : 100%;
+	max-height : 100vh;
+	z-index : 120;
+	padding-top : 85px;
+	background-color : rgba(255, 255, 255, 1);
+	}
+	
+div.menu > span {
+	display : block;
+	position : absolute;
+	top : 0;
+	left : 40px;
+	z-index : 10;
+	width : calc(100% - 80px);
+	background-color : inherit;
+	border-bottom : solid 1px rgba(203, 207, 213, 1);
+	text-align : center;
+	}
+	
+div.menu > div.scrollbar div.special {
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	padding : 20px 0;
+	}
+	
+div.menu > div.scrollbar div.special > a {
+	display : block !important;
+	margin : .5em 0 .5em 40px;
+	text-transform : uppercase;
+	}
+	
+div.menu > div.scrollbar div.special > a::before {
+	display : none;
+	}
+	
+div.menu > div.scrollbar div.special > a > span {
+	position : relative;
+	}
+	
+div.menu > div.scrollbar div.special > a > span::before {
+	position : absolute;
+	bottom : 0;
+	left : 0;
+	z-index : 10;
+	height : 1px;
+	width : 100%;
+	content : "";
+	background-color : rgba(244, 86, 65, 1);
+	transition : all 0.25s ease;
+	}
+
+div.menu > div.scrollbar div.special > a:hover > span::before {
+	width : 0;
+	}
+	
+div.menu > div.scrollbar ul {
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	flex-wrap : wrap;
+	-webkit-flex-wrap : wrap;
+	-ms-flex-wrap : wrap;
+	}
+	
+/* div.menu > div.scrollbar ul > li {
+	float : left;
+	} */
+
 div.container > nav {
 	position : fixed;
 	top : 0;
 	left : 0;
 	z-index : 100;
-	width : 240px;
+	width : 280px;
 	height : calc(100% - 100px);
 	min-height : 100vh;
-	background-color : rgba(247, 248, 250, 1);
+	background-color : rgba(244, 245, 246, 1);
 	box-shadow : 0 0 10px 5px rgba(52, 86, 129, 0.1);
 	}
-	
-div.container.nav > span {
-	display : block;
-	position : absolute;
-	top : 0;
-	left : 240px;
-	z-index : 90;
-	width : calc(100% - 240px);
+
+div.container > nav > div {
+	position : relative;
+	width : 100%;
 	height : 100%;
-	background-color : rgba(52, 86, 129, 0.85);
-	content : "";	
+    overflow : hidden;
+    }
+    
+div.menu,
+div.container > nav > div {
+	color : rgba(1, 31, 88, 1);
 	}
 
-	
-@media (min-width : 1401px) {
+div.menu > div.scrollbar ul,
+div.menu > div.scrollbar ul > li > ul,  
+div.container > nav > div > div > ul,
+div.container > nav > div > div > ul > li > ul {
+	padding : 0;
+	margin : 0;
+	list-style : none;
+	}
 
+div.menu ul > li > span,
+div.menu ul > li > a,
+div.menu ul > li > a > span,
+div.container > nav > div > div ul > li > span,
+div.container > nav > div > div ul > li > a,
+div.container > nav > div > div ul > li > a > span {
+	display : block;
+	color : inherit;
+	transition : all 0.25s ease;
+	}
+	
+div.menu ul > li > a::before,
+div.container > nav > div > div ul > li > a::before,
+div.container > nav > div > div ul > li > a + div {
+	display : none !important;
+	}
+	
+div.menu ul > li > span,
+div.menu ul > li > a > span,
+div.container > nav > div > div ul > li > span,
+div.container > nav > div > div ul > li > a > span {
+	padding-top : .5em;
+	padding-bottom : .5em;	
+	}
+	
+/* div.container > nav > div > div ul > li > span,
+div.container > nav > div > div ul > li > a > span {
+	padding-right : 40px;	
+	}
+
+div.container > nav > div > div > ul > li > span,
+div.container > nav > div > div > ul > li > a > span {
+	padding-left : 40px;	
+	}
+
+div.container > nav > div > div > ul > li > ul > li > span,	
+div.container > nav > div > div > ul > li > ul > li > a > span {
+	padding-left : 40px;	
+	} */
+
+div.container > nav  ul > li > span,
+div.container > nav  ul > li > a > span,
+div.menu ul > li > span,
+div.menu ul > li > a > span {
+	padding-left : 40px;
+	padding-right : 40px;
+	}	
+
+div.container > nav > div > div ul > li > a.selected,
+div.container > nav > div > div ul > li > a:hover {
+	background-color : rgba(255, 255, 255, 1);
+	}
+
+div.menu ul > li > a:hover,
+div.container > nav > div > div ul > li > a.selected {
+	color : rgba(244, 86, 65, 1);
+	}
+
+div.container > nav > div.swiper-container > div.swiper-scrollbar,
+div.container > nav > div.swiper-container > div.swiper-scrollbar > div.swiper-scrollbar-drag {
+	border-radius : 5px;
+	}
+
+div.container > nav > div.swiper-container > div.swiper-scrollbar {
+    position : absolute;
+    right : 5px;
+    top : .65em;
+    z-index : 40;
+    width : 5px;
+    height : calc(100% - 1em);
+    opacity : 0;
+    transition : all 0.25s ease;
+	}
+
+div.container > nav > div.swiper-container:hover > div.swiper-scrollbar {
+	opacity : 1;
+	}
+
+div.container > nav > div.swiper-container > div.swiper-scrollbar > div.swiper-scrollbar-drag {
+    background-color : rgba(0, 0, 0, 0.25);
+	}
+
+@media (min-width : 1401px) {
+	div.menu {
+		left : 280px;
+		width : 880px;
+		padding-bottom : 60px;
+		}
+		
+	div.menu > span {
+		padding : 30px 0;
+		font : 700 28px/32px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+
+	div.menu > div.scrollbar div.special {
+		justify-content : center;
+		-webkit-justify-content : center;
+		-ms-justify-content : center;
+		}
+		
+	div.menu > div.scrollbar ul > li {
+		width : 280px;
+		}
+	
+	div.container > nav {
+		padding-top : 60px;
+		padding-bottom : 60px;
+		}
+		
+	div.menu > div.scrollbar ul > li,	
+	div.container > nav > div > div > ul > li {
+		font: 600 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+
+	div.menu > div.scrollbar ul > li > ul > li,	
+	div.container > nav > div > div > ul > li > ul > li {
+		font: 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 	}
 	
 @media (min-width : 1041px) and (max-width : 1400px) {
+	div.menu {
+		left : 280px;
+		width : 600px;
+		padding-bottom : 50px;
+		}
+		
+	div.menu > span {
+		padding : 25px 0;
+		font : 700 26px/30px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.menu > div.scrollbar div.special {
+		justify-content : center;
+		-webkit-justify-content : center;
+		-ms-justify-content : center;
+		}
+		
+	div.menu > div.scrollbar ul > li {
+		width : 280px;
+		}
+	
+	div.container > nav {
+		padding-top : 50px;
+		padding-bottom : 50px;
+		}
+		
+	div.menu > div.scrollbar ul > li,	
+	div.container > nav > div > div > ul > li {
+		font: 600 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 
+	div.menu > div.scrollbar ul > li > ul > li,	
+	div.container > nav > div > div > ul > li > ul > li {
+		font: 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 	}
 	
 @media (min-width : 721px) and (max-width : 1040px) {
+	div.menu {
+		left : 280px;
+		width : 320px;
+		padding-bottom : 40px;
+		}
+		
+	div.menu > span {
+		padding : 20px 0;
+		font : 700 24px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.menu > div.scrollbar div.special {
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
+		}
+		
+	div.menu > div.scrollbar div.special > a {
+		width : 100%;
+		}
+		
+	div.menu > div.scrollbar ul > li {
+		width : 280px;
+		}
+	
+	div.container > nav {
+		padding-top : 40px;
+		padding-bottom : 40px;
+		}
+		
+	div.menu > div.scrollbar ul > li,	
+	div.container > nav > div > div > ul > li {
+		font: 600 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 
+	div.menu > div.scrollbar ul > li > ul > li,	
+	div.container > nav > div > div > ul > li > ul > li {
+		font: 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 	}
 	
 @media (min-width : 481px) and (max-width : 720px) {
+	div.menu {
+		left : 0;
+		padding-bottom : 30px;
+		}
+		
+	div.menu > span {
+		padding : 15px 0;
+		font : 700 22px/26px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 
+	div.menu > div.scrollbar div.special {
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
+		}
+	
+	div.menu,
+	div.menu > div.scrollbar ul > li,
+	div.menu > div.scrollbar div.special > a {
+		width : 100%;
+		}
+	
+	div.container > nav {
+		padding-top : 30px;
+		padding-bottom : 30px;
+		}
+		
+	div.menu > div.scrollbar ul > li,	
+	div.container > nav > div > div > ul > li {
+		font: 600 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+
+	div.menu > div.scrollbar ul > li > ul > li,	
+	div.container > nav > div > div > ul > li > ul > li {
+		font: 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 	}
 	
 @media (max-width : 480px) {
+	div.menu {
+		left : 0;
+		padding-bottom : 20px;
+		}
+		
+	div.menu > span {
+		padding : 10px 0;
+		font : 700 20px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.menu > div.scrollbar div.special {
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
+		}
+		
+	div.menu,
+	div.menu > div.scrollbar ul > li,
+	div.menu > div.scrollbar div.special > a {
+		width : 100%;
+		}
+	
+	div.container > nav {
+		padding-top : 20px;
+		padding-bottom : 20px;
+		}
+		
+	div.menu > div.scrollbar ul > li,	
+	div.container > nav > div > div > ul > li {
+		font: 600 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 
+	div.menu > div.scrollbar ul > li > ul > li,	
+	div.container > nav > div > div > ul > li > ul > li {
+		font: 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 	}

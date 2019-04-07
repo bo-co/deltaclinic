@@ -57,6 +57,18 @@ div.callback.opened + div.container > span {
 	content : "";	
 	}
 	
+div.container.nav > span {
+	display : block;
+	position : absolute;
+	top : 0;
+	left : 240px;
+	z-index : 90;
+	width : calc(100% - 240px);
+	height : 100%;
+	background-color : rgba(52, 86, 129, 0.85);
+	content : "";	
+	}
+	
 div.callback > button {
 	position : absolute;
 	top : 0;
