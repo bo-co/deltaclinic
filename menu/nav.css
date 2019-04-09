@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 div.menu {
-	display : block;
+	display : none;
 	position : fixed;
 	min-width : 320px;
 	max-width : 480px;
