@@ -221,15 +221,15 @@ $(document).ready(function() {
 
 	$('.scrollbar-menu').scrollbar();
   	$('div.container > nav > div > div ul > li > a').on('click', function(e) {
-  		$('div.menu > span').html('');
-  		$('div.menu > div.scrollbar-menu > div').html('');
+  		$('div.menu').find('span').html(''); 		
+  		$('div.menu').find('div.scroll-content').html('');
   		$('div.container > nav > div > div ul > li > a').removeClass('selected');
   		if ($(this).next('div').length !== 0) {
-  			$('div.container').addClass('nav');
-  			$('div.menu > span').html($(this).html());
-  			$('div.menu > div.scrollbar-menu > div').html($(this).next('div').html());
   			$('div.menu').css({'display' : 'block'});
-  			$('div.menu').css({'padding-top' : $('div.menu > span').outerHeight() + 'px'});
+  			$('div.container').addClass('nav');
+  			$(this).find('span').clone().appendTo($('div.menu').find('span'));
+  			$(this).next('div').clone().appendTo($('div.menu').find('div.scroll-content'));
+  			$('div.menu').css({'padding-top' : $('div.menu').find('span').outerHeight() + 'px'});
   			$(this).addClass('selected');
   			}
   		else {
