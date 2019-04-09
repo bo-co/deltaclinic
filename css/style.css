@@ -15,7 +15,7 @@ div.container {
 	overflow : hidden;
 	}
 	
-a:not(.fix) {
+/* a:not(.fix) {
 	position : relative;
 	display : inline-block;
 	color : rgba(244, 86, 65, 1);
@@ -36,6 +36,15 @@ a:not(.fix)::before {
 
 a:not(.fix):hover::before {
 	width : 0;
+	} */
+	
+a {
+	color : rgba(244, 86, 65, 1);
+	text-decoration : underline;
+	}
+	
+a:hover {
+	text-decoration : none;
 	}
 	
 @keyframes ring-rotate {
