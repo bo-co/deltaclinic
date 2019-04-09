@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+.scroll-wrapper {
+    overflow : hidden !important;
+    padding : 0 !important;
+    position : relative;
+	}
+
+.scroll-wrapper > .scroll-content {
+    border : none !important;
+    box-sizing : content-box !important;
+    height : auto;
+    left : 0;
+    margin : 0;
+    max-height : none;
+    max-width : none !important;
+    overflow : scroll !important;
+    padding : 0;
+    position : relative !important;
+    top : 0;
+    width : auto !important;
+	}
+
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+    height : 0;
+    width : 0;
+	}
+
+.scroll-element {
+    display : none;
+	}
+	
+.scroll-element, 
+.scroll-element div {
+    box-sizing : content-box;
+	}
+
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+    display : block;
+	}
+
+.scroll-element .scroll-bar,
+.scroll-element .scroll-arrow {
+    cursor : default;
+	}
+
+.scrollbar-menu > .scroll-element,
+.scrollbar-menu > .scroll-element div {
+    background : none;
+    border : none;
+    margin : 0;
+    padding : 0;
+    position : absolute;
+    z-index : 10;
+}
+
+.scrollbar-menu > .scroll-element div {
+    display : block;
+    height : 100%;
+    left : 0;
+    top : 0;
+    width : 100%;
+}
+
+.scrollbar-menu > .scroll-element .scroll-element_track { 
+	display : none; 
+	}
+	
+.scrollbar-menu > .scroll-element .scroll-bar {
+	display : block;
+    background-color : rgba(0, 0, 0, 0.25);
+    -webkit-border-radius : 5px;
+    -moz-border-radius : 5px;
+    border-radius : 5px;
+    -webkit-transition : opacity 0.2s linear;
+    -moz-transition : opacity 0.2s linear;
+    -o-transition : opacity 0.2s linear;
+    -ms-transition : opacity 0.2s linear;
+    transition : opacity 0.2s linear;
+    opacity : 0;
+	}
+	
+.scrollbar-menu:hover > .scroll-element .scroll-bar,
+.scrollbar-menu > .scroll-element.scroll-draggable .scroll-bar {
+    opacity : 0.75;
+	}
+
+.scrollbar-menu > .scroll-element.scroll-x {
+    bottom : 0px;
+    height : 0px;
+    left : 0;
+    min-width : 100%;
+    overflow : visible;
+    width : 100%;
+	}
+
+.scrollbar-menu > .scroll-element.scroll-y {
+    height : 100%;
+    min-height : 100%;
+    right : 0px;
+    top : 0;
+    width : 0px;
+	}
+
+.scrollbar-menu > .scroll-element.scroll-x .scroll-bar { 
+	height : 5px; 
+	min-width : 10px; 
+	top : -10px; 
+	}
+	
+.scrollbar-menu > .scroll-element.scroll-y .scroll-bar { 
+	left : -10px; 
+	min-height : 10px; 
+	width : 5px; 
+	}
+
+.scrollbar-menu > .scroll-element.scroll-x .scroll-element_outer { 
+	left : 2px; 
+	}
+	
+.scrollbar-menu > .scroll-element.scroll-x .scroll-element_size { 
+	left : -4px; 
+	}
+
+.scrollbar-menu > .scroll-element.scroll-y .scroll-element_outer { 
+	top : 2px; 
+	}
+	
+.scrollbar-menu > .scroll-element.scroll-y .scroll-element_size { 
+	top : -4px; 
+	}
+
+.scrollbar-menu > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { 
+	left : -11px; 
+	}
+	
+.scrollbar-menu > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { 
+	top : -11px; 
+	}
