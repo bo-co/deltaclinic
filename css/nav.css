@@ -1,132 +1,160 @@
 @charset "UTF-8";
 
-div.menu > span {
-	display : block;
-	position : absolute;
-	top : 0;
-	left : 40px;
-	z-index : 10;
-	width : calc(100% - 80px);
-	background-color : inherit;
-	border-bottom : solid 1px rgba(203, 207, 213, 1);
-	text-align : center;
-	}
-
 div.container > nav {
 	position : fixed;
 	top : 0;
 	left : 0;
 	z-index : 100;
 	width : 280px;
-	height : calc(100% - 100px);
-	min-height : 100vh;
-	background-color : rgba(244, 245, 246, 1);
-	box-shadow : 0 0 10px 5px rgba(52, 86, 129, 0.1);
-	}
-
-div.container > nav > div {
-	position : relative;
-	width : 100%;
 	height : 100%;
-    overflow : hidden;
-    }
-    
-div.container > nav > div {
+	max-height : 100vh;
+	box-shadow : 0 0 10px 5px rgba(52, 86, 129, 0.1);
+	background-color : rgba(244, 245, 246, 1);
 	color : rgba(1, 31, 88, 1);
 	}
- 
-div.container > nav > div > div > ul,
-div.container > nav > div > div > ul > li > ul {
-	padding : 0;
+
+div.menu {
+	display : none;
+	position : fixed;
+	min-width : 320px;
+	height : 100%;
+	max-height : 100vh;
+	background-color : rgba(255, 255, 255, 1);
+	color : rgba(1, 31, 88, 1);
+	}
+	
+div.menu > span {
+	display : block;
+	position : absolute;
+	top : 0;
+	z-index : 10;
+	background-color : inherit;
+	border-bottom : solid 1px rgba(203, 207, 213, 1);
+	text-align : center;
+	}
+
+div.container > nav > div,
+div.menu > div {
+    height : 100%;
+    overflow : auto;
+	}
+
+div.container > nav > div ul,
+div.menu > div ul {
 	margin : 0;
+	padding : 0;
 	list-style : none;
 	}
 
-div.container > nav > div > div ul > li > span,
-div.container > nav > div > div ul > li > a,
-div.container > nav > div > div ul > li > a > span {
+div.container > nav > div ul > li > a,
+div.menu > div ul > li > a {
+	text-decoration : none;
+	}
+
+div.container > nav > div ul > li > span,
+div.container > nav > div ul > li > a,
+div.container > nav > div ul > li > a > span,	
+div.menu > div ul > li > span,
+div.menu > div ul > li > a,
+div.menu > div ul > li > a > span {
 	display : block;
-	color : inherit;
-	transition : all 0.25s ease;
+	color : inherit;	
 	}
-	
-div.container > nav > div > div ul > li > a::before,
-div.container > nav > div > div ul > li > a + div {
-	display : none !important;
-	}
-	
-div.container > nav > div > div ul > li > span,
-div.container > nav > div > div ul > li > a > span {
+
+div.container > nav > div ul > li > span,
+div.container > nav > div ul > li > a > span,	
+div.menu > div ul > li > span,
+div.menu > div ul > li > a > span {
 	padding-top : .5em;
 	padding-bottom : .5em;	
 	}
-	
-/* div.container > nav > div > div ul > li > span,
-div.container > nav > div > div ul > li > a > span {
-	padding-right : 40px;	
-	}
 
-div.container > nav > div > div > ul > li > span,
-div.container > nav > div > div > ul > li > a > span {
-	padding-left : 40px;	
-	}
-
-div.container > nav > div > div > ul > li > ul > li > span,	
-div.container > nav > div > div > ul > li > ul > li > a > span {
-	padding-left : 40px;	
-	} */
-
-div.container > nav  ul > li > span,
-div.container > nav  ul > li > a > span {
-	padding-left : 40px;
-	padding-right : 40px;
-	}	
-
-div.container > nav > div > div ul > li > a.selected,
-div.container > nav > div > div ul > li > a:hover {
-	background-color : rgba(255, 255, 255, 1);
-	}
-
-div.container > nav > div > div ul > li > a.selected {
+div.container > nav > div ul > li > a.selected,
+div.menu > div ul > li > a:hover,
+div.menu > div ul > li > a.selected {
 	color : rgba(244, 86, 65, 1);
 	}
-
-div.container > nav > div.swiper-container > div.swiper-scrollbar,
-div.container > nav > div.swiper-container > div.swiper-scrollbar > div.swiper-scrollbar-drag {
-	border-radius : 5px;
+	
+div.container > nav > div ul > li > a.selected,
+div.container > nav > div ul > li > a:hover {
+	background-color : rgba(255, 255, 255, 1);
 	}
-
-div.container > nav > div.swiper-container > div.swiper-scrollbar {
-    position : absolute;
-    right : 5px;
-    top : .65em;
-    z-index : 40;
-    width : 5px;
-    height : calc(100% - 1em);
-    opacity : 0;
-    transition : all 0.25s ease;
+	
+div.container > nav > div ul > li > a + div {
+	display : none !important;
 	}
-
-div.container > nav > div.swiper-container:hover > div.swiper-scrollbar {
-	opacity : 1;
+	
+div.menu > div div.special {
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	justify-content : space-between;
+	-webkit-justify-content : space-between;
+	-ms-justify-content : space-between;
+	padding-top : 20px;
+	padding-bottom : 20px;
 	}
-
-div.container > nav > div.swiper-container > div.swiper-scrollbar > div.swiper-scrollbar-drag {
-    background-color : rgba(0, 0, 0, 0.25);
+	
+div.menu > div div.special > a {
+	display : block !important;
+	margin-top : .5em;
+	margin-bottom : .5em;
+	text-transform : uppercase;
 	}
-
-@media (min-width : 1401px) {	
+	
+@media (min-width : 1401px) {
 	div.container > nav {
 		padding-top : 60px;
 		padding-bottom : 60px;
 		}
+		
+	div.menu {
+		left : 280px;
+		width : 480px;
+		z-index : 100;
+		padding-bottom : 60px;
+		}
 	
-	div.container > nav > div > div > ul > li {
-		font: 600 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	div.container > nav > div ul > li,
+	div.menu > div ul > li {
+		font: 600 18px/26px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+	
+	div.container > nav > div ul > li > ul > li,
+	div.menu > div ul > li > ul > li {
+		font: 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+	
+	div.menu > div div.special,	
+	div.menu > div ul > li > span,
+	div.menu > div ul > li > a > span {
+		padding-left : 60px;
+		padding-right : 60px;
 		}
 
-	div.container > nav > div > div > ul > li > ul > li {
-		font: 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	div.menu > div ul > li > ul > li > span,
+	div.menu > div ul > li > ul > li > a > span {
+		padding-left : 80px;
+		}
+		
+	div.container > nav ul > li > span,
+	div.container > nav ul > li > a > span {
+		padding-left : 40px;
+		padding-right : 40px;		
+		}
+		
+	div.container > nav ul > li > ul > li > span,
+	div.container > nav ul > li > ul > li > a > span {
+		padding-left : 60px;
+		padding-right : 60px;		
+		}
+		
+	div.menu > span {
+		left : 60px;
+		width : calc(100% - 120px);
+		padding : 30px 0;
+		font: 700 26px/34px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -135,13 +163,53 @@ div.container > nav > div.swiper-container > div.swiper-scrollbar > div.swiper-s
 		padding-top : 50px;
 		padding-bottom : 50px;
 		}
-			
-	div.container > nav > div > div > ul > li {
-		font: 600 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		
+	div.menu {
+		left : 280px;
+		width : 480px;
+		z-index : 100;
+		padding-bottom : 50px;
+		}
+	
+	div.container > nav > div ul > li,
+	div.menu > div ul > li {
+		font: 600 18px/26px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+	
+	div.container > nav > div ul > li > ul > li,
+	div.menu > div ul > li > ul > li {
+		font: 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 
-	div.container > nav > div > div > ul > li > ul > li {
-		font: 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	div.menu > div div.special,	
+	div.menu > div ul > li > span,
+	div.menu > div ul > li > a > span {
+		padding-left : 50px;
+		padding-right : 50px;
+		}
+		
+	div.menu > div ul > li > ul > li > span,
+	div.menu > div ul > li > ul > li > a > span {
+		padding-left : 70px;
+		}
+		
+	div.container > nav ul > li > span,
+	div.container > nav ul > li > a > span {
+		padding-left : 35px;
+		padding-right : 35px;		
+		}
+		
+	div.container > nav ul > li > ul > li > span,
+	div.container > nav ul > li > ul > li > a > span {
+		padding-left : 55px;
+		padding-right : 55px;		
+		}
+		
+	div.menu > span {
+		left : 50px;
+		width : calc(100% - 100px);
+		padding : 25px 0;
+		font: 700 24px/32px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -150,13 +218,53 @@ div.container > nav > div.swiper-container > div.swiper-scrollbar > div.swiper-s
 		padding-top : 40px;
 		padding-bottom : 40px;
 		}
-			
-	div.container > nav > div > div > ul > li {
-		font: 600 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		
+	div.menu {
+		left : 280px;
+		width : 400px;
+		z-index : 100;
+		padding-bottom : 40px;
+		}
+	
+	div.container > nav > div ul > li,
+	div.menu > div ul > li {
+		font: 600 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+	
+	div.container > nav > div ul > li > ul > li,
+	div.menu > div ul > li > ul > li {
+		font: 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 
-	div.container > nav > div > div > ul > li > ul > li {
-		font: 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	div.menu > div div.special,	
+	div.menu > div ul > li > span,
+	div.menu > div ul > li > a > span {
+		padding-left : 40px;
+		padding-right : 40px;
+		}
+		
+	div.menu > div ul > li > ul > li > span,
+	div.menu > div ul > li > ul > li > a > span {
+		padding-left : 60px;
+		}
+		
+	div.container > nav ul > li > span,
+	div.container > nav ul > li > a > span {
+		padding-left : 30px;
+		padding-right : 30px;		
+		}
+		
+	div.container > nav ul > li > ul > li > span,
+	div.container > nav ul > li > ul > li > a > span {
+		padding-left : 50px;
+		padding-right : 50px;		
+		}
+		
+	div.menu > span {
+		left : 40px;
+		width : calc(100% - 80px);
+		padding : 20px 0;
+		font: 700 22px/30px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -166,12 +274,52 @@ div.container > nav > div.swiper-container > div.swiper-scrollbar > div.swiper-s
 		padding-bottom : 30px;
 		}
 		
-	div.container > nav > div > div > ul > li {
-		font: 600 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	div.menu {
+		left : 0;
+		width : 100%;
+		z-index : 110;
+		padding-bottom : 30px;
 		}
-
-	div.container > nav > div > div > ul > li > ul > li {
+	
+	div.container > nav > div ul > li,
+	div.menu > div ul > li {
+		font: 600 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+	
+	div.container > nav > div ul > li > ul > li,
+	div.menu > div ul > li > ul > li {
 		font: 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.menu > div div.special,
+	div.menu > div ul > li > span,
+	div.menu > div ul > li > a > span {
+		padding-left : 30px;
+		padding-right : 30px;
+		}
+		
+	div.menu > div ul > li > ul > li > span,
+	div.menu > div ul > li > ul > li > a > span {
+		padding-left : 50px;
+		}
+		
+	div.container > nav ul > li > span,
+	div.container > nav ul > li > a > span {
+		padding-left : 25px;
+		padding-right : 25px;		
+		}
+		
+	div.container > nav ul > li > ul > li > span,
+	div.container > nav ul > li > ul > li > a > span {
+		padding-left : 45px;
+		padding-right : 45px;		
+		}
+		
+	div.menu > span {
+		left : 30px;
+		width : calc(100% - 60px);
+		padding : 15px 0;
+		font: 700 20px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -181,11 +329,43 @@ div.container > nav > div.swiper-container > div.swiper-scrollbar > div.swiper-s
 		padding-bottom : 20px;
 		}
 		
-	div.container > nav > div > div > ul > li {
-		font: 600 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	div.menu {
+		left : 0;
+		width : 100%;
+		z-index : 110;
+		padding-bottom : 20px;
+		}
+	
+	div.container > nav > div ul > li,	
+	div.menu > div ul > li {
+		font: 600 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+	
+	div.container > nav > div ul > li > ul > li,
+	div.menu > div ul > li > ul > li {
+		font: 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 
-	div.container > nav > div > div > ul > li > ul > li {
-		font: 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	div.container > nav ul > li > span,
+	div.container > nav ul > li > a > span,	
+	div.menu > div div.special,	
+	div.menu > div ul > li > span,
+	div.menu > div ul > li > a > span {
+		padding-left : 20px;
+		padding-right : 20px;
+		}
+	
+	div.container > nav ul > li > ul > li > span,
+	div.container > nav ul > li > ul > li > a > span,
+	div.menu > div ul > li > ul > li > span,
+	div.menu > div ul > li > ul > li > a > span {
+		padding-left : 40px;
+		}
+		
+	div.menu > span {
+		left : 20px;
+		width : calc(100% - 40px);
+		padding : 10px 0;
+		font: 700 18px/26px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
