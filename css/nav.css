@@ -14,7 +14,7 @@ div.container > nav {
 	}
 
 div.menu {
-	display : block;
+	display : none;
 	position : fixed;
 	min-width : 320px;
 	height : 100%;
