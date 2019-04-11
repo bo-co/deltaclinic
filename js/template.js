@@ -275,10 +275,15 @@ $(document).ready(function() {
   			}
   		$('div.container > nav > div ul > li > a').removeClass('selected');
   		$('div.menu').css({'display' : 'none'});
-   		}); 		
-  		
-  		
-
+   		});
+   	$('div.container > span').on('click', function() {
+  		if ($('div.container').hasClass('nav')) {
+  			$('div.container').removeClass('nav');
+  			}
+  		$('div.container > nav > div ul > li > a').removeClass('selected');
+  		$('div.menu').css({'display' : 'none'});
+   		});
+   		
 	return false;
 	});
 	
