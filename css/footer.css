@@ -2,9 +2,9 @@
 
 div.container > footer {
 	position : relative;
-	display : table-row !important;
-	width : 100%;
-  	height : 1px;
+	/* display : table-row !important;
+	height : 1px;
+	width : 100%; */
 	}
 	
 div.container > footer > div.order {
