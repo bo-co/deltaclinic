@@ -119,6 +119,8 @@ div.container > footer > div.contacts > div > ul > li > span {
 div.container > footer > div.contacts > div > ul > li > a.phone {
 	margin : 0 10px 0 0;
 	color : rgba(68, 68, 68, 1) !important;
+	text-decoration : none;
+	white-space : nowrap;
 	}
 	
 div.container > footer > div.contacts > div > ul > li > a.phone::before {
