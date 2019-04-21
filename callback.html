@@ -11,10 +11,15 @@
     	<link rel="stylesheet" href="css/style.css?110420191419" />
     	<link rel="stylesheet" href="css/scrollbar.css?110420191419" />
     	<link rel="stylesheet" href="css/nav.css?110420191419" />
+    	<link rel="stylesheet" href="css/article.css?110420191419" />  	
     	<link rel="stylesheet" href="css/footer.css?110420191419" />
     	<link rel="stylesheet" href="css/callback.css?110420191419" />
     	<link rel="stylesheet" href="css/form.css?110420191419" />
-		<script defer src="js/template.js?110420191419"></script>
+		<script defer src="js/template.js?110420191419"></script>		
+    	<!-- слайдер -->
+    	<link rel="stylesheet" href="main/slider/template.css?110420191419" />
+    	<script defer src="main/slider/template.js?110420191419"></script>
+    	<!-- /слайдер -->
 		<title>«Дельтаклиник» — многопрофильный медицинский центр</title>
 	</head>
 	<body onload="resize();" onresize="resize();">
@@ -50,10 +55,23 @@
 			<span></span>
 			<header></header>
 			<nav>
+				<div class="form search">
+					<form name="application" method="get" action="/search/">
+						<ul>
+							<li>
+								<input class="field" type="text" name="q" value="" data-form="search" />
+								<span>Поиск</span>
+							</li>						
+						</ul>
+						<div>
+							<button type="submit" data-form="search"></button>
+						</div>
+					</form>
+				</div>
 				<div class="scrollbar-box scrollbar-nav">
 					<ul>
 						<li>
-							<a href="#" title="Диагностика">
+							<a class="section" href="#" title="Диагностика">
 								<span>Диагностика</span>
 							</a>
 						</li>
@@ -470,9 +488,140 @@
 								</li>
 							</ul>
 						</li>
+						<li>
+							<a class="section" href="#" title="Дельта Клиник">
+								<span>Дельта Клиник</span>
+							</a>
+							<ul>
+								<li>
+									<a href="#" title="О компании">
+										<span>О компании</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="Врачи">
+										<span>Врачи</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="Статьи">
+										<span>Статьи</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="Новости">
+										<span>Новости</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="Фильмы о клинике">
+										<span>Фильмы о клинике</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="Вакансии">
+										<span>Вакансии</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="section" href="#" title="Пациентам">
+								<span>Пациентам</span>
+							</a>
+							<ul>
+								<li>
+									<a href="#" title="Акции">
+										<span>Акции</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="Программы">
+										<span>Программы</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="Услуги и цены">
+										<span>Услуги и цены</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="Запись на приём">
+										<span>Запись на приём</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="Отзывы">
+										<span>Отзывы</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="Полезная информация">
+										<span>Полезная информация</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="move" href="#map" title="Контакты">
+								<span>Контакты</span>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</nav>
+			<article>
+			<!-- слайдер -->
+			<div class="swiper-main">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide" style="background-image:url(main/slider/e224f03d6fdaaadce825fd3cbce965e5.jpg?110420191419);">
+						<a href="#"></a>
+						<div>
+							<div>
+								<span>Программа Check-Up<br />
+								ежегодный осмотр для мужчин</span>
+								<!--ul>
+									<li>Собственные карьеры и месторождения</li>
+									<li>Прямое партнерство с другими месторождениями</li>
+									<li>Собственное производство</li>
+								</ul-->
+								<button type="button">Узнайте больше</button>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide" style="background-image:url(main/slider/fae88f25ef4f055065f626ef2726a9b9.jpg?110420191419);">
+						<a href="#"></a>
+						<div>
+							<div>
+								<span>Живите полной жизнью!<br />
+								Диагностика сахарного диабета со скидкой</span>
+								<!--ul>
+									<li>Интерьер</li>
+									<li>Экстерьер</li>
+								</ul-->
+								<button type="button">Подробнее</button>
+							</div>
+						</div>				
+					</li>
+					<li class="swiper-slide" style="background-image:url(main/slider/7415d4154669318700ddf593f6b20032.jpg?110420191419);">
+						<a href="#"></a>
+						<div>
+							<div>
+								<span>Скидка 10% на<br />
+								консультацию специалиста!*</span>
+								<!--ul>
+									<li>Интерьер</li>
+									<li>Экстерьер</li>
+								</ul-->
+								<button type="button">Получите скидку</button>
+							</div>
+						</div>				
+					</li>
+				</ul>
+				<div></div>
+			</div>
+			<!-- /слайдер -->
+			</article>
 			<footer>
 				<div class="order">
 					<span>Запишитесь к врачу</span>
@@ -589,14 +738,22 @@
 						<span>Контакты</span>
 						<ul>
 							<li class="location">
-								<span>Москва, Наставнический перeулок,&nbsp;6</span> 
-								<a class="route" href="#" title="Как пройти" data-type="pedestrian">Как&nbsp;пройти</a><br />
-								<span>(м. Курская, м. Чкаловская)</span>
+								<strong>Головной офис клиники</strong><br />
+								<span>Москва, Наставнический перeулок,&nbsp;6</span><br />
 								<a class="route" href="#" title="Как проехать" data-type="auto">Как&nbsp;проехать</a>
+							</li>
+							<li>
+								<strong>Отделение «Андрология»</strong><br />
+								<span>Москва, 2-й Сыромятнический переулок,&nbsp;10</span><br />
+								<a class="route" href="#" title="Как проехать" data-type="auto">Как&nbsp;проехать</a>
+							</li>
+							<li>
+								<span>(м. Курская, м. Чкаловская)</span><br />
+								<a class="route" href="#" title="Как пройти" data-type="pedestrian">Как&nbsp;пройти</a>
 							</li>
 							<li class="phone">
 								<a class="phone" href="tel:+74959179292" title="+7 (495) 917-92-92">+7 (495) 917-92-92</a>
-								<a class="callback" href="#" title="Обратный звонок">Обратный&nbsp;звонок</a>
+								<!--a class="callback" href="#" title="Обратный звонок">Обратный&nbsp;звонок</a-->
 							</li>
 							<li class="time">
 								<span>с 8:00 до 21:00, ежедневно</span>
@@ -622,10 +779,28 @@
 						</ul>
 					</div>
 				</div>
+				<div class="footer">
+					<ul>
+						<li>
+							<a class="youtube" href="https://www.youtube.com/user/Deltaclinic" title="YouTube" target="_blank"></a>
+						</li>
+						<li>
+							<a class="facebook" href="https://www.facebook.com/deltabeautymoscow/" title="facebook" target="_blank"></a>
+						</li>
+						<li>
+							<a class="instagram" href="https://www.instagram.com/deltabeauty_clinic/" title="instagram" target="_blank"></a>
+						</li>
+						<li>
+							<a class="vk" href="https://vk.com/deltaclinic" title="ВКонтакте" target="_blank"></a>
+						</li>
+					</ul>
+					<span>1999-2019 &copy; Дельта Клиник<br />
+					Лицензия ЛО-77-01-016193 от 08.06.2018</span>
+				</div>
 			</footer>
-			<a class="fix call" href="tel:+74959179292" title="+7 (495) 917-92-92">
+			<!--a class="fix call" href="tel:+74959179292" title="+7 (495) 917-92-92">
 				<span>+7 (495) 917-92-92</span>
-			</a>
+			</a-->
 			<a class="fix callback" href="#" title="Обратный звонок">
 				<span>Обратный звонок</span>
 			</a>
