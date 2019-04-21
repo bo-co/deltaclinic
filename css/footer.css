@@ -300,7 +300,69 @@ div.zoom > div:hover {
 	
 div.zoom > div:hover::before, 
 div.zoom > div:hover::after {
-	background-color : rgba(255 , 255 , 255, 1);
+	background-color : rgba(255, 255, 255, 1);
+	}
+	
+div.container > footer > div.footer {
+	position : relative;
+	max-width : 1280px;
+	min-height : 40px;
+	margin : 0 auto;
+	color : rgba(155, 155, 155, 1);
+	font : 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+	
+div.container > footer > div.footer > ul {
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	position : absolute;
+	height : 40px;
+	padding : 0;
+	margin : 0;
+	list-style : none;
+	}
+	
+div.container > footer > div.footer > ul > li,
+div.container > footer > div.footer > ul > li > a {
+	display : block;
+	position : relative;
+	width : 40px;
+	height : 40px;
+	}
+	
+div.container > footer > div.footer > ul > li:not(:first-child) {
+	margin-left : 10px;
+	}
+	
+div.container > footer > div.footer > ul > li > a::before {
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height : 100%;
+	font : normal 40px/40px "icomoon" !important;
+	}
+	
+div.container > footer > div.footer > ul > li > a.vk::before {
+	content : "\e90d";
+	color : rgb(50, 80, 109);
+	}
+	
+div.container > footer > div.footer > ul > li > a.instagram::before {
+	content : "\e90c";
+	color : rgb(81, 127, 164);
+	}
+	
+div.container > footer > div.footer > ul > li > a.facebook::before {
+	content : "\e90b";
+	color : rgb(59, 89, 152);
+	}
+	
+div.container > footer > div.footer > ul > li > a.youtube::before {
+	content : "\e90a";
+	color : rgb(187, 0, 0);
 	}
 	
 @media (min-width : 1401px) {
@@ -341,6 +403,16 @@ div.zoom > div:hover::after {
 		
 	div.container > footer > div.contacts > div > ul > li::before {
 		font : normal 16px/24px "icomoon" !important;
+		}
+		
+	div.container > footer > div.footer {
+		height : 100px;
+		padding : 30px 60px;
+		}
+		
+	div.container > footer > div.footer > ul {
+		right : 60px;
+		top : 30px;
 		}
 	}
 	
@@ -385,6 +457,16 @@ div.zoom > div:hover::after {
 	div.container > footer > div.contacts > div > ul > li::before {
 		font : normal 16px/24px "icomoon" !important;
 		}
+		
+	div.container > footer > div.footer {
+		height : 90px;
+		padding : 25px 50px;
+		}
+		
+	div.container > footer > div.footer > ul {
+		right : 50px;
+		top : 25px;
+		}
 	}
 	
 @media (min-width : 721px) and (max-width : 1040px) {
@@ -426,6 +508,16 @@ div.zoom > div:hover::after {
 
 	div.container > footer > div.contacts > div > ul > li::before {
 		font : normal 16px/20px "icomoon" !important;
+		}
+		
+	div.container > footer > div.footer {
+		height : 80px;
+		padding : 20px 40px;
+		}
+		
+	div.container > footer > div.footer > ul {
+		right : 40px;
+		top : 20px;
 		}
 	}
 	
@@ -470,6 +562,16 @@ div.zoom > div:hover::after {
 	div.container > footer > div.contacts > div > ul > li::before {
 		font : normal 16px/20px "icomoon" !important;
 		}
+		
+	div.container > footer > div.footer {
+		height : 120px;
+		padding : 65px 30px 15px 30px;
+		}
+		
+	div.container > footer > div.footer > ul {
+		left : 30px;
+		top : 15px;
+		}
 	}
 	
 @media (max-width : 480px) {
@@ -512,5 +614,15 @@ div.zoom > div:hover::after {
 		
 	div.container > footer > div.contacts > div > ul > li::before {
 		font : normal 16px/20px "icomoon" !important;
+		}
+		
+	div.container > footer > div.footer {
+		height : 120px;
+		padding : 70px 20px 10px 20px;
+		}
+		
+	div.container > footer > div.footer > ul {
+		left : 20px;
+		top : 20px;
 		}
 	}
