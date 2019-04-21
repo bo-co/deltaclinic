@@ -99,7 +99,7 @@ a:hover {
 	}
 	
 div.container > a.fix {
-	display : none;
+	display : block;
 	position : fixed;
 	z-index : 80;
 	border-radius : 50%;
@@ -162,6 +162,10 @@ div.container > a.fix::before {
 		font : 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
+	strong {
+		font : 700 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
 	div.container {
 		padding-left : 280px;
 		}
@@ -198,6 +202,10 @@ div.container > a.fix::before {
 		font : 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
+	strong {
+		font : 700 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
 	div.container {
 		padding-left : 280px;
 		}
@@ -223,7 +231,7 @@ div.container > a.fix::before {
 		}
 		
 	div.container > a.fix.callback {
-		display : block;
+		/* display : block; */
 		right : 35px;
 		bottom : 35px;
 		}
@@ -232,6 +240,10 @@ div.container > a.fix::before {
 @media (min-width : 721px) and (max-width : 1040px) {
 	body {
 		font : 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	strong {
+		font : 700 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
 	div.container > a.fix {
@@ -255,7 +267,7 @@ div.container > a.fix::before {
 		}
 		
 	div.container > a.fix.callback {
-		display : block;
+		/* display : block; */
 		right : 30px;
 		bottom : 30px;
 		}
@@ -266,6 +278,10 @@ div.container > a.fix::before {
 		font : 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
+	strong {
+		font : 700 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
 	div.container > a.fix {
 		width : 80px;
 		height : 80px;
@@ -286,8 +302,8 @@ div.container > a.fix::before {
 		font : normal 16px/40px "icomoon" !important;	
 		}
 		
-	div.container > a.fix.call {
-		display : block;
+	div.container > a.fix.callback {
+		/* display : block; */
 		right : 25px;
 		bottom : 25px;
 		}
@@ -298,6 +314,10 @@ div.container > a.fix::before {
 		font : 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
+	strong {
+		font : 700 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
 	div.container > a.fix {
 		width : 80px;
 		height : 80px;
@@ -318,8 +338,8 @@ div.container > a.fix::before {
 		font : normal 16px/40px "icomoon" !important;	
 		}
 		
-	div.container > a.fix.call {
-		display : block;
+	div.container > a.fix.callback {
+		/* display : block; */
 		right : 20px;
 		bottom : 20px;
 		}
