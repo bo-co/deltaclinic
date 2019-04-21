@@ -35,8 +35,10 @@ div.callback.opened + div.container > * {
 	} */
 
 div.container.nav > footer,
+div.container.nav > article,
 div.callback.opened + div.container > footer,
-div.callback.opened + div.container > nav {
+div.callback.opened + div.container > nav,
+div.callback.opened + div.container > article {
   	-webkit-filter : url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZmlsdGVyIGlkPSJibHVyIj4KICAgICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxMiIgLz4KICAgIDwvZmlsdGVyPgo8L3N2Zz4=#blur");
  	-webkit-filter : blur(3px);
    		-ms-filter : url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZmlsdGVyIGlkPSJibHVyIj4KICAgICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxMiIgLz4KICAgIDwvZmlsdGVyPgo8L3N2Zz4=#blur");
