@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+article {
+	/* min-height : 100vh; */
+	background : linear-gradient(to bottom, rgba(254, 242, 241, 1) 0%, rgba(255, 255, 255, 1) 100%);
+	}
+	
+@media (min-width : 1401px) {
+
+	}
+	
+@media (min-width : 1041px) and (max-width : 1400px) {
+
+	}
+	
+@media (min-width : 721px) and (max-width : 1040px) {
+
+	}
+	
+@media (min-width : 481px) and (max-width : 720px) {
+
+	}
+	
+@media (max-width : 480px) {
+
+	}
