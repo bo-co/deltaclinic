@@ -1,0 +1,322 @@
+@charset "UTF-8";
+
+div.container > article > div.swiper-main {
+	position : relative;
+	width : 100%;
+	max-width : 100vw;
+	overflow : hidden;	
+	}
+
+div.container > article > div.swiper-main > div {
+	position : relative;
+	left : 0;
+	bottom : 40px;
+	z-index : 10;
+	height : 40px;
+	max-width : 280px;
+	margin : 0 auto;
+	text-align : center;
+	overflow : hidden;
+	}
+
+div.container > article > div.swiper-main > div > span {
+	position : relative;
+	display : inline-block;
+	vertical-align : top;
+	width : 24px;
+	height : 40px;
+	margin : 0 5px;
+    cursor : pointer;
+    }
+    
+div.container > article > div.swiper-main > div > span::before {
+	position : absolute;
+	top : calc(50% - 6px);
+	left : calc(50% - 6px);
+	width : 12px;
+	height : 12px;
+	border-radius : 50%;
+    background-color : rgba(255, 255, 255, 1);
+    border : solid 1px rgba(244, 86, 65, 1);
+    content : "";
+    transition : all 0.25s ease;
+	}
+
+div.container > article > div.swiper-main > div > span.swiper-pagination-bullet-active::before,	
+div.container > article > div.swiper-main > div > span:hover::before  {
+	background-color : rgba(244, 86, 65, 1);
+	}
+
+div.container > article > div.swiper-main > ul.swiper-wrapper {
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	width : 2000em;
+	height : 100%;
+	padding : 0;
+	margin : 0;
+	list-style : none;	
+	}
+	
+div.container > article > div.swiper-main > ul > li {
+	position : relative;
+	width : 100%;
+	height : 100%;
+	background-size : cover;
+	background-position : 75% 50%;
+	background-repeat : no-repeat;
+	}
+	
+div.container > article > div.swiper-main > ul > li::before {
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 5;
+	width : 100%;
+	height : 100%;
+	content : "";
+	background-color : rgba(255, 255, 255, 0.25);
+	}
+	
+div.container > article > div.swiper-main > ul > li > a {
+	display : block;
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 20;
+	width : 100%;
+	height : calc(100% - 40px);
+	text-decoration : none;
+	background-color : rgba(0, 0, 0, 0);
+	}
+	
+div.container > article > div.swiper-main > ul > li > div {
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	flex-wrap : wrap;
+	-webkit-flex-wrap : wrap;
+	-ms-flex-wrap : wrap;
+	align-items : center;
+	-webkit-align-items : center;
+	-ms-align-items : center;
+	position : relative;
+	z-index : 10;
+	height : calc(100% - 40px);
+	max-width : 1280px;
+	margin : 0 auto;
+	color : rgba(40, 40, 40, 1);
+	overflow : hidden;
+	}
+	
+div.container > article > div.swiper-main > ul > li > div > div {
+	position : relative;
+	padding : 65px 0;
+	color : rgba(1, 31, 88, 1);
+	}
+	
+div.container > article > div.swiper-main > ul > li > a + div > div > button {
+	display : block;
+	position : absolute;
+	bottom : 0;
+	left : 0;
+	z-index : 10;
+	height : 40px;
+	padding : 0 20px;
+	margin : 0;
+	border : 0;
+	background-color : rgba(244, 86, 65, 1);
+	color : rgba(255, 255, 255, 1);
+	font : 600 18px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	white-space : nowrap;
+	}
+	
+div.container > article > div.swiper-main > ul > li > a + div > div > button::after {
+	display : block;
+	position : absolute;
+	right : 5px;
+	top : 0;
+	z-index : 10;
+	width : 40px;
+	height : 40px;
+	background-image : url("../img/arrow.svg?110320191457");
+	background-repeat : no-repeat;
+	background-position : 50% 50%;
+	background-size : 11px 17px;	
+	content : "";
+	transition : right 0.25s ease;
+	}
+	
+div.container > article > div.swiper-main > ul > li > a:hover + div > div > button::after {
+	right : 0;
+	}
+	
+div.container > article > div.swiper-main > ul > li > div > div > ul {
+	position : relative;
+	display : block;
+	width : 100%;
+	list-style : none;
+	}
+	
+div.container > article > div.swiper-main > ul > li > div > div > ul::before {
+	display : block;
+	position : absolute;
+	left : 0;
+	top : 0;
+	z-index : 10;
+	width : 60px;
+	height : 2px;
+	content : "";
+	background-color : rgba(244, 86, 65, 1);	
+	}
+	
+div.container > article > div.swiper-main > ul > li > div > div > ul > li {
+	display : block;
+	position : relative;
+	padding-left : 20px;
+	}
+	
+div.container > article > div.swiper-main > ul > li > div > div > ul > li::before {
+	display : block;
+	position : absolute;
+	left : 0;
+	top : 8px;
+	z-index : 10;
+	width : 5px;
+	height : 5px;
+	border-radius : 50%;
+	content : "";
+	background-color : rgba(244, 86, 65, 1);
+	}
+
+@media (min-width : 1401px) {
+	div.container > article > div.swiper-main {
+		height : calc(100vh - 140px);
+		min-height : 480px;
+		max-height : 50vh;
+		}
+		
+	div.container > article > div.swiper-main > ul > li {
+		padding : 0 60px;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > span {
+		font : 700 40px/44px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > ul {
+		margin : 30px 0 0 0;
+		padding : 30px 0 0 0;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > ul > li {
+		margin : 10px 0;
+		font : normal 24px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (min-width : 1041px) and (max-width : 1400px) {
+	div.container > article > div.swiper-main {
+		height : calc(100vh - 120px);
+		min-height : 420px;
+		max-height : 480px;
+		}
+		
+	div.container > article > div.swiper-main > ul > li {
+		padding : 0 50px;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > span {
+		font : 700 36px/36px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > ul {
+		margin : 25px 0 0 0;
+		padding : 25px 0 0 0;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > ul > li {
+		margin : 8px 0;
+		font : normal 22px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (min-width : 861px) and (max-width : 1040px) {
+	div.container > article > div.swiper-main {
+		height : calc(100vh - 120px);
+		min-height : 360px;
+		max-height : 420px;
+		}
+		
+	div.container > article > div.swiper-main > ul > li {
+		padding : 0 40px;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > span {
+		font : 700 32px/36px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > ul {
+		margin : 20px 0 0 0;
+		padding : 20px 0 0 0;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > ul > li {
+		margin : 6px 0;
+		font : normal 20px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (min-width : 481px) and (max-width : 860px) {
+	div.container > article > div.swiper-main {
+		height : calc(100vh - 80px);
+		min-height : 300px;
+		max-height : 360px;
+		}
+		
+	div.container > article > div.swiper-main > ul > li {
+		padding : 0 30px;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > span {
+		font : 700 28px/32px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > ul {
+		margin : 15px 0 0 0;
+		padding : 15px 0 0 0;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > ul > li {
+		margin : 4px 0;
+		font : normal 18px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (max-width : 480px) {
+	div.container > article > div.swiper-main {
+		height : calc(100vh - 60px);
+		min-height : 240px;
+		max-height : 300px;
+		}
+
+	div.container > article > div.swiper-main > ul > li {
+		padding : 0 20px;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > span {
+		font : 700 24px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > ul {
+		margin : 10px 0 0 0;
+		padding : 10px 0 0 0;
+		}
+		
+	div.container > article > div.swiper-main > ul > li > div > div > ul > li {
+		margin : 2px 0;
+		font : normal 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
