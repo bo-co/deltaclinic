@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+div.form > form {
+	position : relative;
+	}
+
 div.form div.choose > ul,
 div.form > form > ul {
 	display : block;
@@ -196,7 +200,6 @@ div.form div.choose > ul > li > div > ul > li {
 	padding-bottom : 10px;
 	font : normal 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	cursor : pointer;
-	transition : all 0.25s ease;
 	}
 	
 div.form div.choose > ul > li > div > ul > li:hover {
