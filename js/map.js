@@ -9,6 +9,15 @@ function init() {
     		iconImageSize: [40, 40],
     		iconImageOffset: [-20, -20]
 			}),
+		otherPlacemark = new ymaps.Placemark([55.752496, 37.662201], {
+			balloonContent: null,
+			hintContent: null
+			}, {
+    		iconLayout: 'default#image',
+    		iconImageHref: 'img/finish.svg',
+    		iconImageSize: [40, 40],
+    		iconImageOffset: [-20, -20]
+			}),
 		multiRouteModel = new ymaps.multiRouter.MultiRouteModel([], {
             wayPointDraggable: false,
             boundsAutoApply: false
@@ -83,6 +92,7 @@ function init() {
     myMap.controls.add(zoomControl);
     myMap.behaviors.disable('scrollZoom');
     myMap.geoObjects.add(myPlacemark);
+    myMap.geoObjects.add(otherPlacemark);
     
 	multiRoute.options.set({
 		wayPointStartIconLayout: 'default#image',
