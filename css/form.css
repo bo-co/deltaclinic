@@ -11,12 +11,6 @@ div.form > form > ul {
 	list-style : none;
 	}
 	
-div.form div.choose.service > ul,
-div.form div.choose.type > ul,
-div.form > form > ul {
-	padding : 0 0 15px 0;
-	}
-	
 div.form div.choose.date > ul,
 div.form div.choose.time > ul {
 	padding : 0;
@@ -26,24 +20,19 @@ div.form div.choose > ul > li,
 div.form > form > ul > li:not(.datetime) {
 	display : block;
 	position : relative;
-	min-height : 40px;
 	background-color : rgba(250, 250, 250, 1);
-	}
-
-div.form > form > ul > li {
-	margin : 0 0 15px 0;
 	}
 	
 div.form > form > ul > li.required::after {
 	position : absolute;
-	top : 0;
+	top : calc(50% - 10px);
 	right : 5px;
 	z-index : 3;
 	width : 20px;
-	height : 40px;
+	height : 20px;
 	background-color : rgba(250, 250, 250, 0);
 	color : rgba(244, 86, 65, 1);
-	font : 700 18px/42px Arial, Tahoma, Verdana, sans-serif;
+	font : 700 18px/20px Arial, Tahoma, Verdana, sans-serif;
 	content : "\273b";
 	}
 	
@@ -51,7 +40,6 @@ div.form > form > ul > li.datetime {
 	display : flex;
 	justify-content : space-between;
 	position : relative;
-	min-height : 40px;
 	}
 	
 div.form > form > ul > li.datetime > div {
@@ -67,11 +55,9 @@ div.form > form > ul > li > input[type=tel] {
 	z-index : 2;
 	display : block;
 	width : 100%;
-	min-height : 40px;
 	padding : 0 35px 0 20px;
 	border : 1px solid rgba(203, 207, 213, 1);
 	border-radius : 0;
-	font : 400 16px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	background-color : rgba(250, 250, 250, 0);
 	color : rgba(68, 68, 68, 1);
 	}
@@ -91,7 +77,6 @@ div.form > form > ul > li > input[type=tel] + span {
 	z-index : 1;
 	color : rgba(140, 140, 140, 1);
 	transform : scale(1,1);
-	font: 400 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	white-space : nowrap;
 	transition : all 0.25s ease;
 	}
@@ -110,13 +95,11 @@ div.form > form > button {
 	display : block;
 	position : relative;
 	width : 100%;
-	height : 50px;
 	padding : 0;
 	margin : 0;
 	border : 0;
 	background-color : rgba(244, 86, 65, 0.75);
 	color : rgba(255, 255, 255, 1);
-	font : 700 16px/50px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	text-align : center;
 	text-transform : uppercase;
 	white-space : nowrap;
@@ -133,12 +116,12 @@ div.form > form > button.active {
 div.form div.choose > ul > li::after {
 	display : block;
 	position : absolute;
-	top : 11px;
+	top : calc(50% - 10px);
 	right : 20px;
 	z-index : 3;
 	width : 5px;
 	height : 20px;
-	color : rgba(0, 28, 87, 0.25);
+	color : rgba(1, 31, 88, 0.5);
 	font : normal 16px/20px "icomoon" !important;
 	}
 	
@@ -148,7 +131,7 @@ div.form div.choose.type > ul > li::after {
 	}
 	
 div.form div.choose.time > ul > li::after {
-	content : "\e908";
+	content : "\e909";
 	}
 	
 div.form div.choose.date > ul > li::after {
@@ -198,7 +181,6 @@ div.form div.choose > ul > li > div > ul > li {
 	padding-left : 20px;
 	padding-right : 40px;
 	padding-bottom : 10px;
-	font : normal 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	cursor : pointer;
 	}
 	
@@ -244,10 +226,8 @@ div.form div.choose > ul > li > div.calendar > table {
 
 div.form div.choose > ul > li > div.calendar > table > caption {
 	position : relative;
-	height : 40px;
 	background-color : rgba(0, 28, 87, 0.25);
 	color : rgba(255, 255, 255, 1);
-	font : 700 16px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	text-align : center;
 	}
 	
@@ -255,8 +235,6 @@ div.form div.choose > ul > li > div.calendar > table > caption > div {
 	position : absolute;
 	top : 0;
 	z-index : 10;
-	width : 40px;
-	height : 40px;
 	cursor : pointer;
 	}
 	
@@ -363,4 +341,104 @@ div.form div.choose > ul > li > div.calendar > table > tbody > tr > td.calDisabl
 div.form div.choose > ul > li > div.calendar > table > tbody > tr > td.calSelected {
 	background-color : rgba(0, 28, 87, 1);
 	color : rgba(255, 255, 255, 1);
+	}
+	
+@media (min-width : 1041px) {
+	div.form div.choose.service > ul,
+	div.form div.choose.type > ul,
+	div.form > form > ul {
+		padding : 0 0 15px 0;
+		}
+		
+	div.form > form > ul > li {
+		margin : 0 0 15px 0;
+		}
+	
+	div.form div.choose > ul > li {
+		min-height : 40px;
+		}
+
+	div.form div.choose > ul > li > input[type=text],
+	div.form > form > ul > li > input[type=text],
+	div.form > form > ul > li > input[type=email],
+	div.form > form > ul > li > input[type=tel] {
+		min-height : 40px;
+		font : 400 16px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.form div.choose > ul > li > input[type=text] + span,	
+	div.form > form > ul > li > input[type=text] + span,
+	div.form > form > ul > li > input[type=email] + span,
+	div.form > form > ul > li > input[type=tel] + span {
+		font: 400 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.form div.choose > ul > li > div > ul > li {
+		font : normal 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.form div.choose > ul > li > div.calendar > table > caption {
+		height : 40px;
+		font : 700 16px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.form div.choose > ul > li > div.calendar > table > caption > div {
+		width : 40px;
+		height : 40px;
+		}
+		
+	div.form > form > button {
+		height : 50px;
+		font : 700 16px/50px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (max-width : 1040px) {
+	div.form div.choose.service > ul,
+	div.form div.choose.type > ul,
+	div.form > form > ul {
+		padding : 0 0 10px 0;
+		}
+		
+	div.form > form > ul > li {
+		margin : 0 0 10px 0;
+		}
+		
+	div.form div.choose > ul > li {
+		min-height : 36px;
+		}
+
+	div.form div.choose > ul > li > input[type=text],
+	div.form > form > ul > li > input[type=text],
+	div.form > form > ul > li > input[type=email],
+	div.form > form > ul > li > input[type=tel] {
+		min-height : 36px;
+		font : 400 14px/36px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.form div.choose > ul > li > input[type=text] + span,	
+	div.form > form > ul > li > input[type=text] + span,
+	div.form > form > ul > li > input[type=email] + span,
+	div.form > form > ul > li > input[type=tel] + span {
+		font: 400 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.form div.choose > ul > li > div > ul > li {
+		font : normal 14px/18px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.form div.choose > ul > li > div.calendar > table > caption {
+		height : 36px;
+		font : 700 14px/36px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.form div.choose > ul > li > div.calendar > table > caption > div {
+		width : 36px;
+		height : 36px;
+		}
+		
+	div.form > form > button {
+		height : 40px;
+		font : 700 14px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 	}
