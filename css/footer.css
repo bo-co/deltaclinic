@@ -83,32 +83,32 @@ div.container > footer > div.contacts > div > ul > li::before {
 	position : absolute;
 	left : 0;
 	z-index : 10;
-	color : rgb(186, 195, 210);
+	color : rgba(1, 31, 88, 0.5);
 	}
 	
 div.container > footer > div.contacts > div > ul > li.location::before {
 	top : 0;
-	content: "\e905";
+	content: "\e904";
 	}
 	
 div.container > footer > div.contacts > div > ul > li.phone::before {
 	top : 0;
-	content: "\e907";
+	content: "\e906";
 	}
 	
 div.container > footer > div.contacts > div > ul > li.time::before {
 	top : 0;
-	content: "\e908";
+	content: "\e909";
 	}
 	
 div.container > footer > div.contacts > div > ul > li.email::before {
 	top : 0;
-	content: "\e902";
+	content: "\e903";
 	}
 	
 div.container > footer > div.contacts > div > ul > li.payment::before {
 	top : 10px;
-	content: "\e900";
+	content: "\e901";
 	}
 	
 div.container > footer > div.contacts > div > ul > li > span {	
@@ -402,7 +402,7 @@ div.container > footer > div.footer > ul > li > a.youtube::before {
 		}
 		
 	div.container > footer > div.contacts > div > ul > li::before {
-		font : normal 16px/24px "icomoon" !important;
+		font : normal 18px/24px "icomoon" !important;
 		}
 		
 	div.container > footer > div.footer {
@@ -455,7 +455,7 @@ div.container > footer > div.footer > ul > li > a.youtube::before {
 		}
 		
 	div.container > footer > div.contacts > div > ul > li::before {
-		font : normal 16px/24px "icomoon" !important;
+		font : normal 18px/24px "icomoon" !important;
 		}
 		
 	div.container > footer > div.footer {
@@ -507,7 +507,7 @@ div.container > footer > div.footer > ul > li > a.youtube::before {
 		}
 
 	div.container > footer > div.contacts > div > ul > li::before {
-		font : normal 16px/20px "icomoon" !important;
+		font : normal 18px/20px "icomoon" !important;
 		}
 		
 	div.container > footer > div.footer {
@@ -560,7 +560,7 @@ div.container > footer > div.footer > ul > li > a.youtube::before {
 		}
 		
 	div.container > footer > div.contacts > div > ul > li::before {
-		font : normal 16px/20px "icomoon" !important;
+		font : normal 18px/20px "icomoon" !important;
 		}
 		
 	div.container > footer > div.footer {
@@ -613,7 +613,7 @@ div.container > footer > div.footer > ul > li > a.youtube::before {
 		}
 		
 	div.container > footer > div.contacts > div > ul > li::before {
-		font : normal 16px/20px "icomoon" !important;
+		font : normal 18px/20px "icomoon" !important;
 		}
 		
 	div.container > footer > div.footer {
