@@ -1,6 +1,7 @@
 function init() {
 
-	var myPlacemark = new ymaps.Placemark([55.75164123543684, 37.662869272700114], {
+	var userCoodinates = null,
+		myPlacemark = new ymaps.Placemark([55.751641, 37.662869], {
 			balloonContent: null,
 			hintContent: null
 			}, {
@@ -110,12 +111,16 @@ function init() {
 		autoReverseGeocode: false,
 		mapStateAutoApply: true
 		}).then(function (result) {
-		multiRouteModel.setReferencePoints([result.geoObjects.get(0).geometry.getCoordinates(), 'Москва, Наставнический перeулок, 6']);
+		userCoodinates = result.geoObjects.get(0).geometry.getCoordinates();
+		multiRouteModel.setReferencePoints([userCoodinates, '55.751641, 37.662869']);
 		});
     
     function changeRoutingMode(routingMode, targetItem) {
     	if (myPlacemark) {
     		myMap.geoObjects.remove(myPlacemark);
+    		}
+    	if (otherPlacemark) {
+    		myMap.geoObjects.remove(otherPlacemark);
     		}
     	if (routingMode) {
         	multiRouteModel.setParams({ routingMode: routingMode }, true);
@@ -137,6 +142,13 @@ function init() {
 		else {
 			changeRoutingMode($(this).data('type'), autoRouteItem);
 			}
+		if ($('div.container > footer > div.contacts > div > div.route > input[name="from"]').val()) {
+			multiRouteModel.setReferencePoints([$('div.container > footer > div.contacts > div > div.route > input[name="from"]').val(), $(this).data('location')]);
+			}
+		else {
+			multiRouteModel.setReferencePoints([userCoodinates, $(this).data('location')]);
+			}
+		$('div.container > footer > div.contacts > div > div.route > input[name="to"]').val($(this).data('location'));
 		$('div.container > footer > div.contacts > div > div.route > button').removeClass();
 		$('div.container > footer > div.contacts > div > div.route > button').addClass($(this).data('type'));
 		$('div.container > footer > div.contacts > div > div.route').css('display', 'block');
@@ -147,7 +159,7 @@ function init() {
 		});
 		
 	$('div.container > footer > div.contacts > div > div.route > button').on('click', function() {
-		multiRouteModel.setReferencePoints([$('div.container > footer > div.contacts > div > div.route > input').val(), 'Москва, Наставнический перeулок, 6']);
+		multiRouteModel.setReferencePoints([$('div.container > footer > div.contacts > div > div.route > input[name="from"]').val(), $('div.container > footer > div.contacts > div > div.route > input[name="to"]').val()]);
 		setTimeout(function () {
 			if ($(this).hasClass('pedestrian')) {
 				changeRoutingMode('pedestrian', pedestrianRouteItem);
