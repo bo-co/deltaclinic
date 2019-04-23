@@ -6,21 +6,31 @@ article {
 	}
 	
 @media (min-width : 1401px) {
-
+	article {
+		padding-top : 100px;
+		}
 	}
 	
 @media (min-width : 1041px) and (max-width : 1400px) {
-
+	article {
+		padding-top : 90px;
+		}
 	}
 	
 @media (min-width : 721px) and (max-width : 1040px) {
-
+	article {
+		padding-top : 80px;
+		}
 	}
 	
 @media (min-width : 481px) and (max-width : 720px) {
-
+	article {
+		padding-top : 70px;
+		}
 	}
 	
 @media (max-width : 480px) {
-
+	article {
+		padding-top : 60px;
+		}
 	}
