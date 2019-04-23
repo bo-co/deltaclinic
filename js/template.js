@@ -252,8 +252,7 @@ $(document).ready(function() {
 			}
 		});
 	clear($(".field"));
-	$("input[type=tel]").inputmask("+7 (999) 999-99-99");
-	
+	$("input[type=tel]").inputmask("+7 (999) 999-99-99");	
 	
 	$('.scrollbar-nav').scrollbar();
 	$('.scrollbar-menu').scrollbar();
@@ -308,8 +307,7 @@ $(document).ready(function() {
 			$(this).toggleClass('opened');
 			}
   		e.preventDefault();
-  		});
-  		
+  		});  		
   		
   	$('div.menu > div.header > span').on('click', function() {
   		if ($('div.container').hasClass('nav')) {
@@ -328,8 +326,7 @@ $(document).ready(function() {
   		$('div.container > nav > div ul > li > a').removeClass('selected');
   		$('div.menu').css({'display' : 'none'});
    		});
-   		
-   		
+   		   		
 	$('.move').on('click', function(e) {
 		if ($('div.container').hasClass('opened')) {
 			$('div.container').removeClass('opened');
@@ -337,6 +334,7 @@ $(document).ready(function() {
   		if ($('div.container').hasClass('nav')) {
   			$('div.container').removeClass('nav');
   			}
+  		$('div.menu').css({'display' : 'none'});
 		$('html, body').stop().animate({
 			scrollTop: $('#' + $(this).data('move')).offset().top - $('div.container > header').outerHeight()
 			}, 600);
