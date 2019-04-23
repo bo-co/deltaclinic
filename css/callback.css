@@ -36,6 +36,8 @@ div.callback.opened + div.container > * {
 
 div.container.nav > footer,
 div.container.nav > article,
+div.container.opened > footer,
+div.container.opened > article,
 div.callback.opened + div.container > footer,
 div.callback.opened + div.container > nav,
 div.callback.opened + div.container > article {
@@ -58,14 +60,15 @@ div.callback.opened + div.container > span {
 	background-color : rgba(52, 86, 129, 0.85);
 	content : "";	
 	}
-	
+
+div.container.opened > span,	
 div.container.nav > span {
 	display : block;
 	position : absolute;
 	top : 0;
-	left : 240px;
+	left : 0;
 	z-index : 90;
-	width : calc(100% - 240px);
+	width : 100%;
 	height : 100%;
 	background-color : rgba(52, 86, 129, 0.85);
 	content : "";	
