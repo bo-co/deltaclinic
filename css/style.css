@@ -191,7 +191,7 @@ div.container > a.fix::before {
 		}
 		
 	div.container > a.fix.callback {
-		display : block;
+		/* display : block; */
 		right : 40px;
 		bottom : 40px;
 		}
