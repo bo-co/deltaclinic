@@ -19,18 +19,18 @@ article {
 	
 @media (min-width : 721px) and (max-width : 1040px) {
 	article {
-		padding-top : 80px;
+		padding-top : 170px;
 		}
 	}
 	
 @media (min-width : 481px) and (max-width : 720px) {
 	article {
-		padding-top : 70px;
+		padding-top : 160px;
 		}
 	}
 	
 @media (max-width : 480px) {
 	article {
-		padding-top : 60px;
+		padding-top : 150px;
 		}
 	}
