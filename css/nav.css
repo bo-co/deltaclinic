@@ -202,13 +202,13 @@ div.menu > div.scrollbar-menu div.special > a {
 	div.container > nav {
 		height : 100%;
 		left : 0;
-		padding-top : 112px;
+		padding-top : 212px;
 		padding-bottom : 30px;
 		box-shadow : 0 0 10px 5px rgba(52, 86, 129, 0.1);
 		}
 		
 	div.container > nav > div.form.search {
-		top : 40px;
+		top : 140px;
 		padding : 0 40px;
 		}
 		
@@ -314,13 +314,13 @@ div.menu > div.scrollbar-menu div.special > a {
 	div.container > nav {
 		height : 100%;
 		left : 0;
-		padding-top : 102px;
+		padding-top : 200px;
 		padding-bottom : 25px;
 		box-shadow : 0 0 10px 5px rgba(52, 86, 129, 0.1);
 		}
 		
 	div.container > nav > div.form.search {
-		top : 35px;
+		top : 135px;
 		padding : 0 35px;
 		}
 		
