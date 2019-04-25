@@ -7,36 +7,11 @@ body {
 	
 div.container {
 	position : relative;
-	/* display : table !important;
-	height : 100%; */
 	width : 100%;
 	min-width : 320px;
 	min-height : 100vh;
 	overflow : hidden;
 	}
-	
-/* a:not(.fix) {
-	position : relative;
-	display : inline-block;
-	color : rgba(244, 86, 65, 1);
-	text-decoration : none;
-	}
-
-a:not(.fix)::before {
-	position : absolute;
-	bottom : 0;
-	left : 0;
-	z-index : 10;
-	height : 1px;
-	width : 100%;
-	content : "";
-	background-color : rgba(244, 86, 65, 1);
-	transition : all 0.25s ease;
-	}
-
-a:not(.fix):hover::before {
-	width : 0;
-	} */
 	
 a {
 	color : rgba(244, 86, 65, 1);
@@ -191,7 +166,6 @@ div.container > a.fix::before {
 		}
 		
 	div.container > a.fix.callback {
-		/* display : block; */
 		right : 40px;
 		bottom : 40px;
 		}
@@ -231,7 +205,6 @@ div.container > a.fix::before {
 		}
 		
 	div.container > a.fix.callback {
-		/* display : block; */
 		right : 35px;
 		bottom : 35px;
 		}
@@ -267,9 +240,13 @@ div.container > a.fix::before {
 		}
 		
 	div.container > a.fix.callback {
-		/* display : block; */
 		right : 30px;
 		bottom : 30px;
+		}	
+			
+	div.container.fixed > header {
+		position : fixed !important;
+		top : -90px !important;
 		}
 	}
 	
@@ -303,9 +280,13 @@ div.container > a.fix::before {
 		}
 		
 	div.container > a.fix.callback {
-		/* display : block; */
 		right : 25px;
 		bottom : 25px;
+		}
+		
+	div.container.fixed > header {
+		position : fixed !important;
+		top : -85px !important;
 		}
 	}
 	
@@ -339,8 +320,12 @@ div.container > a.fix::before {
 		}
 		
 	div.container > a.fix.callback {
-		/* display : block; */
 		right : 20px;
 		bottom : 20px;
+		}
+		
+	div.container.fixed > header {
+		position : fixed !important;
+		top : -80px !important;
 		}
 	}
