@@ -162,16 +162,17 @@ div.container > header > div > ul.sandwich > li:nth-child(3) {
 	top : 0; 
 	}
 
-div.container.opened > div.container > header > div > ul.sandwich > li,
+
+div.container > header > div > ul.sandwich > li:last-child {  bottom : 0; }
 div.container > header > div > ul.sandwich:hover > li:first-child,
 div.container > header > div > ul.sandwich:hover > li:nth-child(2),
 div.container > header > div > ul.sandwich:hover > li:nth-child(3),
-div.container > header > div > ul.sandwich > li:last-child { width : 100%; }
-div.container > header > div > ul.sandwich > li:last-child {  bottom : 0; }
-div.container.opened > div.container > header > div > ul.sandwich > li:first-child { transform : rotate(45deg); }
-div.container.opened > div.container > header > div > ul.sandwich > li:nth-child(2) { transform : rotate(-45deg); }
-div.container.opened > div.container > header > div > ul.sandwich > li:nth-child(3) { top : -2px; }	
-div.container.opened > div.container > header > div > ul.sandwich > li:last-child { bottom : -2px; }
+div.container > header > div > ul.sandwich > li:last-child,
+div.container.opened > header > div > ul.sandwich > li { width : 100%; }
+div.container.opened > header > div > ul.sandwich > li:first-child { transform : rotate(45deg); }
+div.container.opened > header > div > ul.sandwich > li:nth-child(2) { transform : rotate(-45deg); }
+div.container.opened > header > div > ul.sandwich > li:nth-child(3) { top : -2px; }	
+div.container.opened > header > div > ul.sandwich > li:last-child { bottom : -2px; }
 
 div.container > header > div > div.logo > a {
 	display : block;
