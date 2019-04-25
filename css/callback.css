@@ -108,6 +108,7 @@ div.callback > div.form {
 div.callback > div.form > span {
 	display : block;
 	white-space : nowrap;
+	text-align : center;
 	}
 	
 div.callback > div.form a {
