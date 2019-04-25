@@ -158,8 +158,8 @@ $(document).ready(function() {
 			}			
 		if (!$('div.container').hasClass('fixed')) {
 			$('html, body').stop().animate({
-				scrollTop: $('div.container > article').offset().top + fixed + 20
-				}, 250);
+				scrollTop: $('div.container > article').offset().top + fixed + 10
+				}, 0);
 			}		
 		});
 	$("a.callback").on("click", function(e) {
