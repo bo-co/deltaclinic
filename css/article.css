@@ -5,9 +5,40 @@ article {
 	background : linear-gradient(to bottom, rgba(254, 242, 241, 1) 0%, rgba(255, 255, 255, 1) 100%);
 	}
 	
+article > div.content {
+	position : relative;
+	max-width : 960px;
+	margin : 0 auto;
+	}
+	
+article > div.content h1,
+article > div.content h2,
+article > div.content h3,
+article > div.content h4,
+article > div.content h5 {
+	text-align : center;
+	color : rgba(1, 31, 88, 1);
+	}
+	
+article > div.content blockquote {
+	text-align : center;
+	}
+	
 @media (min-width : 1401px) {
 	article {
 		padding-top : 100px;
+		}
+		
+	article > div.content {
+		padding : 60px 0;
+		}
+		
+	article > div.content blockquote {
+		font : 600 20px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.content h1 {
+		font : 700 40px/70px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -15,11 +46,35 @@ article {
 	article {
 		padding-top : 90px;
 		}
+		
+	article > div.content {
+		padding : 50px;
+		}
+		
+	article > div.content blockquote {
+		font : 600 20px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.content h1 {
+		font : 700 36px/60px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 	}
 	
 @media (min-width : 721px) and (max-width : 1040px) {
 	article {
 		padding-top : 170px;
+		}
+		
+	article > div.content {
+		padding : 40px;
+		}
+		
+	article > div.content blockquote {
+		font : 600 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.content h1 {
+		font : 700 32px/50px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -27,10 +82,34 @@ article {
 	article {
 		padding-top : 160px;
 		}
+		
+	article > div.content {
+		padding : 30px;
+		}
+		
+	article > div.content blockquote {
+		font : 600 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.content h1 {
+		font : 700 28px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 	}
 	
 @media (max-width : 480px) {
 	article {
 		padding-top : 150px;
+		}		
+		
+	article > div.content {
+		padding : 20px;
+		}
+		
+	article > div.content blockquote {
+		font : 600 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.content h1 {
+		font : 700 24px/30px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
