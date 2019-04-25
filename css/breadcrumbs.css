@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+div.breadcrumbs > ul,
+div.breadcrumbs > ul > li {
+	position : relative;
+	}
+
+div.breadcrumbs > ul {
+	padding : 0;
+	margin : 0;
+	list-style : none;
+	font : 400 12px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	text-align : center;
+	}
+	
+div.breadcrumbs > ul > li {
+	display : inline-block;
+	padding : 0 10px;
+	}
+	
+div.breadcrumbs > ul > li:not(:first-child)::before {
+	position : absolute;
+	top : calc(50% - 1px);
+	right : calc(100% - 1px);
+	z-index : 10;
+	width : 2px;
+	height : 2px;
+	border-radius : 50%;
+	background-color : rgba(244, 86, 65, 1);
+    content : ".";
+    text-indent : -999em;
+	}
+	
+div.breadcrumbs > ul > li > a {
+	color : rgba(1, 31, 88, 1);
+	text-decoration : none;
+	}
+
+div.breadcrumbs > ul > li > a:hover {	
+	color : rgba(244, 86, 65, 1);
+	}
+	
+div.breadcrumbs > ul > li > span {
+	color : rgba(68, 68, 68, 0.5);
+	}
+	
+@media (min-width : 1401px) {
+	div.breadcrumbs > ul {
+		top : -25px;
+		}
+	}
+	
+@media (min-width : 1041px) and (max-width : 1400px) {
+	div.breadcrumbs > ul {
+		top : -20px;
+		}
+	}
+	
+@media (min-width : 721px) and (max-width : 1040px) {
+	div.breadcrumbs > ul {
+		top : -15px;
+		}
+	}
+	
+@media (min-width : 481px) and (max-width : 720px) {
+	div.breadcrumbs > ul {
+		top : -10px;
+		}
+	}
+	
+@media (max-width : 480px) {
+	div.breadcrumbs > ul {
+		top : -5px;
+		padding : 10px 0;
+		}
+	}
