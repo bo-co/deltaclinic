@@ -30,6 +30,7 @@ function resize() {
 	if ($('div.menu').length !== 0) {	
 		$('div.menu').css({'display' : 'none'});
 		}
+		
 	$('div.form div.choose > ul > li > div').each(function() {
 		if ($(this).hasClass('selected')) {
 			$(this).removeClass('selected');
@@ -360,7 +361,7 @@ $(document).ready(function() {
   			}
   		$('div.menu').css({'display' : 'none'});
 		$('html, body').stop().animate({
-			scrollTop: $('#' + $(this).data('move')).offset().top - $('div.container > header').outerHeight()
+			scrollTop: $('#' + $(this).data('move')).offset().top - $('div.container > header').outerHeight() + Math.abs($('div.container > header').position().top)
 			}, 600);
 		e.preventDefault();
 		});
