@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
-header {
+div.container > header {
 	right : 0;
 	background-color : rgba(255, 255, 255, 1);
 	border-bottom : solid 1px rgba(239, 240, 245, 1);
 	}
 	
-header > div {
+div.container > header > div {
 	position : relative;
 	max-width : 1280px;
 	margin : 0 auto;
 	}
 	
-header > div > button {
+div.container > header > div > button {
 	height : 40px;
 	margin : 0;
 	border : 0;
@@ -22,7 +22,7 @@ header > div > button {
 	cursor : pointer;
 	}
 	
-header > div > button::before {
+div.container > header > div > button::before {
 	left : 0;
 	width : 50px;
 	height : 40px;
@@ -31,67 +31,67 @@ header > div > button::before {
 	content: "\e914";
 	}
 	
-header > div > button::after {
+div.container > header > div > button::after {
 	width : 100%;
 	height : 40px;
 	font : 600 16px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	content : "Запишитесь на прием";
 	}
 	
-header > div > a {
+div.container > header > div > a {
 	text-decoration : none;
 	white-space : nowrap;
 	}
 	
-header > div > a,
-header > div > a.move::before,
-header > div > a.phone::after,
-header > div > a.phone::before,
-header > div > button,
-header > div > button::after,
-header > div > button::before {
+div.container > header > div > a,
+div.container > header > div > a.move::before,
+div.container > header > div > a.phone::after,
+div.container > header > div > a.phone::before,
+div.container > header > div > button,
+div.container > header > div > button::after,
+div.container > header > div > button::before {
 	display : block;
 	}
 	
-header > div > a,
-header > div > a.move::before,
-header > div > a.phone::after,
-header > div > a.phone::before,
-header > div > button,
-header > div > button::before {
+div.container > header > div > a,
+div.container > header > div > a.move::before,
+div.container > header > div > a.phone::after,
+div.container > header > div > a.phone::before,
+div.container > header > div > button,
+div.container > header > div > button::before {
 	position : absolute;
 	}
 	
-header > div > a,
-header > div > a.move::before,
-header > div > a.phone::before,
-header > div > button,
-header > div > button::before {
+div.container > header > div > a,
+div.container > header > div > a.move::before,
+div.container > header > div > a.phone::before,
+div.container > header > div > button,
+div.container > header > div > button::before {
 	top : 0;
 	z-index : 10;	
 	}
 	
-header > div > a,
-header > div > a.move::after,
-header > div > a.phone::before,
-header > div > a.move::before {
+div.container > header > div > a,
+div.container > header > div > a.move::after,
+div.container > header > div > a.phone::before,
+div.container > header > div > a.move::before {
 	transition : color 0.25s ease;
 	}
 	
-header > div > a,
-header > div > a.move::after,
-header > div > a.phone:hover::before,	
-header > div > a.move:hover::before {
+div.container > header > div > a,
+div.container > header > div > a.move::after,
+div.container > header > div > a.phone:hover::before,	
+div.container > header > div > a.move:hover::before {
 	color : rgba(1, 31, 88, 1);
 	}
 	
-header > div > a.move::before,
-header > div > a.phone::after,
-header > div > a.phone::before {
+div.container > header > div > a.move::before,
+div.container > header > div > a.phone::after,
+div.container > header > div > a.phone::before {
 	color : rgba(1, 31, 88, 0.5);
 	}
 	
-header > div > a.move::before {
+div.container > header > div > a.move::before {
 	right : 100%;
 	width : 30px;
 	height : 40px;
@@ -99,21 +99,21 @@ header > div > a.move::before {
 	content: "\e913";
 	}
 	
-header > div > a.move::after {
+div.container > header > div > a.move::after {
 	font : 400 20px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	content: "Как добраться";
 	}
 
-header > div > a.phone:hover,
-header > div > a.move:hover::after {
+div.container > header > div > a.phone:hover,
+div.container > header > div > a.move:hover::after {
 	color : rgba(244, 86, 65, 1);
 	}
 	
-header > div > a.phone {	
+div.container > header > div > a.phone {	
 	font : 400 18px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	}
 	
-header > div > a.phone::after {
+div.container > header > div > a.phone::after {
 	right : 0;
 	top : calc(100% + 2px);
 	z-index : 10;
@@ -121,7 +121,7 @@ header > div > a.phone::after {
 	content : "8:00-21:00, ежедневно";
 	}
 	
-header > div > a.phone::before {
+div.container > header > div > a.phone::before {
 	right : calc(100% + 10px);
 	font : normal 18px/20px "icomoon" !important;
 	content: "\e906";
@@ -162,16 +162,16 @@ div.container > header > div > ul.sandwich > li:nth-child(3) {
 	top : 0; 
 	}
 
-div.container.opened > header > div > ul.sandwich > li,
+div.container.opened > div.container > header > div > ul.sandwich > li,
 div.container > header > div > ul.sandwich:hover > li:first-child,
 div.container > header > div > ul.sandwich:hover > li:nth-child(2),
 div.container > header > div > ul.sandwich:hover > li:nth-child(3),
 div.container > header > div > ul.sandwich > li:last-child { width : 100%; }
 div.container > header > div > ul.sandwich > li:last-child {  bottom : 0; }
-div.container.opened > header > div > ul.sandwich > li:first-child { transform : rotate(45deg); }
-div.container.opened > header > div > ul.sandwich > li:nth-child(2) { transform : rotate(-45deg); }
-div.container.opened > header > div > ul.sandwich > li:nth-child(3) { top : -2px; }	
-div.container.opened > header > div > ul.sandwich > li:last-child { bottom : -2px; }
+div.container.opened > div.container > header > div > ul.sandwich > li:first-child { transform : rotate(45deg); }
+div.container.opened > div.container > header > div > ul.sandwich > li:nth-child(2) { transform : rotate(-45deg); }
+div.container.opened > div.container > header > div > ul.sandwich > li:nth-child(3) { top : -2px; }	
+div.container.opened > div.container > header > div > ul.sandwich > li:last-child { bottom : -2px; }
 
 div.container > header > div > div.logo > a {
 	display : block;
@@ -182,7 +182,7 @@ div.container > header > div > div.logo > a {
 	}
 	
 @media (min-width : 1401px) {
-	header {
+	div.container > header {
 		position : fixed;
 		top : 0;
 		z-index : 101;
@@ -191,24 +191,24 @@ div.container > header > div > div.logo > a {
 		padding : 30px 0;
 		}
 		
-	header > div {
+	div.container > header > div {
 		padding : 0 60px;
 		}
 		
-	header > div > button {
+	div.container > header > div > button {
 		right : 60px;
 		padding : 0 15px 0 45px;
 		}
 		
-	header > div > a.phone {
+	div.container > header > div > a.phone {
 		right : 330px;
 		}
 		
-	header > div > a.move {
+	div.container > header > div > a.move {
 		left : 100px;
 		}
 		
-	header > div > a.move::before {
+	div.container > header > div > a.move::before {
 		right : calc(100% + 10px);
 		}
 		
@@ -232,7 +232,7 @@ div.container > header > div > div.logo > a {
 	}
 	
 @media (min-width : 1041px) and (max-width : 1400px) {
-	header {
+	div.container > header {
 		position : fixed;
 		top : 0;
 		z-index : 101;
@@ -241,24 +241,24 @@ div.container > header > div > div.logo > a {
 		padding : 25px 0;
 		}
 		
-	header > div {
+	div.container > header > div {
 		padding : 0 50px;
 		}
 		
-	header > div > button {
+	div.container > header > div > button {
 		right : 50px;
 		padding : 0 15px 0 45px;
 		}
 		
-	header > div > a.phone {
+	div.container > header > div > a.phone {
 		right : 315px;
 		}
 		
-	header > div > a.move {
+	div.container > header > div > a.move {
 		left : 90px;
 		}
 		
-	header > div > a.move::before {
+	div.container > header > div > a.move::before {
 		right : calc(100% + 10px);
 		}
 		
@@ -282,7 +282,7 @@ div.container > header > div > div.logo > a {
 	}
 	
 @media (min-width : 721px) and (max-width : 1040px) {
-	header {
+	div.container > header {
 		position : absolute;
 		top : 0;
 		z-index : 101;
@@ -291,27 +291,27 @@ div.container > header > div > div.logo > a {
 		padding : 20px 0;
 		}
 		
-	header > div {
+	div.container > header > div {
 		padding : 0 40px;
 		}
 		
-	header > div > button {
+	div.container > header > div > button {
 		top : 90px;
 		right : 40px;
 		padding : 0 15px 0 45px;
 		}
 		
-	header > div > a.phone {
+	div.container > header > div > a.phone {
 		top : 90px;
 		right : 300px;	
 		}
 		
-	header > div > a.move {
+	div.container > header > div > a.move {
 		top : 30px;
 		right : 40px;
 		}
 		
-	header > div > a.move::before {
+	div.container > header > div > a.move::before {
 		right : calc(100% + 10px);
 		}
 		
@@ -327,7 +327,7 @@ div.container > header > div > div.logo > a {
 	}
 	
 @media (min-width : 481px) and (max-width : 720px) {
-	header {
+	div.container > header {
 		position : absolute;
 		top : 0;
 		z-index : 101;
@@ -336,31 +336,31 @@ div.container > header > div > div.logo > a {
 		padding : 15px 0;
 		}
 		
-	header > div {
+	div.container > header > div {
 		padding : 0 30px;
 		}
 		
-	header > div > button {
+	div.container > header > div > button {
 		top : 90px;
 		right : 30px;
 		padding : 0 15px 0 35px;
 		}
 		
-	header > div > button::after {
+	div.container > header > div > button::after {
 		display : none;
 		}
 		
-	header > div > a.phone {
+	div.container > header > div > a.phone {
 		top : 90px;
 		right : 95px;
 		}
 		
-	header > div > a.move {
+	div.container > header > div > a.move {
 		top : 35px;
 		right : 30px;
 		}
 		
-	header > div > a.move::before {
+	div.container > header > div > a.move::before {
 		right : calc(100% + 10px);
 		}
 		
@@ -376,7 +376,7 @@ div.container > header > div > div.logo > a {
 	}
 	
 @media (max-width : 480px) {
-	header {
+	div.container > header {
 		position : absolute;
 		top : 0;
 		z-index : 101;
@@ -385,24 +385,24 @@ div.container > header > div > div.logo > a {
 		padding : 10px 0;
 		}
 		
-	header > div {
+	div.container > header > div {
 		padding : 0 20px;
 		}
 		
-	header > div > button {
+	div.container > header > div > button {
 		top : 85px;
 		right : 20px;
 		padding : 0 15px 0 35px;
 		}
 	
-	header > div > a.move,
-	header > div > button::after,
-	header > div > a.move::after,
-	header > div > a.phone::before {
+	div.container > header > div > a.move,
+	div.container > header > div > button::after,
+	div.container > header > div > a.move::after,
+	div.container > header > div > a.phone::before {
 		display : none;
 		}
 		
-	header > div > a.phone {
+	div.container > header > div > a.phone {
 		top : 85px;
 		right : 80px;
 		}
