@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
 header {
-	position : fixed;
-	top : 0;
 	right : 0;
 	background-color : rgba(255, 255, 255, 1);
 	border-bottom : solid 1px rgba(239, 240, 245, 1);
@@ -131,7 +129,6 @@ header > div > a.phone::before {
 	
 div.container > header > div > ul.sandwich {
 	position: absolute;
-	top : 6px;
 	z-index: 10;
 	width: 28px;
 	height: 28px;
@@ -175,10 +172,20 @@ div.container.opened > header > div > ul.sandwich > li:first-child { transform :
 div.container.opened > header > div > ul.sandwich > li:nth-child(2) { transform : rotate(-45deg); }
 div.container.opened > header > div > ul.sandwich > li:nth-child(3) { top : -2px; }	
 div.container.opened > header > div > ul.sandwich > li:last-child { bottom : -2px; }
+
+div.container > header > div > div.logo > a {
+	display : block;
+	background-image : url("../img/logo.svg?25042019");
+	background-position : 50% 50%;
+	background-repeat : no-repeat;
+	background-size : contain;
+	}
 	
 @media (min-width : 1401px) {
 	header {
-		z-index : 99;
+		position : fixed;
+		top : 0;
+		z-index : 101;
 		width : calc(100% - 280px);
 		height : 100px;
 		padding : 30px 0;
@@ -208,11 +215,27 @@ div.container.opened > header > div > ul.sandwich > li:last-child { bottom : -2p
 	div.container > header > div > ul.sandwich {
 		display : none;
 		}
+				
+	div.container > header > div > div.logo {
+		position : fixed;
+		left : 40px;
+		top : 30px;
+		z-index : 10;
+		width : 200px;
+		height : 70px;
+		}
+		
+	div.container > header > div > div.logo > a {
+		width : inherit;
+		height : inherit;		
+		}
 	}
 	
 @media (min-width : 1041px) and (max-width : 1400px) {
 	header {
-		z-index : 99;
+		position : fixed;
+		top : 0;
+		z-index : 101;
 		width : calc(100% - 280px);
 		height : 90px;
 		padding : 25px 0;
@@ -242,13 +265,29 @@ div.container.opened > header > div > ul.sandwich > li:last-child { bottom : -2p
 	div.container > header > div > ul.sandwich {
 		display : none;
 		}
+		
+	div.container > header > div > div.logo {
+		position : fixed;
+		left : 40px;
+		top : 25px;
+		z-index : 10;
+		width : 200px;
+		height : 70px;
+		}
+		
+	div.container > header > div > div.logo > a {
+		width : inherit;
+		height : inherit;		
+		}
 	}
 	
 @media (min-width : 721px) and (max-width : 1040px) {
 	header {
+		position : absolute;
+		top : 0;
 		z-index : 101;
 		width : 100%;
-		height : 80px;
+		height : 170px;
 		padding : 20px 0;
 		}
 		
@@ -257,19 +296,18 @@ div.container.opened > header > div > ul.sandwich > li:last-child { bottom : -2p
 		}
 		
 	header > div > button {
-		right : 100px;
+		top : 90px;
+		right : 40px;
 		padding : 0 15px 0 45px;
 		}
 		
-	header > div > a.move::after {
-		display : none;
-		}
-		
 	header > div > a.phone {
-		right : 360px;	
+		top : 90px;
+		right : 300px;	
 		}
 		
 	header > div > a.move {
+		top : 30px;
 		right : 40px;
 		}
 		
@@ -278,15 +316,23 @@ div.container.opened > header > div > ul.sandwich > li:last-child { bottom : -2p
 		}
 		
 	div.container > header > div > ul.sandwich {
+		top : 96px;
 		left : 40px;
+		}
+		
+	div.container > header > div > div.logo > a {
+		width : 200px;
+		height : 70px;		
 		}
 	}
 	
 @media (min-width : 481px) and (max-width : 720px) {
 	header {
+		position : absolute;
+		top : 0;
 		z-index : 101;
 		width : 100%;
-		height : 70px;
+		height : 160px;
 		padding : 15px 0;
 		}
 		
@@ -295,33 +341,47 @@ div.container.opened > header > div > ul.sandwich > li:last-child { bottom : -2p
 		}
 		
 	header > div > button {
-		right : 75px;
+		top : 90px;
+		right : 30px;
 		padding : 0 15px 0 35px;
 		}
 		
-	header > div > button::after,
-	header > div > a.move::after {
+	header > div > button::after {
 		display : none;
 		}
 		
 	header > div > a.phone {
-		right : 140px;
+		top : 90px;
+		right : 95px;
 		}
 		
 	header > div > a.move {
+		top : 35px;
 		right : 30px;
 		}
 		
+	header > div > a.move::before {
+		right : calc(100% + 10px);
+		}
+		
 	div.container > header > div > ul.sandwich {
+		top : 96px;
 		left : 30px;
+		}
+		
+	div.container > header > div > div.logo > a {
+		width : 200px;
+		height : 70px;		
 		}
 	}
 	
 @media (max-width : 480px) {
 	header {
+		position : absolute;
+		top : 0;
 		z-index : 101;
 		width : 100%;
-		height : 60px;
+		height : 150px;
 		padding : 10px 0;
 		}
 		
@@ -330,6 +390,7 @@ div.container.opened > header > div > ul.sandwich > li:last-child { bottom : -2p
 		}
 		
 	header > div > button {
+		top : 85px;
 		right : 20px;
 		padding : 0 15px 0 35px;
 		}
@@ -342,10 +403,18 @@ div.container.opened > header > div > ul.sandwich > li:last-child { bottom : -2p
 		}
 		
 	header > div > a.phone {
+		top : 85px;
 		right : 80px;
 		}
 		
 	div.container > header > div > ul.sandwich {
+		top : 91px;
 		left : 20px;
+		}
+		
+	div.container > header > div > div.logo > a {
+		width : 200px;
+		height : 70px;
+		margin : 0 auto;	
 		}
 	}
