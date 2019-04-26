@@ -24,6 +24,41 @@ article > div.content blockquote {
 	text-align : center;
 	}
 	
+article > div.content img {
+	max-width : 100%;
+	height : auto;
+	margin : 0 auto;
+	}
+
+/* обертка для видео с YouTube-канала :: начало */
+div.youtube {
+	position : relative;
+	max-width : 640px;
+	 margin : 30px auto;
+	}
+
+div.youtube > div {
+	position : relative;
+    width : 100%;
+    height : 0;    
+    padding-bottom : 60%;
+    overflow : hidden;
+    }
+    
+div.youtube > div iframe, 
+div.youtube > div object, 
+div.youtube > div embed {
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    border : 0;
+    padding : 0;
+    margin : 0;
+	}
+/* обертка для видео с YouTube-канала :: конец */	
+	
 @media (min-width : 1401px) {
 	article {
 		padding-top : 100px;
@@ -39,6 +74,16 @@ article > div.content blockquote {
 		
 	article > div.content h1 {
 		font : 700 40px/70px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.content h2,
+	article > div.content h3 {
+		font : 700 36px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.content h4,
+	article > div.content h5 {
+		font : 600 36px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -58,6 +103,16 @@ article > div.content blockquote {
 	article > div.content h1 {
 		font : 700 36px/60px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
+		
+	article > div.content h2,
+	article > div.content h3 {
+		font : 700 32px/36px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.content h4,
+	article > div.content h5 {
+		font : 600 32px/36px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 	}
 	
 @media (min-width : 721px) and (max-width : 1040px) {
@@ -75,6 +130,16 @@ article > div.content blockquote {
 		
 	article > div.content h1 {
 		font : 700 32px/50px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.content h2,
+	article > div.content h3 {
+		font : 700 28px/32px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.content h4,
+	article > div.content h5 {
+		font : 600 28px/32px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -94,6 +159,16 @@ article > div.content blockquote {
 	article > div.content h1 {
 		font : 700 28px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
+		
+	article > div.content h2,
+	article > div.content h3 {
+		font : 700 24px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.content h4,
+	article > div.content h5 {
+		font : 600 24px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
 	}
 	
 @media (max-width : 480px) {
@@ -111,5 +186,15 @@ article > div.content blockquote {
 		
 	article > div.content h1 {
 		font : 700 24px/30px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.content h2,
+	article > div.content h3 {
+		font : 700 20px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.content h4,
+	article > div.content h5 {
+		font : 600 20px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
