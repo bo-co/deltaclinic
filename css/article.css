@@ -11,11 +11,11 @@ article > div.content {
 	margin : 0 auto;
 	}
 	
-article > div.content h1,
-article > div.content h2,
-article > div.content h3,
-article > div.content h4,
-article > div.content h5 {
+article h1,
+article h2,
+article h3,
+article h4,
+article h5 {
 	text-align : center;
 	color : rgba(1, 31, 88, 1);
 	}
@@ -57,13 +57,73 @@ div.youtube > div embed {
     padding : 0;
     margin : 0;
 	}
-/* обертка для видео с YouTube-канала :: конец */	
+/* обертка для видео с YouTube-канала :: конец */
+
+/* прайс-лист :: начало */
+article > div.prices {
+	position : relative;
+	}
+	
+article > div.prices:before {
+    position : absolute;
+    top : 0;
+    left : 0; 
+    background-color : rgba(1, 31, 88, 0.1);
+    content: ".";
+    text-indent : -999em;
+    display: block;
+    width: 100%;
+    height: 1px;
+	}
+	
+article > div.prices > table,
+article > div.prices > table > tbody {
+	display : block;
+	}
+	
+article > div.prices > table {
+	width : 100%;
+	max-width : 960px;
+	margin : 0 auto;
+	}
+	
+article > div.prices > table > tbody > tr {
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	justify-content : space-between;
+	-webkit-justify-content : space-between;
+	-ms-justify-content : space-between;
+	padding : 10px 0;
+	}
+	
+article > div.prices > table > tbody > tr:not(:first-child) {
+	border-bottom : solid 1px rgba(1, 31, 88, 0.1);
+	}
+	
+article > div.prices > table > tbody > tr:first-child {
+	font : 400 12px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	color : rgba(1, 31, 88, 0.5);
+	}
+	
+article > div.prices > table > tbody > tr > td:last-child {
+	min-width : 60px;
+	white-space : nowrap;
+	text-align : right;
+	}
+/* прайс-лист :: конец */
 	
 @media (min-width : 1401px) {
 	article {
 		padding-top : 100px;
 		}
 		
+	article > div.prices {
+		padding : 60px 0 0 0;
+		}
+	
+	article > div.prices > table,
 	article > div.content {
 		padding : 60px 0;
 		}
@@ -72,17 +132,17 @@ div.youtube > div embed {
 		font : 600 20px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h1 {
+	article h1 {
 		font : 700 40px/70px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h2,
-	article > div.content h3 {
+	article h2,
+	article h3 {
 		font : 700 36px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h4,
-	article > div.content h5 {
+	article h4,
+	article h5 {
 		font : 600 36px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
@@ -92,6 +152,11 @@ div.youtube > div embed {
 		padding-top : 90px;
 		}
 		
+	article > div.prices {
+		padding : 50px 0 0 0;
+		}
+	
+	article > div.prices > table,
 	article > div.content {
 		padding : 50px;
 		}
@@ -100,17 +165,17 @@ div.youtube > div embed {
 		font : 600 20px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h1 {
+	article h1 {
 		font : 700 36px/60px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h2,
-	article > div.content h3 {
+	article h2,
+	article h3 {
 		font : 700 32px/36px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h4,
-	article > div.content h5 {
+	article h4,
+	article h5 {
 		font : 600 32px/36px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
@@ -120,6 +185,11 @@ div.youtube > div embed {
 		padding-top : 170px;
 		}
 		
+	article > div.prices {
+		padding : 40px 0 0 0;
+		}
+	
+	article > div.prices > table,	
 	article > div.content {
 		padding : 40px;
 		}
@@ -128,17 +198,17 @@ div.youtube > div embed {
 		font : 600 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h1 {
+	article h1 {
 		font : 700 32px/50px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h2,
-	article > div.content h3 {
+	article h2,
+	article h3 {
 		font : 700 28px/32px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h4,
-	article > div.content h5 {
+	article h4,
+	article h5 {
 		font : 600 28px/32px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
@@ -147,7 +217,12 @@ div.youtube > div embed {
 	article {
 		padding-top : 160px;
 		}
-		
+
+	article > div.prices {
+		padding : 30px 0 0 0;
+		}
+
+	article > div.prices > table,	
 	article > div.content {
 		padding : 30px;
 		}
@@ -156,17 +231,17 @@ div.youtube > div embed {
 		font : 600 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h1 {
+	article h1 {
 		font : 700 28px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h2,
-	article > div.content h3 {
+	article h2,
+	article h3 {
 		font : 700 24px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h4,
-	article > div.content h5 {
+	article h4,
+	article h5 {
 		font : 600 24px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
@@ -174,8 +249,13 @@ div.youtube > div embed {
 @media (max-width : 480px) {
 	article {
 		padding-top : 150px;
-		}		
+		}
 		
+	article > div.prices {
+		padding : 20px 0 0 0;
+		}
+	
+	article > div.prices > table,
 	article > div.content {
 		padding : 20px;
 		}
@@ -184,17 +264,17 @@ div.youtube > div embed {
 		font : 600 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h1 {
+	article h1 {
 		font : 700 24px/30px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h2,
-	article > div.content h3 {
+	article h2,
+	article h3 {
 		font : 700 20px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
-	article > div.content h4,
-	article > div.content h5 {
+	article h4,
+	article h5 {
 		font : 600 20px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
