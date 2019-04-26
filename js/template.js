@@ -112,6 +112,13 @@ function isRequire(classname) {
 		}
 	return false;
 	}
+	
+function isWrap(elements, purpose) {
+	elements.each(function() {
+		$(this).wrap(purpose);
+		});
+	return false;
+	}
 
 $(document).ready(function() {
 	$(window).scroll(function() {
@@ -277,8 +284,7 @@ $(document).ready(function() {
 			}
 		});
 	clear($(".field"));
-	$("input[type=tel]").inputmask("+7 (999) 999-99-99");	
-	
+	$("input[type=tel]").inputmask("+7 (999) 999-99-99");
 	$('.scrollbar-nav').scrollbar();
 	$('.scrollbar-menu').scrollbar();
   	$('div.container > nav > div ul > li > ul > li > a').on('click', function(e) {
@@ -332,8 +338,7 @@ $(document).ready(function() {
 			$(this).toggleClass('opened');
 			}
   		e.preventDefault();
-  		});  		
-  		
+  		});
   	$('div.menu > div.header > span').on('click', function() {
   		if ($('div.container').hasClass('nav')) {
   			$('div.container').removeClass('nav');
@@ -351,7 +356,6 @@ $(document).ready(function() {
   		$('div.container > nav > div ul > li > a').removeClass('selected');
   		$('div.menu').css({'display' : 'none'});
    		});
-   		   		
 	$('.move').on('click', function(e) {
 		if ($('div.container').hasClass('opened')) {
 			$('div.container').removeClass('opened');
@@ -365,7 +369,7 @@ $(document).ready(function() {
 			}, 600);
 		e.preventDefault();
 		});
-
+   	isWrap($('div.container > article > div.content iframe'), '<div class="youtube"><div>');
    	resize();	
 	return false;
 	});
