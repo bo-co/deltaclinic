@@ -2,9 +2,6 @@
 
 div.container > footer {
 	position : relative;
-	/* display : table-row !important;
-	height : 1px;
-	width : 100%; */
 	}
 	
 div.container > footer > div.order {
@@ -21,7 +18,7 @@ div.container > footer > div.order > div::before {
 	top : 0;
 	z-index : 10;
 	height : 100%;
-	background-image : url("../img/xgirl.jpg?05032019");
+	background-image : url("../img/xgirl.webp?28042019");
 	background-repeat : no-repeat;
 	background-position : 50% 100%;
 	background-size : contain;
@@ -48,7 +45,7 @@ div.container > footer > div.contacts {
 div.container > footer > div.contacts > div:first-child {
 	position : relative;
 	min-height : 320px;
-	background-image : url("../img/map.jpg?07032019");
+	background-image : url("../img/map.webp?28042019");
 	background-position : 50% 50%;
 	background-repeat : no-repeat;
 	background-size : cover;
