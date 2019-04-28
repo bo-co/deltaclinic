@@ -86,6 +86,8 @@ div.youtube > div embed {
 
 article > div.box {
 	position : relative;
+	max-width : 960px;
+	margin : 0 auto;
 	}
 	
 article > div.box:before {
@@ -104,12 +106,7 @@ article > div.box:before {
 article > div.prices > div > table,
 article > div.prices > div > table > tbody {
 	display : block;
-	}
-	
-article > div.prices > div > table {
 	width : 100%;
-	max-width : 960px;
-	margin : 0 auto;
 	}
 	
 article > div.prices > div > table > tbody > tr {
@@ -136,6 +133,26 @@ article > div.prices > div > table > tbody > tr > td:last-child {
 	min-width : 60px;
 	white-space : nowrap;
 	text-align : right;
+	}
+	
+article > div.prices > div > ul.payment {
+	position : relative;
+	justify-content : flex-end;
+	-webkit-justify-content : flex-end;
+	-ms-justify-content : flex-end;	
+	}
+	
+article > div.prices > div > ul.payment::before {
+	position : absolute;
+	z-index : 10;
+	content : "Принимаем к оплате:";
+	white-space : nowrap;
+	color : rgba(1, 31, 88, 0.5);
+	}
+	
+article > div.prices > div > a {
+	display : block;
+	text-align : center;
 	}
 /* прайс-лист :: конец */
 	
@@ -170,6 +187,21 @@ article > div.prices > div > table > tbody > tr > td:last-child {
 	article h5 {
 		font : 600 36px/40px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
+		
+	article > div.prices > div > ul.payment {
+		padding-top : 30px;
+		}
+		
+	article > div.prices > div > ul.payment::before {
+		bottom : 16px;
+		right : 270px;
+		}
+		
+	article > div.prices > div > a {
+		position : absolute;
+		bottom : 76px;
+		left : 0;
+		}
 	}
 	
 @media (min-width : 1041px) and (max-width : 1400px) {
@@ -202,6 +234,21 @@ article > div.prices > div > table > tbody > tr > td:last-child {
 	article h4,
 	article h5 {
 		font : 600 32px/36px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.prices > div > ul.payment {
+		padding-top : 25px;
+		}
+		
+	article > div.prices > div > ul.payment::before {
+		bottom : 16px;
+		right : 270px;
+		}
+		
+	article > div.prices > div > a {
+		position : absolute;
+		bottom : 66px;
+		left : 50px;
 		}
 	}
 	
@@ -236,6 +283,21 @@ article > div.prices > div > table > tbody > tr > td:last-child {
 	article h5 {
 		font : 600 28px/32px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
+		
+	article > div.prices > div > ul.payment {
+		padding-top : 20px;
+		}
+		
+	article > div.prices > div > ul.payment::before {
+		bottom : 18px;
+		right : 270px;
+		}
+		
+	article > div.prices > div > a {
+		position : absolute;
+		bottom : 58px;
+		left : 40px;
+		}
 	}
 	
 @media (min-width : 481px) and (max-width : 720px) {
@@ -269,6 +331,16 @@ article > div.prices > div > table > tbody > tr > td:last-child {
 	article h5 {
 		font : 600 24px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 		}
+		
+	article > div.prices > div > ul.payment::before {
+		bottom : 18px;
+		right : 270px;
+		}
+		
+	article > div.prices > div > a {
+		padding : 15px 0;
+		text-align : center;
+		}
 	}
 	
 @media (max-width : 480px) {
@@ -301,5 +373,24 @@ article > div.prices > div > table > tbody > tr > td:last-child {
 	article h4,
 	article h5 {
 		font : 600 20px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	article > div.prices > div > ul.payment {
+		padding-top : 20px;
+		justify-content : center;
+		-webkit-justify-content : center;
+		-ms-justify-content : center;	
+		}
+		
+	article > div.prices > div > ul.payment::before {
+		bottom  : calc(100% - 20px);
+		left : 0;
+		width : 100%;
+		text-align : center;
+		}
+		
+	article > div.prices > div > a {
+		padding : 10px 0;
+		text-align : center;
 		}
 	}
