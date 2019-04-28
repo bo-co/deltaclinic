@@ -15,7 +15,7 @@ div.breadcrumbs > ul {
 	
 div.breadcrumbs > ul > li {
 	display : inline-block;
-	padding : 0 10px;
+	padding : 0 10px !important;
 	}
 	
 div.breadcrumbs > ul > li:not(:first-child)::before {
@@ -29,6 +29,10 @@ div.breadcrumbs > ul > li:not(:first-child)::before {
 	background-color : rgba(244, 86, 65, 1);
     content : ".";
     text-indent : -999em;
+	}
+	
+div.breadcrumbs > ul > li:first-child::before {
+	display : none !important;
 	}
 	
 div.breadcrumbs > ul > li > a {
