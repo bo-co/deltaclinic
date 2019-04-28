@@ -30,6 +30,20 @@ var isInit = null,
 	isNav = null,
 	isBox = null;
 
+(function() {
+	var WebP = new Image();
+	WebP.onload = WebP.onerror = function() {
+		if (WebP.height != 2) {
+			var sc = document.createElement("script");
+				sc.acync = true;
+			var s = document.getElementsByTagName("script")[0];
+				sc.src = "js/webp.js";
+				s.parentNode.insertBefore(sc,s);
+			}
+		};
+	WebP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+	})();
+
 function resize() {
 	if ($('div.container').length !== 0) {
 		if ($('div.container').hasClass('opened')) {
