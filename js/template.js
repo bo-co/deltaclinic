@@ -26,9 +26,9 @@ $('div.container > article img').each(function() {
 
 var isInit = null,
 	isLoad = null,
-	isFixed = null,
 	isNav = null,
-	isBox = null;
+	isBox = null,
+	isFixed = 0;
 
 function resize() {
 	if ($('div.container').length !== 0) {
@@ -37,6 +37,11 @@ function resize() {
 			}
 		if ($('div.container').hasClass('nav')) {
 			$('div.container').removeClass('nav');
+			}
+		}
+	if ($('div.callback').length !== 0) {
+		if ($('div.callback').hasClass('opened')) {
+			$('div.callback').removeClass('opened');
 			}
 		}
 	if ($('div.menu').length !== 0) {	
@@ -67,7 +72,9 @@ function resize() {
 	if ($('div.menu > div.header').length !== 0) {
 		$('div.menu').css({'padding-top' : $('div.menu > div.header').outerHeight() + 'px'});
 		}
-	isFixed = $('div.container > header > div > div.logo').offset().top + 70;
+	if (!$('div.container').hasClass('fixed')) {
+		isFixed = $('div.container > header > div > div.logo').offset().top + 70;
+		}
 	isInit = $('div.container > footer').offset().top - $(window).height();
 	}
 	
@@ -134,7 +141,6 @@ function isWrap(elements, purpose) {
 	}
 
 $(document).ready(function() {
-	resize();
 	$(window).scroll(function() {
 		if ($(window).scrollTop() > isInit && !isLoad) {
 			loadJS('js/jquery.calendar.js?' + $.now(), true);
@@ -378,7 +384,8 @@ $(document).ready(function() {
 			}, 600);
 		e.preventDefault();
 		});
-   	isWrap($('div.container > article > div.content iframe'), '<div class="youtube"><div>');	
+	resize();
+   	isWrap($('div.container > article > div.content iframe'), '<div class="youtube"><div>');
 	return false;
 	});
 	
