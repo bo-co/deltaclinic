@@ -30,6 +30,30 @@ article > div.content img {
 	margin : 0 auto;
 	}
 
+article > div.content ul {
+	padding : 0;
+	margin : 0;
+	list-style : none;
+	}
+	
+article > div.content ul > li {
+	position : relative;
+	padding : 5px 0 5px 30px;
+	}
+	
+article > div.content ul > li::before {
+	display : block;
+	position : absolute;
+	top : 15px;
+	left : 0;
+	z-index : 10;
+	width : 20px;
+	height : 1px;
+	content : ".";
+	text-indent : -999em;
+	background-color : rgba(1, 31, 88, 1);
+	}
+
 /* обертка для видео с YouTube-канала :: начало */
 div.youtube {
 	position : relative;
@@ -59,12 +83,12 @@ div.youtube > div embed {
 	}
 /* обертка для видео с YouTube-канала :: конец */
 
-/* прайс-лист :: начало */
-article > div.prices {
+
+article > div.box {
 	position : relative;
 	}
 	
-article > div.prices:before {
+article > div.box:before {
     position : absolute;
     top : 0;
     left : 0; 
@@ -75,19 +99,20 @@ article > div.prices:before {
     width: 100%;
     height: 1px;
 	}
-	
-article > div.prices > table,
-article > div.prices > table > tbody {
+
+/* прайс-лист :: начало */
+article > div.prices > div > table,
+article > div.prices > div > table > tbody {
 	display : block;
 	}
 	
-article > div.prices > table {
+article > div.prices > div > table {
 	width : 100%;
 	max-width : 960px;
 	margin : 0 auto;
 	}
 	
-article > div.prices > table > tbody > tr {
+article > div.prices > div > table > tbody > tr {
 	display : flex;
 	display : -webkit-box;
 	display : -webkit-flex;
@@ -98,16 +123,16 @@ article > div.prices > table > tbody > tr {
 	padding : 10px 0;
 	}
 	
-article > div.prices > table > tbody > tr:not(:first-child) {
+article > div.prices > div > table > tbody > tr:not(:first-child) {
 	border-bottom : solid 1px rgba(1, 31, 88, 0.1);
 	}
 	
-article > div.prices > table > tbody > tr:first-child {
+article > div.prices > div > table > tbody > tr:first-child {
 	font : 400 12px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	color : rgba(1, 31, 88, 0.5);
 	}
 	
-article > div.prices > table > tbody > tr > td:last-child {
+article > div.prices > div > table > tbody > tr > td:last-child {
 	min-width : 60px;
 	white-space : nowrap;
 	text-align : right;
@@ -119,11 +144,11 @@ article > div.prices > table > tbody > tr > td:last-child {
 		padding-top : 100px;
 		}
 		
-	article > div.prices {
+	article > div.box {
 		padding : 60px 0 0 0;
 		}
 	
-	article > div.prices > table,
+	article > div.prices > div,
 	article > div.content {
 		padding : 60px 0;
 		}
@@ -152,11 +177,11 @@ article > div.prices > table > tbody > tr > td:last-child {
 		padding-top : 90px;
 		}
 		
-	article > div.prices {
+	article > div.box {
 		padding : 50px 0 0 0;
 		}
 	
-	article > div.prices > table,
+	article > div.prices > div,
 	article > div.content {
 		padding : 50px;
 		}
@@ -185,11 +210,11 @@ article > div.prices > table > tbody > tr > td:last-child {
 		padding-top : 170px;
 		}
 		
-	article > div.prices {
+	article > div.box {
 		padding : 40px 0 0 0;
 		}
 	
-	article > div.prices > table,	
+	article > div.prices > div,	
 	article > div.content {
 		padding : 40px;
 		}
@@ -218,11 +243,11 @@ article > div.prices > table > tbody > tr > td:last-child {
 		padding-top : 160px;
 		}
 
-	article > div.prices {
+	article > div.box {
 		padding : 30px 0 0 0;
 		}
 
-	article > div.prices > table,	
+	article > div.prices > div,	
 	article > div.content {
 		padding : 30px;
 		}
@@ -251,11 +276,11 @@ article > div.prices > table > tbody > tr > td:last-child {
 		padding-top : 150px;
 		}
 		
-	article > div.prices {
+	article > div.box {
 		padding : 20px 0 0 0;
 		}
 	
-	article > div.prices > table,
+	article > div.prices > div,
 	article > div.content {
 		padding : 20px;
 		}
