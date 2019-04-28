@@ -18,7 +18,6 @@ div.container > footer > div.order > div::before {
 	top : 0;
 	z-index : 10;
 	height : 100%;
-	background-image : url("../img/xgirl.webp?28042019");
 	background-repeat : no-repeat;
 	background-position : 50% 100%;
 	background-size : contain;
@@ -45,7 +44,7 @@ div.container > footer > div.contacts {
 div.container > footer > div.contacts > div:first-child {
 	position : relative;
 	min-height : 320px;
-	background-image : url("../img/map.webp?28042019");
+	background-image : url("../img/map.jpg?28042019");
 	background-position : 50% 50%;
 	background-repeat : no-repeat;
 	background-size : cover;
@@ -379,6 +378,7 @@ div.container > footer > div.footer > ul > li > a.youtube::before {
 	div.container > footer > div.order > div::before {
 		left : -60px;
 		width : calc(50% + 60px);
+		background-image : url("../img/xgirl.jpg?28042019");
 		}
 		
 	div.container > footer > div.contacts > div {
@@ -432,6 +432,7 @@ div.container > footer > div.footer > ul > li > a.youtube::before {
 	div.container > footer > div.order > div::before {
 		right : calc(100% + 100px);
 		width : calc(100% + 50px);
+		background-image : url("../img/xgirl.jpg?28042019");
 		}
 
 	div.container > footer > div.contacts > div {
@@ -484,6 +485,7 @@ div.container > footer > div.footer > ul > li > a.youtube::before {
 	div.container > footer > div.order > div::before {
 		right : calc(100% + 80px);
 		width : calc(100% + 40px);
+		background-image : url("../img/xgirl.jpg?28042019");
 		}
 		
 	div.container > footer > div.contacts > div {
