@@ -34,17 +34,10 @@ div.callback.opened + div.container > article {
 	}
 	
 div.callback.opened + div.container > span {
-	display : block;
-	position : absolute;
-	top : 0;
-	left : 0;
 	z-index : 110;
-	width : 100%;
-	height : 100%;
-	background-color : rgba(52, 86, 129, 0.85);
-	content : "";	
 	}
 
+div.callback.opened + div.container > span,
 div.container.opened > span,	
 div.container.nav > span {
 	display : block;
