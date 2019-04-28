@@ -1,7 +1,7 @@
 function init() {
 
 	var userCoodinates = null,
-		myPlacemark = new ymaps.Placemark([55.751641, 37.662869], {
+		myPlacemark = new ymaps.Placemark([55.751486, 37.663129], {
 			balloonContent: null,
 			hintContent: null
 			}, {
@@ -10,7 +10,7 @@ function init() {
     		iconImageSize: [40, 40],
     		iconImageOffset: [-20, -20]
 			}),
-		otherPlacemark = new ymaps.Placemark([55.752496, 37.662201], {
+		otherPlacemark = new ymaps.Placemark([55.752596, 37.662201], {
 			balloonContent: null,
 			hintContent: null
 			}, {
@@ -47,8 +47,8 @@ function init() {
     	pedestrianRouteItem.events.add('click', function(e) { changeRoutingMode('pedestrian', e.get('target')); });
 		
     myMap = new ymaps.Map('map', {
-        center: [55.74964123543684, 37.662869272700114],
-        zoom: 15,
+        center: [55.751819, 37.662773],
+        zoom: 17,
         controls: [routeTypeSelector]
     	}, {
         buttonMaxWidth: 300
@@ -112,7 +112,7 @@ function init() {
 		mapStateAutoApply: true
 		}).then(function (result) {
 		userCoodinates = result.geoObjects.get(0).geometry.getCoordinates();
-		multiRouteModel.setReferencePoints([userCoodinates, '55.751641, 37.662869']);
+		multiRouteModel.setReferencePoints([userCoodinates, '55.751486, 37.663129']);
 		});
     
     function changeRoutingMode(routingMode, targetItem) {
