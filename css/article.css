@@ -83,11 +83,14 @@ div.youtube > div embed {
 	}
 /* обертка для видео с YouTube-канала :: конец */
 
-
-article > div.box {
+article > div.box,
+article > div.box > div {
 	position : relative;
+	}
+
+article > div.box > div {
 	max-width : 960px;
-	margin : 0 auto;
+	margin : 0 auto;	
 	}
 	
 article > div.box:before {
