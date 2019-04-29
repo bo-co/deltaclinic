@@ -197,7 +197,7 @@ div.container > header > div > div.logo > a {
 		
 	div.container > header > div > button {
 		right : 60px;
-		padding : 0 15px 0 45px;
+		padding : 0 30px;
 		}
 		
 	div.container > header > div > a.phone {
@@ -211,7 +211,8 @@ div.container > header > div > div.logo > a {
 	div.container > header > div > a.move::before {
 		right : calc(100% + 10px);
 		}
-		
+	
+	div.container > header > div > button::before,
 	div.container > header > div > ul.sandwich {
 		display : none;
 		}
@@ -247,11 +248,11 @@ div.container > header > div > div.logo > a {
 		
 	div.container > header > div > button {
 		right : 50px;
-		padding : 0 15px 0 45px;
+		padding : 0 25px;
 		}
 		
 	div.container > header > div > a.phone {
-		right : 315px;
+		right : 305px;
 		}
 		
 	div.container > header > div > a.move {
@@ -261,7 +262,8 @@ div.container > header > div > div.logo > a {
 	div.container > header > div > a.move::before {
 		right : calc(100% + 10px);
 		}
-		
+	
+	div.container > header > div > button::before,	
 	div.container > header > div > ul.sandwich {
 		display : none;
 		}
@@ -298,12 +300,16 @@ div.container > header > div > div.logo > a {
 	div.container > header > div > button {
 		top : 90px;
 		right : 40px;
-		padding : 0 15px 0 45px;
+		padding : 0 20px;
+		}
+		
+	div.container > header > div > button::before {
+		display : none;
 		}
 		
 	div.container > header > div > a.phone {
 		top : 90px;
-		right : 300px;	
+		right : 280px;	
 		}
 		
 	div.container > header > div > a.move {
