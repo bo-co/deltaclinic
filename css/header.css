@@ -175,6 +175,8 @@ div.container.opened > header > div > ul.sandwich > li:last-child { bottom : -2p
 
 div.container > header > div > div.logo > a {
 	display : block;
+	width : 200px;
+	height : 70px;
 	background-image : url("../img/logo.svg?25042019");
 	background-position : 50% 50%;
 	background-repeat : no-repeat;
@@ -218,17 +220,12 @@ div.container > header > div > div.logo > a {
 		}
 				
 	div.container > header > div > div.logo {
-		position : absolute;
-		right : calc(100% + 40px);
-		top : 0;
+		position : fixed;
+		left : 40px;
+		top : 35px;
 		z-index : 10;
 		width : 200px;
 		height : 70px;
-		}
-		
-	div.container > header > div > div.logo > a {
-		width : inherit;
-		height : inherit;		
 		}
 	}
 	
@@ -269,17 +266,12 @@ div.container > header > div > div.logo > a {
 		}
 		
 	div.container > header > div > div.logo {
-		position : absolute;
-		right : calc(100% + 40px);
-		top : 0;
+		position : fixed;
+		left : 40px;
+		top : 30px;
 		z-index : 10;
 		width : 200px;
 		height : 70px;
-		}
-		
-	div.container > header > div > div.logo > a {
-		width : inherit;
-		height : inherit;		
 		}
 	}
 	
@@ -325,11 +317,6 @@ div.container > header > div > div.logo > a {
 		top : 96px;
 		left : 40px;
 		}
-		
-	div.container > header > div > div.logo > a {
-		width : 200px;
-		height : 70px;		
-		}
 	}
 	
 @media (min-width : 481px) and (max-width : 720px) {
@@ -374,11 +361,6 @@ div.container > header > div > div.logo > a {
 		top : 96px;
 		left : 30px;
 		}
-		
-	div.container > header > div > div.logo > a {
-		width : 200px;
-		height : 70px;		
-		}
 	}
 	
 @media (max-width : 480px) {
@@ -419,8 +401,6 @@ div.container > header > div > div.logo > a {
 		}
 		
 	div.container > header > div > div.logo > a {
-		width : 200px;
-		height : 70px;
 		margin : 0 auto;	
 		}
 	}
