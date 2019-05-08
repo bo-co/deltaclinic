@@ -218,9 +218,9 @@ div.container > header > div > div.logo > a {
 		}
 				
 	div.container > header > div > div.logo {
-		position : fixed;
-		left : 40px;
-		top : 30px;
+		position : absolute;
+		right : calc(100% + 40px);
+		top : 0;
 		z-index : 10;
 		width : 200px;
 		height : 70px;
@@ -269,9 +269,9 @@ div.container > header > div > div.logo > a {
 		}
 		
 	div.container > header > div > div.logo {
-		position : fixed;
-		left : 40px;
-		top : 25px;
+		position : absolute;
+		right : calc(100% + 40px);
+		top : 0;
 		z-index : 10;
 		width : 200px;
 		height : 70px;
