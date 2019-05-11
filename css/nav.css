@@ -126,8 +126,16 @@ div.menu > div.scrollbar-menu {
 div.container > nav > div.scrollbar-nav ul,
 div.menu > div.scrollbar-menu ul {
 	margin : 0;
-	padding : 0;
 	list-style : none;
+	}
+	
+div.menu > div.scrollbar-menu ul {
+	padding : 10px 0 0 0;
+	}
+
+div.menu > div.scrollbar-menu ul > li > ul,	
+div.container > nav > div.scrollbar-nav ul {
+	padding : 0;
 	}
 
 div.container > nav > div.scrollbar-nav ul > li > a,
@@ -188,7 +196,6 @@ div.menu > div.scrollbar-menu div.special {
 	-webkit-justify-content : center;
 	-ms-justify-content : center;
 	padding-top : 10px;
-	padding-bottom : 10px;
 	}
 	
 div.menu > div.scrollbar-menu div.special > a {
