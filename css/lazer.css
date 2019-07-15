@@ -167,6 +167,10 @@ div.content > ul.recomend > li > a > div > img {
 	height: auto;
 }
 
+div.content > ul.recomend > li > a > p {
+	text-align: center;
+}
+
 @media (min-width : 1401px) {
 	article h6 {
 		font : 600 28px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
