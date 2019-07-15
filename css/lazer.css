@@ -1,0 +1,526 @@
+@charset "UTF-8";
+
+article h6 {
+	text-align : center;
+	color : rgba(1, 31, 88, 1);
+	}
+
+div.content > p:first-of-type {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+div.content > div.banner {
+	height: 90px;
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(1, 31, 88, 1);
+	margin: 20px 0 40px 0;
+}
+
+div.content > blockquote.leader {
+	text-align: left;
+}
+
+div.content > blockquote.accent,
+div.content > blockquote.compare,
+div.content > blockquote.prepare {
+	color: rgba(1, 31, 88, 1);
+}
+
+div.content > ul.fig,
+div.content > div.compare,
+div.content > ul.review,
+div.content > ul.recomend {
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	flex-wrap : wrap;
+	-webkit-flex-wrap : wrap;
+	-ms-flex-wrap : wrap;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	padding : 0;
+}
+
+div.content > div.compare > ol,
+div.content > ol {
+	position: relative;
+	counter-reset: myCounter;
+}
+
+div.content > div.compare > ol {
+	margin: 30px 0 0 0;
+}
+
+div.content > div.compare > ol > li,
+div.content > ol > li {
+	position: relative;
+	list-style: none;
+}
+
+div.content > div.compare > ol > li:before,
+div.content > ol > li::before {
+	position: absolute;
+	counter-increment: myCounter;
+	content: counter(myCounter);
+	display: inline-block;
+}
+
+div.content > div.compare > ol > li:before {
+	left: -30px;
+	top: 0;
+	color: inherit;
+}
+
+div.content > ol > li::before {
+	top: 0;
+	left: -30px;
+	color: rgba(1, 31, 88, 1);
+}
+
+div.content > ol > li::after {
+	position: absolute;
+	content: "";
+	width: 32px;
+	height: 32px;
+	top: -7.5px;
+	left: -42px;
+	border: 1px solid rgba(1, 31, 88, 1);
+	border-radius: 50%;
+}
+
+article > div.content ul > li {
+	padding: 0;
+}
+
+article > div.content ul > li::before {
+	display: none;
+}
+
+div.content > blockquote.accent {
+	border: 1px solid rgba(244, 86, 65, 1);
+}
+
+div.content > blockquote.accent.prepare {
+	border: 1px solid rgba(153, 153, 153, 1);
+}
+
+div.content > p.figsign {
+	font-style: italic;
+	text-align: center;
+	margin-top: 0;
+}
+
+div.content > div.compare > ol::before {
+	position: absolute;
+	content: "";
+	width: 42px;
+	height: 42px;
+	top: 0;
+	left: calc(50% - 20px);
+}
+
+div.content > div.compare > ol:first-child::before {
+	background-image: url(../img/01-plus.svg);
+}
+
+div.content > div.compare > ol:last-child::before {
+	background-image: url(../img/02-minus.svg);
+}
+
+div.content > ul.review > li,
+div.content > ul.recomend > li > a {
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(233, 233, 233, 1);
+}
+
+div.content > ul.review > li > p:first-child {
+	font-style: italic;
+}
+
+div.content > ul.review > li > p:last-child {
+	color: rgba(1, 31, 88, 1);
+}
+
+div.content > ul.recomend > li > a {
+	display: block;
+}
+
+div.content > ul.recomend > li > a:hover {
+	border: 1px solid rgba(244, 86, 65, 1);
+}
+
+div.content > ul.recomend > li > a > div {
+	position: relative;
+	padding-top: 70%;
+	overflow: hidden;
+}
+
+div.content > ul.recomend > li > a > div > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: auto;
+}
+
+@media (min-width : 1401px) {
+	article h6 {
+		font : 600 28px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		padding : 30px 0;
+	}
+
+	div.content > ul.fig > li,
+	div.content > ul.review > li {
+		width: calc(50% - 10px);
+		margin-bottom: 20px;
+	}
+
+	article > div.content > ul.fig > li:first-child {
+		margin-right: 20px;
+	}
+
+	article > div.content > blockquote {
+		font : 400 20px/30px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	div.content > blockquote.accent,
+	div.content > blockquote.compare,
+	div.content > blockquote.prepare {
+		padding: 30px 70px;
+	}
+
+	article > div.content > blockquote > b {
+		font : 700 20px/30px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+
+	div.content > div.compare > ol {
+		width: 50%;
+	}
+
+	div.content > div.compare > ol > li {
+		margin-bottom: 20px;
+	}
+
+	div.content > div.compare > ol > li:before {
+		line-height: 24px;
+	}
+
+	div.content > div.compare > ol:first-child {
+		border-right: 1px solid rgba(68, 68, 68, 1);
+		padding: 70px 20px 0 40px;
+	}
+
+	div.content > div.compare > ol:last-child {
+		padding: 70px 0 0 60px;
+	}
+
+	div.content > ul.review > li,
+	div.content > ul.recomend > li > a {
+		padding: 20px;
+	}
+
+	div.content > ul.recomend > li {
+		width: calc((100% - 40px) / 3);
+		margin-bottom: 20px;
+	}
+
+	div.content > ul.recomend > li:not(:last-child) {
+		margin-right: 20px;
+	}
+
+	div.content > ol > li:not(:last-child) {
+		margin-bottom: 25px;
+	}
+
+	article > div.content > ol > li::before {
+		font : 600 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+}
+
+@media (min-width : 1041px) and (max-width : 1400px) {
+	article h6 {
+		font : 600 26px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		padding : 25px 0;
+	}
+
+	div.content > ul.fig > li,
+	div.content > ul.review > li {
+		width: calc(50% - 10px);
+		margin-bottom: 20px;
+	}
+
+	article > div.content > ul.fig > li:first-child {
+		margin-right: 20px;
+	}
+
+	article > div.content > blockquote {
+		font : 400 20px/30px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	div.content > blockquote.accent,
+	div.content > blockquote.compare,
+	div.content > blockquote.prepare {
+		padding: 25px 60px;
+	}
+
+	article >  div.content > blockquote > b {
+		font : 700 20px/30px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	div.content > div.compare > ol {
+		width: 50%;
+		list-style: none;
+
+	}
+
+	div.content > div.compare > ol > li {
+		margin-bottom: 20px;
+	}
+
+	div.content > div.compare > ol > li:before {
+		line-height: 24px;
+	}
+
+	div.content > div.compare > ol:first-child {
+		border-right: 1px solid rgba(68, 68, 68, 1);
+		padding: 70px 20px 0 40px;
+	}
+
+	div.content > div.compare > ol:last-child {
+		padding: 70px 0 0 60px;
+	}
+
+	div.content > ul.review > li,
+	div.content > ul.recomend > li > a {
+		padding: 20px;
+	}
+
+	div.content > ul.recomend > li {
+		width: calc((100% - 40px) / 3);
+		margin-bottom: 20px;
+	}
+
+	div.content > ul.recomend > li:not(:last-child) {
+		margin-right: 20px;
+	}
+
+	div.content > ol > li:not(:last-child) {
+		margin-bottom: 25px;
+	}
+
+	article > div.content > ol > li::before {
+		font : 600 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+}
+
+@media (min-width : 721px) and (max-width : 1040px) {
+	article h6 {
+		font : 600 24px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		padding : 20px 0;
+	}
+
+	div.content > ul.fig > li,
+	div.content > ul.review > li {
+		width: calc(50% - 10px);
+		margin-bottom: 20px;
+	}
+
+	article > div.content > ul.fig > li:first-child {
+		margin-right: 20px;
+	}
+
+	article > div.content > blockquote {
+		font : 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	div.content > blockquote.accent,
+	div.content > blockquote.compare,
+	div.content > blockquote.prepare {
+		padding: 20px 50px;
+	}
+
+	article > div.content > blockquote > b {
+		font : 700 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	div.content > div.compare > ol {
+		width: 50%;
+	}
+
+	div.content > div.compare > ol > li:before {
+		line-height: 20px;
+	}
+
+	div.content > div.compare > ol > li {
+		margin-bottom: 20px;
+	}
+
+	div.content > div.compare > ol:first-child {
+		border-right: 1px solid rgba(68, 68, 68, 1);
+		padding: 60px 20px 0 30px;
+	}
+
+	div.content > div.compare > ol:last-child {
+		padding: 60px 0 0 50px;
+	}
+
+	div.content > ul.review > li,
+	div.content > ul.recomend > li > a {
+		padding: 20px;
+	}
+
+	div.content > ul.recomend > li {
+		width: calc((100% - 30px) / 3);
+		margin-bottom: 15px;
+	}
+
+	div.content > ul.recomend > li:not(:last-child) {
+		margin-right: 15px;
+	}
+
+	div.content > ol > li:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	article > div.content > ol > li::before {
+		font : 600 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+}
+
+@media (min-width : 481px) and (max-width : 720px) {
+	article h6 {
+		font : 600 22px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		padding : 15px 0;
+	}
+
+	div.content > ul.fig > li,
+	div.content > ul.recomend > li {
+		width: calc(50% - 5px);
+		margin-bottom: 10px;
+	}
+
+	div.content > ul.review > li {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	div.content > ul.recomend > li:last-child {
+		display: none;
+	}
+
+	article > div.content > ul.fig > li:first-child {
+		margin-right: 10px;
+	}
+
+	article > div.content > blockquote {
+		font : 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	div.content > blockquote.accent,
+	div.content > blockquote.compare,
+	div.content > blockquote.prepare {
+		padding: 15px 30px;
+	}
+
+	article > div.content > blockquote > b {
+		font : 700 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+
+	div.content > div.compare > ol {
+		width: 100%;
+		padding: 50px 0 20px 30px;
+	}
+
+	div.content > div.compare > ol > li:before {
+		line-height: 20px;
+	}
+
+	div.content > div.compare > ol > li {
+		margin-bottom: 15px;
+	}
+
+	div.content > div.compare > ol:first-child {
+		border-bottom: 1px solid rgba(68, 68, 68, 1);
+	}
+
+	div.content > ul.review > li,
+	div.content > ul.recomend > li > a {
+		padding: 15px;
+	}
+
+	div.content > ol > li:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	article > div.content > ol > li::before {
+		font : 600 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+}
+
+@media (max-width : 480px) {
+	article h6 {
+		font : 600 20px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+		padding : 10px 0;
+	}
+
+	div.content > ul.fig > li,
+	div.content > ul.review > li,
+	div.content > ul.recomend > li {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	article > div.content > blockquote {
+		font : 400 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	div.content > blockquote.accent,
+	div.content > blockquote.compare,
+	div.content > blockquote.prepare {
+		padding: 10px 20px;
+	}
+
+	article > div.content > blockquote > b {
+		font : 700 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+
+	div.content > div.compare > ol {
+		width: 100%;
+		padding: 50px 0 20px 0;
+	}
+
+	div.content > div.compare > ol > li {
+		margin-bottom: 10px;
+		padding-left: 20px;
+	}
+
+	div.content > div.compare > ol > li:before {
+		line-height: 20px;
+		left: 0;
+	}
+
+	div.content > div.compare > ol:first-child {
+		border-bottom: 1px solid rgba(68, 68, 68, 1);
+	}
+
+	div.content > ul.review > li,
+	div.content > ul.recomend > li > a {
+		padding: 15px;
+	}
+
+	div.content > ol > li:not(:last-child) {
+		margin-bottom: 15px;
+	}
+
+	article > div.content > ol > li::before {
+		font : 600 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+}
