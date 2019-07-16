@@ -44,6 +44,10 @@ div.content > ul.recomend {
 	padding : 0;
 }
 
+article > div.content > ul.fig > li > img {
+	width: 100%;
+}
+
 div.content > div.compare > ol,
 div.content > ol {
 	position: relative;
@@ -74,6 +78,13 @@ div.content > div.compare > ol > li:before {
 	color: inherit;
 }
 
+div.content > div.compare > ol > li:after {
+	position: absolute;
+	content: ".";
+	width: 2px;
+	top: 0;
+}
+
 div.content > ol > li::before {
 	top: 0;
 	left: -30px;
@@ -84,9 +95,6 @@ div.content > ol > li::after {
 	position: absolute;
 	content: "";
 	width: 32px;
-	height: 32px;
-	top: -7.5px;
-	left: -42px;
 	border: 1px solid rgba(1, 31, 88, 1);
 	border-radius: 50%;
 }
@@ -113,27 +121,59 @@ div.content > p.figsign {
 	margin-top: 0;
 }
 
-div.content > div.compare > ol::before {
-	position: absolute;
-	content: "";
-	width: 42px;
-	height: 42px;
+div.content > div.compare > ol > div {
+    position: absolute;
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
 	top: 0;
 	left: calc(50% - 20px);
 }
 
-div.content > div.compare > ol:first-child::before {
-	background-image: url(../img/01-plus.svg);
+div.content > div.compare > ol:first-child > div {
+	border: 2px solid rgba(244,86,65,1);
+	border-radius: 50%;
 }
 
-div.content > div.compare > ol:last-child::before {
-	background-image: url(../img/02-minus.svg);
+div.content > div.compare > ol:last-child > div {
+	border: 2px solid rgba(1, 31, 88, 1);
+	border-radius: 50%;
 }
+
+div.content > div.compare > ol > div.plus::before,
+div.content > div.compare > ol > div::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	margin: -1px 0 0 -8px;
+    width: 16px;
+    height: 2px;
+    content: '.';
+    text-indent: -999em;
+    overflow: hidden;
+    transition: all 0.25s ease;
+	}
+
+div.content > div.compare > ol > div.plus::before,
+div.content > div.compare > ol:first-child > div::after {
+	background-color: rgba(244,86,65,1);
+}
+
+div.content > div.compare > ol:last-child > div::after {
+	background-color: rgba(1, 31, 88, 1);
+}
+
+div.content > div.compare > ol> div.plus::before {
+    margin: -8px 0 0 -1px;
+    width: 2px;
+    height: 16px;
+	}
 
 div.content > ul.review > li,
 div.content > ul.recomend > li > a {
 	background-color: rgba(255, 255, 255, 1);
 	border: 1px solid rgba(233, 233, 233, 1);
+	height: 100%;
 }
 
 div.content > ul.review > li > p:first-child {
@@ -214,6 +254,11 @@ div.content > ul.recomend > li > a > p {
 		line-height: 24px;
 	}
 
+	div.content > div.compare > ol > li:after {
+		height: 24px;
+		left: -20px;
+	}
+
 	div.content > div.compare > ol:first-child {
 		border-right: 1px solid rgba(68, 68, 68, 1);
 		padding: 70px 20px 0 40px;
@@ -243,6 +288,13 @@ div.content > ul.recomend > li > a > p {
 
 	article > div.content > ol > li::before {
 		font : 600 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	div.content > ol > li::after {
+		width: 32px;
+		height: 32px;
+		top: -5px;
+		left: -43px;
 	}
 }
 
@@ -290,6 +342,11 @@ div.content > ul.recomend > li > a > p {
 		line-height: 24px;
 	}
 
+	div.content > div.compare > ol > li:after {
+		height: 24px;
+		left: -20px;
+	}
+
 	div.content > div.compare > ol:first-child {
 		border-right: 1px solid rgba(68, 68, 68, 1);
 		padding: 70px 20px 0 40px;
@@ -319,6 +376,13 @@ div.content > ul.recomend > li > a > p {
 
 	article > div.content > ol > li::before {
 		font : 600 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	div.content > ol > li::after {
+		width: 32px;
+		height: 32px;
+		top: -5px;
+		left: -43px;
 	}
 }
 
@@ -360,6 +424,11 @@ div.content > ul.recomend > li > a > p {
 		line-height: 20px;
 	}
 
+	div.content > div.compare > ol > li:after {
+		height: 20px;
+		left: -20px;
+	}
+
 	div.content > div.compare > ol > li {
 		margin-bottom: 20px;
 	}
@@ -394,6 +463,13 @@ div.content > ul.recomend > li > a > p {
 	article > div.content > ol > li::before {
 		font : 600 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	}
+
+	div.content > ol > li::after {
+		width: 30px;
+		height: 30px;
+		top: -5px;
+		left: -42px;
+	}
 }
 
 @media (min-width : 481px) and (max-width : 720px) {
@@ -414,7 +490,7 @@ div.content > ul.recomend > li > a > p {
 	}
 
 	div.content > ul.recomend > li:last-child {
-		display: none;
+		margin: 0 auto 10px auto;
 	}
 
 	article > div.content > ul.fig > li:first-child {
@@ -445,6 +521,11 @@ div.content > ul.recomend > li > a > p {
 		line-height: 20px;
 	}
 
+	div.content > div.compare > ol > li:after {
+		height: 20px;
+		left: -20px;
+	}
+
 	div.content > div.compare > ol > li {
 		margin-bottom: 15px;
 	}
@@ -464,6 +545,13 @@ div.content > ul.recomend > li > a > p {
 
 	article > div.content > ol > li::before {
 		font : 600 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	div.content > ol > li::after {
+		width: 30px;
+		height: 30px;
+		top: -5px;
+		left: -42px;
 	}
 
 }
@@ -511,6 +599,11 @@ div.content > ul.recomend > li > a > p {
 		left: 0;
 	}
 
+	div.content > div.compare > ol > li:after {
+		height: 20px;
+		left: 8px;
+	}
+
 	div.content > div.compare > ol:first-child {
 		border-bottom: 1px solid rgba(68, 68, 68, 1);
 	}
@@ -527,4 +620,12 @@ div.content > ul.recomend > li > a > p {
 	article > div.content > ol > li::before {
 		font : 600 14px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	}
+
+	div.content > ol > li::after {
+		width: 26px;
+		height: 26px;
+		top: -4px;
+		left: -40px;
+	}
+
 }
