@@ -23,8 +23,9 @@ div.content > blockquote.leader {
 
 div.content > blockquote.accent,
 div.content > blockquote.compare,
-div.content > blockquote.prepare {
-	color: rgba(1, 31, 88, 1);
+div.content > blockquote.prepare,
+div.content > blockquote.prepare > b {
+	color: rgba(1, 31, 88, 1) !important;
 }
 
 div.content > ul.fig,
