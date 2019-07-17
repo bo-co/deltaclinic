@@ -56,7 +56,7 @@ div.content > ol {
 }
 
 div.content > div.compare > ol {
-	margin: 30px 0 0 0;
+	margin: 0;
 }
 
 div.content > div.compare > ol > li,
@@ -122,27 +122,30 @@ div.content > p.figsign {
 	margin-top: 0;
 }
 
-div.content > div.compare > ol > div {
+div.content > div.compare {
+	position: relative;
+}
+
+div.content > div.compare > div {
     position: absolute;
     margin-bottom: 10px;
     width: 40px;
     height: 40px;
 	top: 0;
-	left: calc(50% - 20px);
 }
 
-div.content > div.compare > ol:first-child > div {
+div.content > div.compare > div:first-of-type {
 	border: 2px solid rgba(244,86,65,1);
 	border-radius: 50%;
 }
 
-div.content > div.compare > ol:last-child > div {
+div.content > div.compare > div:last-of-type {
 	border: 2px solid rgba(1, 31, 88, 1);
 	border-radius: 50%;
 }
 
-div.content > div.compare > ol > div.plus::before,
-div.content > div.compare > ol > div::after {
+div.content > div.compare > div.plus::before,
+div.content > div.compare > div::after {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -155,16 +158,16 @@ div.content > div.compare > ol > div::after {
     transition: all 0.25s ease;
 	}
 
-div.content > div.compare > ol > div.plus::before,
-div.content > div.compare > ol:first-child > div::after {
+div.content > div.compare > div.plus::before,
+div.content > div.compare > div:first-of-type::after {
 	background-color: rgba(244,86,65,1);
 }
 
-div.content > div.compare > ol:last-child > div::after {
+div.content > div.compare > div:last-of-type::after {
 	background-color: rgba(1, 31, 88, 1);
 }
 
-div.content > div.compare > ol> div.plus::before {
+div.content > div.compare > div.plus::before {
     margin: -8px 0 0 -1px;
     width: 2px;
     height: 16px;
@@ -242,7 +245,6 @@ div.content > ul.recomend > li > a > p {
 		font : 700 20px/30px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
 	}
 
-
 	div.content > div.compare > ol {
 		width: 50%;
 	}
@@ -260,13 +262,22 @@ div.content > ul.recomend > li > a > p {
 		left: -20px;
 	}
 
-	div.content > div.compare > ol:first-child {
+	div.content > div.compare > ol:first-of-type {
 		border-right: 1px solid rgba(68, 68, 68, 1);
 		padding: 70px 20px 0 40px;
 	}
 
-	div.content > div.compare > ol:last-child {
+	div.content > div.compare > ol:last-of-type {
 		padding: 70px 0 0 60px;
+	}
+
+	div.content > div.compare > div:first-of-type {
+		left: calc(25% - 20px);
+		top: 0;
+	}
+
+	div.content > div.compare > div:last-of-type {
+		left: calc(75% - 20px);
 	}
 
 	div.content > ul.review > li,
@@ -348,13 +359,22 @@ div.content > ul.recomend > li > a > p {
 		left: -20px;
 	}
 
-	div.content > div.compare > ol:first-child {
+	div.content > div.compare > ol:first-of-type {
 		border-right: 1px solid rgba(68, 68, 68, 1);
 		padding: 70px 20px 0 40px;
 	}
 
-	div.content > div.compare > ol:last-child {
+	div.content > div.compare > ol:last-of-type {
 		padding: 70px 0 0 60px;
+	}
+
+	div.content > div.compare > div:first-of-type {
+		left: calc(25% - 20px);
+		top: 0;
+	}
+
+	div.content > div.compare > div:last-of-type {
+		left: calc(75% - 20px);
 	}
 
 	div.content > ul.review > li,
@@ -434,13 +454,22 @@ div.content > ul.recomend > li > a > p {
 		margin-bottom: 20px;
 	}
 
-	div.content > div.compare > ol:first-child {
+	div.content > div.compare > ol:first-of-type {
 		border-right: 1px solid rgba(68, 68, 68, 1);
 		padding: 60px 20px 0 30px;
 	}
 
-	div.content > div.compare > ol:last-child {
+	div.content > div.compare > ol:last-of-type {
 		padding: 60px 0 0 50px;
+	}
+
+	div.content > div.compare > div:first-of-type {
+		left: calc(25% - 20px);
+		top: 0;
+	}
+
+	div.content > div.compare > div:last-of-type {
+		left: calc(75% - 20px);
 	}
 
 	div.content > ul.review > li,
@@ -531,8 +560,18 @@ div.content > ul.recomend > li > a > p {
 		margin-bottom: 15px;
 	}
 
-	div.content > div.compare > ol:first-child {
+	div.content > div.compare > ol:first-of-type {
 		border-bottom: 1px solid rgba(68, 68, 68, 1);
+		margin-bottom: 10px;
+	}
+
+	div.content > div.compare > div:first-of-type {
+		left: calc(50% - 20px);
+		top: 0;
+	}
+
+	div.content > div.compare > div:last-of-type {
+		left: calc(50% - 20px);
 	}
 
 	div.content > ul.review > li,
@@ -605,8 +644,18 @@ div.content > ul.recomend > li > a > p {
 		left: 8px;
 	}
 
-	div.content > div.compare > ol:first-child {
+	div.content > div.compare > ol:first-of-type {
 		border-bottom: 1px solid rgba(68, 68, 68, 1);
+		margin-bottom: 10px;
+	}
+
+	div.content > div.compare > div:first-of-type {
+		left: calc(50% - 20px);
+		top: 0;
+	}
+
+	div.content > div.compare > div:last-of-type {
+		left: calc(50% - 20px);
 	}
 
 	div.content > ul.review > li,
