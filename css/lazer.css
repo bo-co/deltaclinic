@@ -5,7 +5,7 @@ article h6 {
 	color : rgba(1, 31, 88, 1);
 	}
 
-div.content > p:first-of-type {
+/* div.content > p:first-of-type {
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -15,7 +15,7 @@ div.content > div.banner {
 	background-color: rgba(255, 255, 255, 1);
 	border: 1px solid rgba(1, 31, 88, 1);
 	margin: 20px 0 40px 0;
-}
+} */
 
 div.content > blockquote.leader {
 	text-align: left;
@@ -24,7 +24,8 @@ div.content > blockquote.leader {
 div.content > blockquote.accent,
 div.content > blockquote.compare,
 div.content > blockquote.prepare,
-div.content > blockquote.prepare > b {
+div.content > blockquote.prepare > b,
+div.content > blockquote.compare > b {
 	color: rgba(1, 31, 88, 1) !important;
 }
 
@@ -119,33 +120,39 @@ div.content > blockquote.accent.prepare {
 div.content > p.figsign {
 	font-style: italic;
 	text-align: center;
-	margin-top: 0;
+	/* margin-top: 0; */
+	margin : 0; 
 }
 
 div.content > div.compare {
 	position: relative;
 }
 
-div.content > div.compare > div {
-    position: absolute;
-    margin-bottom: 10px;
-    width: 40px;
-    height: 40px;
-	top: 0;
-}
+div.content > div.compare > div,
+div.content > div.compare > div > span {
+	height: 40px;
+	}
 
-div.content > div.compare > div:first-of-type {
-	border: 2px solid rgba(244,86,65,1);
-	border-radius: 50%;
-}
+div.content > div.compare > div > span {
+	position : absolute;
+	top : 0;
+	left : calc(50% - 20px);
+    display : block;
+    width : 40px;
+	}
 
-div.content > div.compare > div:last-of-type {
-	border: 2px solid rgba(1, 31, 88, 1);
-	border-radius: 50%;
-}
+div.content > div.compare > div.plus > span {
+	border : 2px solid rgba(244, 86, 65, 1);
+	border-radius : 50%;
+	}
 
-div.content > div.compare > div.plus::before,
-div.content > div.compare > div::after {
+div.content > div.compare > div:not(.plus) > span {
+	border : 2px solid rgba(1, 31, 88, 1);
+	border-radius : 50%;
+	}
+
+div.content > div.compare > div.plus > span::before,
+div.content > div.compare > div > span::after {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -158,16 +165,16 @@ div.content > div.compare > div::after {
     transition: all 0.25s ease;
 	}
 
-div.content > div.compare > div.plus::before,
-div.content > div.compare > div:first-of-type::after {
+div.content > div.compare > div.plus > span::before,
+div.content > div.compare > div.plus > span::after {
 	background-color: rgba(244,86,65,1);
-}
+	}
 
-div.content > div.compare > div:last-of-type::after {
+div.content > div.compare > div:not(.plus) > span::after {
 	background-color: rgba(1, 31, 88, 1);
-}
+	}
 
-div.content > div.compare > div.plus::before {
+div.content > div.compare > div.plus > span::before {
     margin: -8px 0 0 -1px;
     width: 2px;
     height: 16px;
@@ -218,18 +225,25 @@ div.content > ul.recomend > li > a > p {
 @media (min-width : 1401px) {
 	article h6 {
 		font : 600 28px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
-		padding : 30px 0;
+		/* padding : 30px 0; */
+		padding : 60px 0 30px 0;
 	}
 
-	div.content > ul.fig > li,
+	/* div.content > ul.fig > li, */
 	div.content > ul.review > li {
 		width: calc(50% - 10px);
 		margin-bottom: 20px;
-	}
+		}
+	
+	article > div.content > ul.fig > li {
+		width: calc(50% - 1px);
+		margin-bottom: 20px;		
+		}
 
 	article > div.content > ul.fig > li:first-child {
 		margin-right: 20px;
-	}
+		margin-right: 2px;
+		}
 
 	article > div.content > blockquote {
 		font : 400 20px/30px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
@@ -271,14 +285,19 @@ div.content > ul.recomend > li > a > p {
 		padding: 70px 0 0 60px;
 	}
 
-	div.content > div.compare > div:first-of-type {
-		left: calc(25% - 20px);
-		top: 0;
-	}
+	article > div.content > div.compare > div {
+		position : absolute;
+		top : 0;
+		width : 50%;
+		}
 
-	div.content > div.compare > div:last-of-type {
-		left: calc(75% - 20px);
-	}
+	article > div.content > div.compare > div.plus {
+		left: 0;
+		}
+
+	article > div.content > div.compare > div:not(.plus) {
+		right: 0;
+		}
 
 	div.content > ul.review > li,
 	div.content > ul.recomend > li > a {
@@ -313,18 +332,25 @@ div.content > ul.recomend > li > a > p {
 @media (min-width : 1041px) and (max-width : 1400px) {
 	article h6 {
 		font : 600 26px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
-		padding : 25px 0;
+		/* padding : 25px 0; */
+		padding : 50px 0 25px 0;
 	}
 
-	div.content > ul.fig > li,
+	/* div.content > ul.fig > li, */
 	div.content > ul.review > li {
 		width: calc(50% - 10px);
 		margin-bottom: 20px;
-	}
+		}
+
+	article > div.content > ul.fig > li {
+		width: calc(50% - 1px);
+		margin-bottom: 20px;		
+		}
 
 	article > div.content > ul.fig > li:first-child {
-		margin-right: 20px;
-	}
+		/* margin-right: 20px; */
+		margin-right: 2px;
+		}
 
 	article > div.content > blockquote {
 		font : 400 20px/30px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
@@ -368,14 +394,19 @@ div.content > ul.recomend > li > a > p {
 		padding: 70px 0 0 60px;
 	}
 
-	div.content > div.compare > div:first-of-type {
-		left: calc(25% - 20px);
-		top: 0;
-	}
+	article > div.content > div.compare > div {
+		position : absolute;
+		top : 0;
+		width : 50%;
+		}
 
-	div.content > div.compare > div:last-of-type {
-		left: calc(75% - 20px);
-	}
+	article > div.content > div.compare > div.plus {
+		left: 0;
+		}
+
+	article > div.content > div.compare > div:not(.plus) {
+		right: 0;
+		}
 
 	div.content > ul.review > li,
 	div.content > ul.recomend > li > a {
@@ -410,18 +441,25 @@ div.content > ul.recomend > li > a > p {
 @media (min-width : 721px) and (max-width : 1040px) {
 	article h6 {
 		font : 600 24px/28px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
-		padding : 20px 0;
+		/* padding : 20px 0; */
+		padding : 40px 0 20px 0;
 	}
 
-	div.content > ul.fig > li,
+	/* div.content > ul.fig > li, */
 	div.content > ul.review > li {
 		width: calc(50% - 10px);
 		margin-bottom: 20px;
-	}
+		}
+	
+	article > div.content > ul.fig > li {
+		width: calc(50% - 1px);
+		margin-bottom: 20px;		
+		}
 
 	article > div.content > ul.fig > li:first-child {
-		margin-right: 20px;
-	}
+		/* margin-right: 20px; */
+		margin-right: 2px;
+		}
 
 	article > div.content > blockquote {
 		font : 400 16px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
@@ -463,14 +501,19 @@ div.content > ul.recomend > li > a > p {
 		padding: 60px 0 0 50px;
 	}
 
-	div.content > div.compare > div:first-of-type {
-		left: calc(25% - 20px);
-		top: 0;
-	}
+	article > div.content > div.compare > div {
+		position : absolute;
+		top : 0;
+		width : 50%;
+		}
 
-	div.content > div.compare > div:last-of-type {
-		left: calc(75% - 20px);
-	}
+	article > div.content > div.compare > div.plus {
+		left: 0;
+		}
+
+	article > div.content > div.compare > div:not(.plus) {
+		right: 0;
+		}
 
 	div.content > ul.review > li,
 	div.content > ul.recomend > li > a {
@@ -505,14 +548,25 @@ div.content > ul.recomend > li > a > p {
 @media (min-width : 481px) and (max-width : 720px) {
 	article h6 {
 		font : 600 22px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
-		padding : 15px 0;
+		/* padding : 15px 0; */
+		padding : 30px 0 15px 0;
 	}
 
-	div.content > ul.fig > li,
+	/* div.content > ul.fig > li, */
 	div.content > ul.recomend > li {
 		width: calc(50% - 5px);
 		margin-bottom: 10px;
-	}
+		}
+	
+	article > div.content > ul.fig > li {
+		width: calc(50% - 1px);
+		margin-bottom: 20px;		
+		}
+
+	article > div.content > ul.fig > li:first-child {
+		/* margin-right: 10px; */
+		margin-right: 2px;
+		}
 
 	div.content > ul.review > li {
 		width: 100%;
@@ -521,10 +575,6 @@ div.content > ul.recomend > li > a > p {
 
 	div.content > ul.recomend > li:last-child {
 		margin: 0 auto 10px auto;
-	}
-
-	article > div.content > ul.fig > li:first-child {
-		margin-right: 10px;
 	}
 
 	article > div.content > blockquote {
@@ -544,35 +594,33 @@ div.content > ul.recomend > li > a > p {
 
 	div.content > div.compare > ol {
 		width: 100%;
-		padding: 50px 0 20px 30px;
-	}
-
-	div.content > div.compare > ol > li:before {
-		line-height: 20px;
-	}
-
-	div.content > div.compare > ol > li:after {
-		height: 20px;
-		left: -20px;
+		padding: 15px 0;
 	}
 
 	div.content > div.compare > ol > li {
 		margin-bottom: 15px;
+		padding-left: 30px;
+	}
+
+	div.content > div.compare > ol > li:before {
+		line-height: 20px;
+		left: 0;
+	}
+
+	div.content > div.compare > ol > li:after {
+		height: 20px;
+		left: 8px;
 	}
 
 	div.content > div.compare > ol:first-of-type {
 		border-bottom: 1px solid rgba(68, 68, 68, 1);
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 	}
 
-	div.content > div.compare > div:first-of-type {
-		left: calc(50% - 20px);
-		top: 0;
-	}
-
-	div.content > div.compare > div:last-of-type {
-		left: calc(50% - 20px);
-	}
+	article > div.content > div.compare > div {
+		position : relative;
+		width : 100%;
+		}
 
 	div.content > ul.review > li,
 	div.content > ul.recomend > li > a {
@@ -599,15 +647,21 @@ div.content > ul.recomend > li > a > p {
 @media (max-width : 480px) {
 	article h6 {
 		font : 600 20px/24px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
-		padding : 10px 0;
+		/* padding : 10px 0; */
+		padding : 20px 0 10px 0;
 	}
 
-	div.content > ul.fig > li,
+	div.content > ul.fig > li:nth-child(even),
 	div.content > ul.review > li,
 	div.content > ul.recomend > li {
 		width: 100%;
 		margin-bottom: 10px;
 	}
+	
+	div.content > ul.fig > li:nth-child(odd) {
+		width: 100%;
+		margin-bottom: 2px;
+		}
 
 	article > div.content > blockquote {
 		font : 400 16px/20px "Open Sans", Arial, Tahoma, Verdana, sans-serif;
@@ -626,7 +680,7 @@ div.content > ul.recomend > li > a > p {
 
 	div.content > div.compare > ol {
 		width: 100%;
-		padding: 50px 0 20px 0;
+		padding: 10px 0;
 	}
 
 	div.content > div.compare > ol > li {
@@ -646,17 +700,13 @@ div.content > ul.recomend > li > a > p {
 
 	div.content > div.compare > ol:first-of-type {
 		border-bottom: 1px solid rgba(68, 68, 68, 1);
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 	}
 
-	div.content > div.compare > div:first-of-type {
-		left: calc(50% - 20px);
-		top: 0;
-	}
-
-	div.content > div.compare > div:last-of-type {
-		left: calc(50% - 20px);
-	}
+	article > div.content > div.compare > div {
+		position : relative;
+		width : 100%;
+		}
 
 	div.content > ul.review > li,
 	div.content > ul.recomend > li > a {
