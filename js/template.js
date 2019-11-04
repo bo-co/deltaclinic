@@ -127,19 +127,19 @@ function isPhone(phone) {
 	
 function isRequire(classname) {
 	if ($('div.form.' + classname + ' input.error').length !== 0) {
-		if ($('div.form.' + classname + ' > form > button').hasClass('active')) {
-			$('div.form.' + classname + ' > form > button').removeClass('active');
+		if ($('div.form.' + classname + ' > form button').hasClass('active')) {
+			$('div.form.' + classname + ' > form button').removeClass('active');
 			}
 		}
 	else {
 		if ($('div.form.' + classname + ' .required > input').length !== $('div.form.' + classname + ' .required > input.success').length) {
-			if ($('div.form.' + classname + ' > form > button').hasClass('active')) {
-				$('div.form.' + classname + ' > form > button').removeClass('active');
+			if ($('div.form.' + classname + ' > form button').hasClass('active')) {
+				$('div.form.' + classname + ' > form button').removeClass('active');
 				}
 			}
 		else {
-			if (!$('div.form.' + classname + ' > form > button').hasClass('active')) {
-				$('div.form.' + classname + ' > form > button').addClass('active');
+			if (!$('div.form.' + classname + ' > form button').hasClass('active')) {
+				$('div.form.' + classname + ' > form button').addClass('active');
 				}
 			}
 		}
@@ -342,7 +342,7 @@ $(document).ready(function() {
 			isRequire($(element).data('form'));
 			}, 100);
 		});
-	$('div.form > form > button').on('click', function() {
+	$('div.form > form button').on('click', function() {
 		if ($(this).hasClass('active')) {
 			isForm($(this).data('form'));
 			}
@@ -460,6 +460,16 @@ $(document).ready(function() {
 				}, 1200);			
 			}
 		/* запрещаем действие элемента по умолчанию */
+		
+		
+		if ($(this).data('name') && $(this).data('move') == 'comments') {
+			$('div.form.comments > form ul > li > div > textarea').val($(this).data('name') + ', ');
+			if (!$('div.form.comments > form ul > li > div > textarea').next('span').hasClass('selected')) {
+				$('div.form.comments > form ul > li > div > textarea').next('span').addClass('selected');
+				}
+			$('div.form.comments > form ul > li > div > textarea').focus();
+			}
+		
 		e.preventDefault();
 		});
 	/* находим все iFrame */
