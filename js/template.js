@@ -459,9 +459,7 @@ $(document).ready(function() {
 				$('div.container > article img').lazyLoadXT();
 				}, 1200);			
 			}
-		/* запрещаем действие элемента по умолчанию */
-		
-		
+			
 		if ($(this).data('name') && $(this).data('move') == 'comments') {
 			$('div.form.comments > form ul > li > div > textarea').val($(this).data('name') + ', ');
 			if (!$('div.form.comments > form ul > li > div > textarea').next('span').hasClass('selected')) {
@@ -469,7 +467,8 @@ $(document).ready(function() {
 				}
 			$('div.form.comments > form ul > li > div > textarea').focus();
 			}
-		
+			
+		/* запрещаем действие элемента по умолчанию */
 		e.preventDefault();
 		});
 	/* находим все iFrame */
